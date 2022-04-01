@@ -1,0 +1,1031 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<title>teste atos_capital</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-sacle=1.0">
+
+<style type="text/css">
+	header{
+		width: 100%;
+		min-width: 280px;
+		max-width: 1000px;		
+		margin: auto;
+		background-color: black;	
+		height: 80%;
+	}
+	.container_cabecalho{
+
+		color:white;
+		margin:auto;
+		background-image: linear-gradient( to right ,white,blue); 
+		background-size: 100% 100%; 
+		position:flex;
+		width: 100%;
+		animation-name: gradient;
+		animation-duration: 5s;
+		animation-timing-function: ease-in-out;
+		animation-iteration-count: infinite;
+	}
+
+	@keyframes gradient{
+		0%{
+		background-image: linear-gradient( to right ,white,blue); 
+		}
+		40%{
+			background: white;
+		}
+		60%{
+			background: blue;
+		}
+		100%{
+			background-image: linear-gradient( to right ,white,blue); 
+		}
+	}
+	.container_cabecalho ul{
+		list-style: none;
+		margin: auto;
+		text-align: right;
+		align-items: center;
+		margin-right: 25%;
+	}
+	.container_cabecalho li{
+		font-size: 10px;
+		display: inline;
+		margin-left:16pxs; 
+		font-size: 9px;
+	}
+	.container_cabecalho li:hover{
+	    color:red;
+	    background-color: rgba(0,0,0,.4);
+	}
+	.container_cabecalho li.tel1::before{
+			content: '✆';
+		}
+	.container_cabecalho li.mail::before{
+			content: '✉';
+		}	
+
+	.imag_TEXT{
+		width: 100%;
+		min-width: 318px;
+		max-width: 1000px;
+		position: fixed;
+		top: 15px;
+		margin: auto;
+		display: inline-flex;
+		margin-top:5px; 
+		width:100%;	
+		background: black;
+		z-index: 2;
+	}
+	img{
+		width: 60px;		
+	}
+	body{
+		margin: 0px;
+		padding: 0px;
+		background-image:linear-gradient(to right,#ADD8E6,#FF6347);
+	}
+	main{
+
+		margin: auto;
+		width: 100%;
+		min-width: 280px;
+		max-width: 1000px;
+		background: url('.imagens/.fundo-principal/fundo-avermelhado.png')center bottom repeat;
+		background-size: 100% , 100%;
+		background-attachment: fixed;
+
+	}
+	section{
+		margin: auto;
+		width: 90%;
+		min-width: 280px;
+		max-width: 1000px;
+	}
+
+	section h2{
+		padding-top: 40px;
+		margin-top: 0px;
+		margin-bottom: 0px;
+		text-align: right;
+		text-transform: uppercase;		
+	}
+	section hr{
+		margin-top: 2px;
+		align-items: right;
+		margin-right: 0px;
+		position: relative;
+		width: 240px;
+		border-color:red;
+		background-color: red;
+	}
+	section p {
+		font-size: 11px;
+		margin-left: 15%;
+		text-align: right;	
+		padding-right: 0px;
+		margin-bottom: 20px;
+
+	}
+
+	.navegador{
+	margin-left: 0px;
+    margin-right: 56px;
+
+	}
+	.navegador ul{
+	margin: 0px; 
+	margin-left: 60px;
+	margin-right:10px;
+	text-align: center;
+	}
+
+	.navegador ul li{
+		list-style: none;
+		display: inline;
+		margin: 0px;
+	}
+	.navegador li:hover{
+		background-color: rgba(255,255,255,0.3);
+	}
+
+	.navegador a {
+		padding-right: 15px; 
+		text-decoration: none;
+		color:white;
+		margin: 0px;
+		transition: color 0.5s;
+		font-size: 8px;
+		text-transform: uppercase;
+	}
+	.navegador a:hover {
+
+		text-decoration: none;
+		color:red;
+		margin: 0px;
+	}
+	.ling-band{
+		margin-left: 2px; 
+		padding-left: 5px; 
+		width: 30px;
+	}
+
+	#img_f1{
+		width: 100%;
+		 
+	}
+	div.imagem{
+		position: relative;
+		width: 100%;
+	}
+	div.texto{
+		width: 60%;
+		max-width: 900px;
+		max-height: 30px;
+		position: absolute;
+		top: 100px;
+		margin-left: 20%;		
+		color: white;
+	}
+	div.texto p{
+		margin-top:0px; 
+		margin-bottom: 0px;
+	}
+
+	hr{
+
+		margin:auto;
+		background-color: white;
+		height: 1px;
+		border-color:white;
+		margin-top:0px; 
+	}
+
+	#h2_center{
+		text-align: center;
+	}
+
+	hr#sublinhar-01{
+		align-items: center;
+		margin:auto;
+	}
+
+	.div-principal{
+		display: flex;
+		position: relative;
+		margin: auto;
+		margin-top: 50px;
+		padding-top: 30px;
+		padding-bottom: 70px;
+		max-width: 615px;
+		justify-content: center;
+		height: auto;
+		gap: 10px;
+		flex-wrap: wrap;
+		
+	}
+
+
+	.div-principal > div{
+			height: 100px;
+			flex: 1 1 100px;
+			max-width: 100px;
+			background: white;
+			box-shadow: 8px 9px 24px -12px black;	
+			transition: 0.8s;	
+			
+	}
+
+	.div-principal > div:hover{
+			background: white;
+			z-index: 1;
+			border-radius: 1px;	
+			transform: scale(1.4);	
+			box-shadow: 8px 9px 24px -12px black;
+			border: 1px solid red;
+			border-radius: 2px;
+	}	
+
+	@media (min-width: 581px){
+		div.texto p{
+		font-size:45px;
+		}
+
+
+	}		
+	@media (max-width: 580px){
+		div.texto p{
+		font-size:20px;
+		}
+		.imag_TEXT{
+		margin: auto;
+		display: inline-flex;
+		margin-left:2%;
+		margin-top:5px; 
+		width:80%;	
+	    }
+
+		.navegador{
+		display: none;	
+		}
+
+		section h2{
+			font-size: 20px;
+		}
+		section hr{
+			width: 190px;
+		}
+		.container_cabecalho ul{
+		display: block;
+		margin: auto;
+		align-items: center;
+		text-align: center;
+		}
+
+		.container_cabecalho li{
+		font-size: 10px;
+		font-size: 9px;
+		}
+
+		.div-principal > div{
+			height: 100px;
+			flex: 1 1 70px;
+			max-width:80px;	
+			transition: 0.1s;						 
+		}		
+
+		.div-principal > div:hover{
+			z-index: 1;
+			flex: 1 1 100px;
+			max-width: 110px;
+			transform: scale(1.2);
+			border: 1px solid red;					
+	}
+
+
+	}	
+
+	button{
+		
+		width: 55%;
+		color:white;
+		background: rgba(165,42,42,1);
+		font-size: 10px;
+		border-radius: 5px;
+		padding: 3px;
+		border:none;
+		margin-left: 20% ;
+	}	
+
+	.secao-01{
+		margin: auto;
+		 width: 100%;
+		 max-width:1000px;
+		 min-width: 280px;
+		 height: auto; 
+		 position: relative;
+		 background: rgba(220,220,220,1);
+	}
+	section#div-scroll{
+		margin: 0px auto;
+		width: 100%;
+		min-width: 280px;
+		max-width: 80%;
+		height: 400px;
+		border:1px black;
+		
+	}
+
+	#seta-esquerda{
+	width: 7%; 
+	height: 7%;
+	position: absolute;
+	top: 20%;
+	left:87%;
+	padding: 0px;	
+	z-index: 1;
+	}
+
+	#seta-esquerda:hover{
+	animation-name: seta_Esquerda;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	animation-timing-function: ease-in
+	}
+
+	#seta-direita{
+	width: 7%;
+	height: 7%;
+	position: absolute;
+	top: 20%;
+	right: 87%;
+	padding: 0px;
+	transform: rotate(180deg);
+	z-index: 1;
+	}
+
+	#seta-direita:hover{
+	animation-name: seta_Direita;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	animation-timing-function: ease-in;
+	}
+
+	@keyframes seta_Direita{
+		0%{
+				transform: translateX(-5px) rotate(180deg) scale(1.2);
+		}
+
+		100%{
+				transform: translateX(-10px)rotate(180deg) scale(1.2);
+		}
+	}
+	@keyframes seta_Esquerda{
+		0%{
+				transform: translateX(5px) scale(1.2);
+		}
+
+		100%{
+				transform: translateX(10px) scale(1.2);
+		}
+	}
+
+	#navegador-scroll{
+		position: relative;
+		display: flex;
+		top: 10%;
+		margin: auto;
+		min-width: auto;
+		max-width: 80%;
+		height: 90%;
+		overflow-x: auto;
+		gap: 9%;
+		justify-content: center;
+		align-items: center;
+		
+	}
+	#navegador-scroll::-webkit-scrollbar{
+			width: 0px;
+		}
+	#navegador-scroll > div{
+		position: relative;
+		display: inline-flex;
+		margin: auto;
+		min-width: 41%;
+		height: 70%;
+		background: white;
+		border:1px solid;
+		border-radius: 15px;
+		flex-wrap: wrap;
+		
+	}
+		#navegador-scroll > div h2{
+		position: relative;
+		width: 40%;
+		min-width:40%;
+		height: 40%;
+		min-height: 10%;
+		font-size: 16px;
+		padding-right: 0px;
+		border:1px solid;
+		padding: 0px;
+		margin:0px;
+		padding-top: 10px;
+		text-align: left;
+		grid-area: 5px;
+		z-index: 3;
+	}
+		#navegador-scroll > div p{
+		
+		justify-content: center;
+		margin: 0px;
+		text-align: center;
+		width: 100%;
+		align-items: center;
+		height: 50%;
+		border:1px solid;
+
+		
+	}
+		iframe{		
+		position: relative;	
+		display: inline-block;
+		top: -8%;
+		left: -10px;
+		width: 50%;
+		height: 50%;
+		min-width: auto;
+		min-height: 20%;
+		background: rgba(135,0,0,1);
+		border:1px black;
+		border-radius: 15px;
+		z-index: 1;
+
+	}
+
+	#navegador-scroll.centro.activeE div{
+		animation-name : testeC1;
+		animation-duration: 1.5s;
+		animation-fill-mode: forwards;	
+		animation-timing-function: ease-out;			
+	}
+
+	#navegador-scroll.centro.activeD div{
+		animation-name : testeC2;
+		animation-duration: 1.5s;
+		animation-fill-mode: forwards;
+		animation-timing-function: ease-out;
+	}
+	#navegador-scroll.activeE div{
+		animation-name: testeE;
+		animation-duration: 1.5s;
+		animation-fill-mode: forwards;
+		animation-timing-function: ease-out;
+			
+	}
+	#navegador-scroll.activeD div{
+		animation-name: testeD;
+		animation-duration: 1.5s;	
+		animation-fill-mode: forwards;	
+		animation-timing-function: ease-out;
+	}
+	#apontador > div{
+		color: red;
+	}
+	
+	#apontador> div{
+	width: 7px;
+	height: 4px;
+	background: rgb(54,54,54);
+	margin: auto;
+	border-radius: 50%;		
+	transition:1.4s;
+	}
+	#apontador > div::before{
+    content: "";
+    position: absolute;
+    display: inline-flex;
+    width: 7px;
+    height: 4px;
+    background: rgb(128,128,128);
+    margin-left: -10px;
+    border-radius: 50%;
+
+    transition:1.4s;	
+	}
+
+	#apontador > div::after{
+	content: "";
+    display: inline-flex;
+    position: absolute;
+    width: 7px;
+    height: 4px;
+    margin-left: 10px;
+
+    background: rgb(128,128,128);
+    border-radius: 50%;
+    transition:1.4s;
+	}
+
+	#apontador.centro.activeD div{ background: rgb(54,54,54);}
+	#apontador.centro.activeE div{ background: rgb(54,54,54);}
+
+
+	#apontador.centro.activeD div::before{background: rgb(128,128,128);}
+	#apontador.centro.activeE div::after{background: rgb(128,128,128);}
+
+	#apontador.activeD div::before{ background: rgba(54,54,54);}
+	#apontador.activeD div{background:rgb(128,128,128);}
+
+	#apontador.activeE div::after{ background: rgba(54,54,54);}
+	#apontador.activeE div{background:rgb(128,128,128);}
+
+	@keyframes testeC1{
+		0%{
+			transform: translateX(245%);
+			opacity: 0.1;
+		}
+		80%{
+			opacity: 0.2;
+		}
+		100%{
+			transform: translateX(0px);
+			opacity: 1;
+		}
+	}
+	@keyframes testeC2{
+		0%{
+			transform: translateX(-245%);
+			opacity: 0.1;
+		}
+		80%{
+			opacity: 0.2;
+		}
+		100%{
+			transform: translateX(0px);
+			opacity: 1;
+		}
+	}
+	@keyframes testeE{
+
+		0%{
+			opacity: 0.1;
+		}
+		80%{
+			opacity: 0.2;
+		}
+		100%{
+			transform: translateX(-245%);
+			opacity: 1;
+		
+		}
+	}
+		@keyframes testeD{
+		0%{
+			opacity: 0.1;
+		}
+
+		80%{
+			opacity: 0.2;
+		}
+		100%{
+			transform: translateX(245%);
+			opacity: 1;
+		}
+	}
+
+	@media (max-width: 580px){
+		div.texto p{
+		font-size:20px;
+		}
+		.imag_TEXT{
+		margin: auto;
+		display: inline-flex;
+		
+		margin-top:5px; 
+		width:100%;	
+	    }
+
+		.navegador{
+		display: none;	
+		}
+
+		section h2{
+			font-size: 20px;
+		}
+		section hr{
+			width: 190px;
+		}
+		.container_cabecalho ul{
+		display: block;
+		margin: auto;
+		align-items: center;
+		text-align: center;
+		}
+
+		.container_cabecalho li{
+		font-size: 10px;
+		font-size: 9px;
+		}
+		.div-principal{
+		display: flex;
+		position: relative;
+		margin: auto;
+		margin-top: 10px;
+		padding-top: 30px;
+		padding-bottom: 70px;
+		max-width: 62%;
+		justify-content: center;
+		height: auto;
+		gap: 10px;
+		flex-wrap: wrap;
+		
+	}
+		#navegador-scroll > div h2{
+		position: relative;
+		font-size: 10px;
+	}
+
+		.div-principal > div{
+			height: 100px;
+			flex: 1 1 80px;
+			max-width:80px;	
+			transition: 0.1s;						 
+		}		
+
+		.div-principal > div:hover{
+			position: relative;
+			z-index: 1;
+			flex: 1 1 80px;
+			max-width: 80px;
+			transform: scale(1.2);
+			border: 1px solid red;					
+	}
+#seta-direita{
+	position: absolute;
+	top:15%;
+}
+#seta-esquerda{
+	position: absolute;
+	top:15%;
+}
+
+		/*------------------------------------------------------
+			carrossel-----------------------------------------*/
+		#navegador-scroll{
+		position: relative;
+		display: flex;
+		top: 10%;
+		margin: auto;
+		min-width: auto;
+		max-width: 86%;
+		height: 90%;
+		overflow-x: auto;
+		gap: 10%;
+		justify-content: center;
+		align-items: center;
+		
+	}		
+
+	}	
+	section#parceiros{
+		width: 70%;
+		margin: auto;
+
+	}
+
+	.h2center{
+		text-align: center;
+		align-items: center;
+		margin:auto;
+		text-transform: uppercase;	
+		position: relative;
+	}
+	section#parceiros hr{
+		position: relative;
+		align-items: center;
+		margin: auto;
+		width: 70%;
+	}
+
+	section div#parceiros-div{
+		display: inline-flex;
+		position:relative ;
+		margin-top:30px;
+		gap:20px;
+		height: auto;
+		
+	}
+	section div#parceiros-div div{
+	
+		 display: flex;
+		 position: relative;
+		 width: 50%;
+		 min-width: 20%;	
+		 max-height: 50%;	 
+		 margin: 2px;
+		 background: white;
+		 border-radius: 5px;
+		 flex-flow:column;
+		 min-height: 260px;
+		 max-width: 300px;
+		 height: max-content;
+	}
+
+	section div#parceiros-div div img{
+		width: 100%;
+		min-height: 50%;
+	}
+
+	section div#parceiros-div div h4{
+		text-indent: 25px;
+		margin: 5px;
+	}
+
+	section div#parceiros-div div p{
+		height: max-content;		
+		text-align: justify;
+		text-indent: 20px;
+		font-size: 10px;
+		padding-left: 10%;
+		padding-right: 10%;
+		margin: 0px;
+		opacity: 0.5;
+		flex-wrap: wrap;
+	}
+	aside{
+		margin-top: 40px;
+		max-width: 100%;
+		justify-content: center;
+		display: flex;
+		flex-wrap: wrap;
+		padding-bottom: 50px;
+		gap: 15px;
+	}
+	aside img{
+		position: relative;	
+		flex:1 130px;
+		max-width: 130px;
+		display: flex;
+		height: 40px;
+		flex-wrap: wrap;
+		margin-right: 15px;
+	}
+	#finish_section div hr{
+		align-items: center;
+		justify-content: center;
+		margin: auto;
+		width: 240px;
+
+	}
+	
+</style>
+</head>
+<body>
+	<header>
+		<div class="container_cabecalho">
+			<ul>
+				<li class="mail">atoscapital@gmail.com.br</li>
+				<li class="tel1">79 9 9999 9999</li>
+				<li class="tel1">79 8 8888 8888</li>
+			</ul>			
+		</div>
+		<div class="imag_TEXT">
+				<img src=".imagens/.cabeçalho/atos-cabecalho.png">
+				<img src=".imagens/.cabeçalho/sap.png">
+				<img src=".imagens/.cabeçalho/sap-b.png">
+			<nav class="navegador">
+				<ul>
+				<li><a href="#">quem somos</a></li>
+				<li><a href="#">soluçoes  </a></li>		
+				<li><a href="#">parceiros </a></li>
+				<li><a href="#">clientes  </a></li>		
+				<li><a href="#">blog      </a></li>
+				<li><a href="#">contato   </a></li>	
+				</ul>
+			</nav>
+				<img class="ling-band" src=".imagens/.cabeçalho/bandeira-eua.png" alt="ingles">
+				<img class="ling-band" src=".imagens/.cabeçalho/bandeira-esp.png" alt="espanhol">
+				<img class="ling-band" src=".imagens/.cabeçalho/bandeira-br.png" alt="portugues">
+		</div>
+		<div class="imagem">
+			<img id="img_f1" src=".imagens/.cabeçalho/f1.png">
+			<div class="texto">
+			<p>Suite B1Cards - Addon de Reconciliação para SAP Business One</p>
+			 <hr>
+			</div>
+		</div>
+	</header>
+	<main id="principal">
+		<section>
+		 <h2>a atos capital</h2>
+		 <hr class="hr-center">
+		<p>A ATOS CAPITAL é uma Fintech, uma empresa de serviços financeiros, 100% brasileira e genuinamente nordestina, especializada na Gestão e Conciliação de<br>
+		Cartões Eletrônicos. Atuamos atendendo diversos segmentos da economia que possuem grande participação de seus recebíveis financeiros por meio de<br>
+		transações com cartões eletrônicos de diversas Adquirentes e Bandeiras.</p>
+		<p>Com larga experiência, equipe capacitada e tecnologia, somos uma empresa parceira SAP, oferecendo aos nossos clientes uma experiência única identificando e <br>solucionando de forma eficiente problemas como perdas e fraudes.</p>
+		<p>Nossa relação com nossos clientes é de parceria baseada em um relacionamento saudável e duradouro.</p>
+		</section>
+		<img style="width: 100%" src=".imagens/.fundo-principal/atos-principal.png">
+		<section class="principal-final">
+		 <h2 id="h2_center">nossas soluções</h2>
+		 <hr id="sublinhar-01">
+		 <div class="div-principal">
+		 <div id="div1"><img style="width: 100%;" src=".imagens/.imagens-div-principal/div1.png"><button > veja mais</button></div>
+		 <div id="div2"><img style="width: 100%;" src=".imagens/.imagens-div-principal/div2.png"><button > veja mais</button></div> 
+		 <div id="div3"><img style="width: 100%;" src=".imagens/.imagens-div-principal/div3.png"><button > veja mais</button></div>
+		 <div id="div4"><img style="width: 100%;" src=".imagens/.imagens-div-principal/div4.png"><button > veja mais</button></div>
+		 <div id="div5"><img style="width: 100%;" src=".imagens/.imagens-div-principal/div5.png"><button > veja mais</button></div>
+		 <div id="div6"><img style="width: 100%;" src=".imagens/.imagens-div-principal/div6.png"><button > veja mais</button></div>
+		 <div id="div7"><img style="width: 100%;" src=".imagens/.imagens-div-principal/div7.png"><button > veja mais</button></div>
+		 <div id="div8"><img style="width: 100%;" src=".imagens/.imagens-div-principal/div8.png"><button > veja mais</button></div>
+		 <div id="div9"><img style="width: 100%;" src=".imagens/.imagens-div-principal/div9.png"><button > veja mais</button></div>
+		</div>
+		</section>	
+	</main>
+	<section class="secao-01">
+		<section id="div-scroll">
+		<?xml version="1.0" ?><svg id="seta-direita" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" style="enable-background:new 0 0 100;"> <defs><style>.cls-1{fill:none;}</style></defs><title/><g data-name="Layer 2" id="Layer_2"><path d="M12,25a1,1,0,0,1-.71-.29,1,1,0,0,1,0-1.42L18.59,16l-7.3-7.29a1,1,0,1,1,1.42-1.42l8,8a1,1,0,0,1,0,1.42l-8,8A1,1,0,0,1,12,25Z"/></g><g id="frame"><rect class="cls-1" height="32" width="32"/></g></svg>
+		<nav id="navegador-scroll">
+		<div>
+					<iframe width="100%" height="100%" src="https://www.youtube.com/embed/cvHYM4VI1Mk?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					<h2>Nome do</h2>
+					<p>ipsum dolor sit amet, consectetur adipisicing elit</p>
+		</div>
+		<div>		
+					<iframe width="100%" height="100%" src="https://www.youtube.com/embed/cvHYM4VI1Mk?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					<h2>Nome do</h2>		
+					
+					<p>ipsum dolor sit amet, consectetur adipisicing elit</p>
+		</div>
+		<div>
+					<iframe width="100%" height="100%" src="https://www.youtube.com/embed/cvHYM4VI1Mk?controls=0" title="	YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		
+					<h2>Nome do</h2>
+					<p>ipsum dolor sit amet, consectetur adipisicing elit</p>
+		</div>
+		<div>		
+					<iframe width="100%" height="100%" src="https://www.youtube.com/embed/cvHYM4VI1Mk?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					<h2>Nome do</h2>
+					<p>ipsum dolor sit amet, consectetur adipisicing elit</p>
+		</div>
+		<div>		
+				<iframe width="100%" height="100%" src="https://www.youtube.com/embed/cvHYM4VI1Mk?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		
+				<h2>Nome do</h2>
+				<p>ipsum dolor sit amet, consectetur adipisicing elit</p>
+		</div>
+		<div>
+		
+				<iframe width="100%" height="100%" src="https://www.youtube.com/embed/cvHYM4VI1Mk?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	
+				<h2>Nome do</h2>
+				<p>ipsum dolor sit amet, consectetur adipisicing elit</p>
+		</div>
+		</nav>
+		<div id="apontador"> <div></div> </div>
+
+		<?xml version="1.0" ?><svg  id="seta-esquerda"  viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" style="enable-background:new 0 0 100;"><defs><style>.cls-1{fill:none;}</style></defs><title/><g data-name="Layer 2" id="Layer_2"><path d="M12,25a1,1,0,0,1-.71-.29,1,1,0,0,1,0-1.42L18.59,16l-7.3-7.29a1,1,0,1,1,1.42-1.42l8,8a1,1,0,0,1,0,1.42l-8,8A1,1,0,0,1,12,25Z"/></g><g id="frame"><rect class="cls-1" height="32" width="32"/></g></svg>		
+		</section>		
+			<section id="parceiros">
+					<h2 class="h2center">parceiros</h2>
+					<hr >
+
+					<div id="parceiros-div" >
+						<div ><img style="width:100%;" src=".imagens/.lotes/Grupo de máscara 882.jpg">
+						<h4>SAP</h4>
+							<p style=""> A Atos Capital - Serviços Financeiros, é uma empresa Parceira Oficial da
+							SAP com a solução B1 Cards Reconciliação de Meios de Pagamento para SAP
+							Business One desde 2019, sendo referência no mercado Brasileiro de SAP
+							Business One, atendendo aos principais players com o que há de melhor e
+							mais inovador em Reconciliação e módulos voltados para o segmento
+							financeiro.</p>
+						</div>
+						<div ><img style="width:100%;" src=".imagens/.lotes/Grupo de máscara 883.jpg">
+						<h4>B1 Alliance</h4>	
+						<p>A Atos Capital - Serviços Financeiros, é empresa Associada da B1 Alliance, associação de empresas parceiras SAP no Brasil, com empresas líderes em seus segmentos e presente em 12 países.</p>
+					</div>
+					</div>
+					<aside>
+						<img src=".imagens/.logos/logoSeidor.png">
+						<img src=".imagens/.logos/Ramo-Sistemas-Digitais-Logo.png">
+						<img src=".imagens/.logos/nordware.png">
+						<img src=".imagens/.logos/UPPERTOOLS.png">
+						<img src=".imagens/.logos/logo_alfa.png">
+						<img src=".imagens/.logos/logo-1.png">
+						<img src=".imagens/.logos/logo-alta-3.png">
+					</aside>
+				</section>
+	</section>
+	<section id="finish_section" style="background: white; width:100%;max-width: 1000px;min-width: 280px;">
+
+		<div style="width:100%">
+					<h2 class="h2center">Blog | Ta na Mídia</h2>
+					<hr>
+		</div>			
+	</section>
+
+</body>
+<script type="text/javascript">
+	// Definindo variaveis para capturar o id do elemento que 
+	//ativara a função
+	const selectDireita = document.getElementById("seta-direita");
+	const selectEsquerda = document.getElementById("seta-esquerda");
+
+	//definindo qual evento ocorrera quando clicar nos 
+	//elementos que possuem determinado id
+	selectDireita.addEventListener("click" , toggleDireita);
+	selectEsquerda.addEventListener("click" , toggleEsquerda);
+
+//=============================================================================
+	//função ativada o clicar na seta para esquerda
+		function toggleEsquerda(){
+		const nav = document.getElementById("navegador-scroll");
+		const apont = document.getElementById("apontador");		
+		if(nav.className == 'activeD'){
+			nav.classList.remove('activeD');
+			nav.classList.add('centro');
+			nav.classList.add('activeE');
+
+			apont.classList.remove('activeD');
+			apont.classList.add('centro');
+			apont.classList.add('activeE');
+
+				}else if( nav.className == 'centro activeE'){
+					nav.classList.remove('centro','activeD');
+					nav.classList.add('activeE')
+
+					apont.classList.remove('centro','activeD');
+					apont.classList.add('activeE');
+
+						}else if ( nav.className == 'centro activeD'){
+							nav.classList.remove('centro','activeD');
+							nav.classList.add('activeE');
+
+							 apont.classList.remove('centro','activeD');
+							 apont.classList.add('activeE');
+
+								}else if(nav.className == 'activeE') {
+									nav.classList.remove('activeE');
+									apont.classList.remove('activeE');
+
+									nav.classList.add('activeD');
+									apont.classList.add('activeD');
+
+										}else{
+										 nav.classList.add('activeE');
+										 apont.classList.add('activeE');
+										}
+		}
+//=============================================================================
+//função ativada o clicar na seta para direita
+		function toggleDireita(){
+		const nav = document.getElementById("navegador-scroll");
+		const apont = document.getElementById("apontador");
+		if(nav.className == 'activeE'){
+			nav.classList.remove('activeE');
+			nav.classList.add('centro'); 
+			nav.classList.add('activeD');
+
+			apont.classList.remove('activeE');
+			apont.classList.add('centro');
+			apont.classList.add('activeD');
+
+		}else if ( nav.className == 'centro activeD'){
+			nav.classList.remove('centro','activeE');
+			nav.classList.add('activeD'); 
+
+			apont.classList.remove('centro','activeE');
+			apont.classList.add('activeD');
+
+				}else if ( nav.className == 'centro activeE' ){
+				nav.classList.remove('centro','activeE');
+				nav.classList.add('activeD');
+
+				apont.classList.remove('centro','activeE');
+				apont.classList.add('activeD');
+
+					}else if( nav.className == 'centro activeD'){
+					nav.classList.remove('centro','activeD');
+					nav.classList.add('activeD');
+
+					apont.classList.remove('centro','activeD');
+					apont.classList.add('activeD');
+						}else if(nav.className == 'activeD') {
+							nav.classList.remove('activeD');
+							apont.classList.remove('activeD');
+
+							nav.classList.add('activeE');
+						    apont.classList.add('activeE');
+
+								}else{
+									 nav.classList.add('activeD');
+									 apont.classList.add('activeD');
+										}
+		}
+</script>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+		<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-sacle=1.0">
+	<style type="text/css">
+		body,ul{
+			margin: 0px;
+		}
+	 #logo{
+	 	font-size: 20px;
+	 }	
+	 #hred{
+	 	display: flex;
+	 	box-sizing: border-box;
+	 	align-items: center;
+	 	justify-content: space-between;
+	 	background-color: red;
+	  }
+	 #menu{
+	 	font-size: 20px;
+	 	display:flex;
+	 	list-style: none;
+
+	 }
+	 #menu a{
+	 	display: block;
+	 	padding: .5rem;
+	 }
+
+	 #btn-mobile{
+	 	display:none;
+	 }
+
+	 @media (max-width: 600px){
+
+	 	#menu{
+	 	display: block;
+	 	position: absolute;
+	 	width: 100%;
+	 	top: 30px;
+	 	right: 0px;
+	 	background-color: red;
+	 	height: 0px;
+	 	z-index: 1000;
+	 	transition: 0.7s;
+	 	visibility: hidden;
+	 	overflow-y: auto; 
+	 	}
+	 	#nav.active #menu{
+	 		visibility: visible;
+	 		height: calc(100vh - 70px);
+	 	}
+	 	#menu a{
+	 		padding: 1rem 0;
+	 		margin: 0 1rem;
+	 		border: 2px solid rgb(255,255,255);
+
+	 	}
+	 	#btn-mobile{
+	 		display: flex;
+	 		padding: .5rem 1rem; 
+	 		font-size: 12px;
+	 		border: none;
+	 		background-color: none;
+	 		cursor: pointer;
+	 		gap: 5rem;
+	 	}
+	 	#burger{
+	 		width: 20px;
+	 		border-top: 2px solid;
+	 	}
+	 	#burger::after, #burger::before{
+	 		content:'';
+	 		display: block;
+	 		width: 20px;
+	 		border-top: 2px;
+	 		height: 2px;
+	 		background-color: currentColor;
+	 		margin-top: 5px;
+	 		transition: .3s; 
+	 		position: relative;
+	 	}
+	 	#nav.active #burger{
+	 		border-top-color: transparent;	 	
+
+	 	}
+	 	#nav.active #burger::before{
+	 		transform:rotate(135deg);
+	 	}
+	 	 #nav.active #burger::after{
+	 	 	transform: rotate(-135deg);
+	 	 	top:-7px;
+	 	}
+	 }
+	</style>
+
+</head>
+<body >
+	<header id="hred">
+		<a href="#" id="logo">Logo</a>
+	<nav id="nav">
+		<button id="btn-mobile"><span id="burger"></span></button>
+	<ul id="menu">
+		<li><a href="#">teste1</a></li>
+		<li><a href="#">teste2</a></li>
+		<li><a href="#">teste3</a></li>
+		<li><a href="#">teste4</a></li>
+	</ul>
+	</nav>
+	</header>
+		<script type="text/javascript">
+		const btnMobile = document.getElementById('btn-mobile');
+
+		function toggleMenu(){
+			const nav = document.getElementById('nav');
+			nav.classList.toggle('active');
+		}
+
+		btnMobile.addEventListener('click' , toggleMenu);
+		btnMobile.addEventListener('touchstar' , toggleMenu);
+	</script>
+</body>
+</html>

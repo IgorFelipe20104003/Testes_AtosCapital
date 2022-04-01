@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>blog</title>
+
+	<style type="text/css">
+		*{
+			margin: 0px;
+			padding: 0px;
+		}
+		section{
+			position: relative;
+			width: 100%;
+			box-sizing: border-box;
+			max-width: 1000px;
+			min-width: auto;
+			max-height: 800px;
+			min-height: 200px;
+			margin: auto;
+		}
+		h2{
+			text-align: center;
+		}
+		hr{
+			width: 250px;
+			margin: auto;
+			border: 1px solid red;
+		}
+		
+		div#div{
+		display: flex;
+		position: relative;
+		top: 10%;
+		margin: auto;
+		width: 100%;
+		max-width: 1000px;
+		height: 500px;
+		overflow-x: auto;
+		gap: 11%;
+		
+		}
+
+		#div > div{
+		 display: grid;	
+		 position: relative;
+		 margin: auto;
+		 min-width: 100%;
+		 height: 98%;
+		 background: white;
+		 border-radius: 15px;
+		 grid-template-columns: 60% 25%;
+		 grid-template-rows: 1fr 1fr;
+         transition: 2s;
+		}
+
+		div{
+		justify-content: center;	
+  	     width: 100%;
+   	     min-height: 100px;
+ 	     margin: auto;
+	     padding: 2px;
+	     align-items: center;
+	     text-align: center;
+	     column-gap: 10px;
+	
+		}
+
+	.div-1{
+		z-index: 1;
+	}
+		section.activeD .div-1{
+		
+			transform: translateX(111%);
+		}
+
+		section.activeE .div-3{
+		
+			transform: translateX(-111%);
+		}
+		div.div-1 > div:nth-child(1),div.div-2 > div:nth-child(1),div.div-3 > div:nth-child(1) {
+			position: relative;
+			display: inline-block;
+			grid-row: span 2; 
+			height: 100%;
+			width: 100%;	
+			border-radius: 15px;
+
+		}
+
+		div.div-1 > div:nth-child(n + 2),div.div-2 > div:nth-child(n + 2),div.div-3 > div:nth-child(n + 2){
+			position: relative;
+			display: inline-block;
+			min-height: 95%;
+			min-width: 100%;
+			border-radius: 10px;
+
+		}
+/*---------------------------------*/
+		.btn-principal{
+			border:none;height: 20px;font-size: 10px;position:absolute;left: 75% ; top: 90%;color: white; background: rgb(128,128,128);border-radius: 5px;
+			z-index: 1;
+		}
+
+		.btn-secundaria{
+			position:relative;top:50%; left:90px;heigth:10px;background: red;
+		}
+
+		.btn-secundaria > a{
+			text-decoration:none;color:white;font-size:8px;padding: 0px;
+		}
+
+		.btn-principal:hover,.btn-secundaria:hover{
+			transform: scale(1.2);
+		}
+
+		.img-principal{
+			width: 100%; height:100%;  border-radius:10px;
+		}
+
+		.img-secundaria-carrossel{
+			width: 100%; height:100%; border-radius: 2px;
+		}
+		h3{
+			color: white; max-width: 270px; min-width:200px;text-align: left;padding-left: 12px;
+		}
+		h5{
+			text-align:left;padding-bottom: 8px;padding-top: 8px; font-size: 12px;
+		}
+
+		.paragrafo-principal{
+			color: white;text-align: justify;font-size: 100%;padding-left: 12px;padding-top: 8px;padding-right: 10px;	
+		}
+
+		.paragrafo-secundario{
+			font-size: 14px; text-align: justify; line-height: 12px;
+		}
+
+		.div-interna{
+			width:95%;position: absolute;top: 60%; z-index: 1; ;text-align: left;
+		}
+		
+		div.container-btn{
+			background: red; align-content: center; margin: auto;align-items: center;
+			height: 50px; 
+		}
+
+		div.container-btn button{
+			width: 10px;
+			height: 7px;
+			border-radius: 50%;
+		}
+
+	</style>
+</head>
+<body>
+	<section id="navegador" >
+			<h2>blog | Ta na midia</h2>
+			<hr>
+		<div id="div">
+		<div class="div-1" style="background: blue;" >			
+			<div>
+				<img  class="img-principal"  src=".imagens/.lotes/Grupo de máscara 874.jpg" >
+				<div  class="div-interna" >
+					<h3 >Atos Capital é patrocinadora do SAP Partner Sales Meeting 2021</h3>
+					<p class="paragrafo-principal">O maior evento do Ecossistema SAP Business One do Brasil, desembarca em São Paulo emnovo formato, atendendo as todas as regras de saúde estipuladas pelo Ministério da Saúde e em modelo híbrido (presencial e Online), proporcionando o que há de mais inovador, lúdico e tecnológico aps parceiros SAP Business One Brasil.</p>					
+				</div>
+				<button class="btn-principal"><a style="text-decoration: none; padding: 4px;" href="#"> ler materia completa</a></button>
+			</div>
+			<div style="background: white; margin: 0px; padding: 0px;">
+			
+				<img  class="img-secundaria-carrossel"style="" src=".imagens/.lotes/Grupo de máscara 875.jpg">
+			
+				<h5 style="text-align:left;padding-bottom: 8px;padding-top: 8px; font-size: 12px;">Granado Pharmácias Adota Suíte B1 Capital</h5>
+			
+				<p style="font-size: 14px; text-align: justify; line-height: 12px; ">		Com uma história de mais de 150 anos de
+					mercado, a Granado Pharmácias, uma das
+					principais empresas de Cosméticos do Brasil,
+					com indústria, mais de 80 lojas em todo...</p>
+
+				<button  class="btn-secundaria"><a href="#">Matéria completa</a></button>
+			</div>
+			<div style="background: white; margin: 0px; padding: 0px;">
+				<img class="img-secundaria-carrossel" src=".imagens/.lotes/Grupo de máscara 876.jpg">
+
+				<h5 >BBlend Inova na Gestão com Suíte B1Cards</h5>
+
+				<p class="paragrafo-secundario">A BBlend, uma empresa Ambev/Whirlpool,
+					fornecedora das máquinas e bebidas pré
+					prontas, vem expandindo solidamente suas
+					operações no Brasil ampliando suas vendas
+					tanto no e-commerce quanto com suas...
+				</p>
+
+				<button  class="btn-secundaria"><a href="#">Matéria completa</a></button>
+		</div>
+		</div>	
+		<div class="div-2" style="background: red;" >		
+			<div>
+				<img  class="img-principal"  src=".imagens/.lotes/Grupo de máscara 874.jpg" >
+				<div class="div-interna" >
+					<h3 >Atos Capital é patrocinadora do SAP Partner Sales Meeting 2021</h3>
+					<p class="paragrafo-principal">O maior evento do Ecossistema SAP Business One do Brasil, desembarca em São Paulo emnovo formato, atendendo as todas as regras de saúde estipuladas pelo Ministério da Saúde e em modelo híbrido (presencial e Online), proporcionando o que há de mais inovador, lúdico e tecnológico aps parceiros SAP Business One Brasil.
+					</p>					
+				</div>
+				<button class="btn-principal"><a style="text-decoration: none; padding: 4px;" href="#"> ler materia completa</a></button>
+			</div>
+			
+			<div style="background: white; margin: 0px; padding: 0px;">
+			
+				<img  class="img-secundaria-carrossel"style="" src=".imagens/.lotes/Grupo de máscara 875.jpg">
+			
+				<h5 >Granado Pharmácias Adota Suíte B1 Capital</h5>
+			
+				<p style="font-size: 14px; text-align: justify; line-height: 12px; ">		Com uma história de mais de 150 anos de
+					mercado, a Granado Pharmácias, uma das
+					principais empresas de Cosméticos do Brasil,
+					com indústria, mais de 80 lojas em todo...
+				</p>
+
+				<button  class="btn-secundaria"><a  href="#">Matéria completa</a></button>
+			</div>
+			<div style="background: white; margin: 0px; padding: 0px;">
+				<img class="img-secundaria-carrossel" src=".imagens/.lotes/Grupo de máscara 876.jpg">
+
+				<h5 >BBlend Inova na Gestão com Suíte B1Cards</h5>
+
+				<p class="paragrafo-secundario">A BBlend, uma empresa Ambev/Whirlpool,
+					fornecedora das máquinas e bebidas pré
+					prontas, vem expandindo solidamente suas
+					operações no Brasil ampliando suas vendas
+					tanto no e-commerce quanto com suas...
+				</p>
+
+				<button  class="btn-secundaria"><a href="#">Matéria completa</a></button>
+			</div>
+		</div>
+		<div class="div-3" style="background: green;" >		
+			<div>
+				<img  class="img-principal"  src=".imagens/.lotes/Grupo de máscara 874.jpg" >
+				<div class="div-interna" >
+					<h3 >Atos Capital é patrocinadora do SAP Partner Sales Meeting 2021</h3>
+					<p class="paragrafo-principal">O maior evento do Ecossistema SAP Business One do Brasil, desembarca em São Paulo emnovo formato, atendendo as todas as regras de saúde estipuladas pelo Ministério da Saúde e em modelo híbrido (presencial e Online), proporcionando o que há de mais inovador, lúdico e tecnológico aps parceiros SAP Business One Brasil.</p>					
+				</div>
+				<button class="btn-principal"><a style="text-decoration: none; padding: 4px;" href="#"> ler materia completa</a></button>
+			</div>
+			
+			<div style="background: white; margin: 0px; padding: 0px;">
+			
+				<img  class="img-secundaria-carrossel"style="" src=".imagens/.lotes/Grupo de máscara 875.jpg">
+			
+				<h5 >Granado Pharmácias Adota Suíte B1 Capital</h5>
+			
+				<p style="font-size: 14px; text-align: justify; line-height: 12px; ">		Com uma história de mais de 150 anos de
+					mercado, a Granado Pharmácias, uma das
+					principais empresas de Cosméticos do Brasil,
+					com indústria, mais de 80 lojas em todo...
+				</p>
+
+				<button  class="btn-secundaria"><a  href="#">Matéria completa</a></button>
+			</div>
+			<div style="background: white; margin: 0px; padding: 0px;">
+				<img class="img-secundaria-carrossel" src=".imagens/.lotes/Grupo de máscara 876.jpg">
+
+				<h5 >BBlend Inova na Gestão com Suíte B1Cards</h5>
+
+				<p class="paragrafo-secundario">A BBlend, uma empresa Ambev/Whirlpool,
+					fornecedora das máquinas e bebidas pré
+					prontas, vem expandindo solidamente suas
+					operações no Brasil ampliando suas vendas
+					tanto no e-commerce quanto com suas...
+				</p>
+
+				<button  class="btn-secundaria"><a href="#">Matéria completa</a></button>
+			</div>
+		</div>
+		</div>
+		<div class="container-btn" >
+		<button id="direita"></button> <button id="centro"></button> <button id="esquerda"></button>
+		</div>
+	</section>
+
+	<script type="text/javascript">
+	const clickD = document.getElementById('direita');
+		const clickE = document.getElementById('esquerda');
+			const clickC = document.getElementById('centro');
+
+
+		clickD.addEventListener('click', Direita);
+		clickE.addEventListener('click', Esquerda);
+		clickC.addEventListener('click', Centro);
+
+		function Direita(){
+			const ativ = document.getElementById('navegador');
+			if(ativ.className == 'activeE'){
+			ativ.classList.remove('activeE');	
+			ativ.classList.add('activeD');
+		}else{
+			ativ.classList.add('activeD');
+		}
+			
+
+		}
+
+		function Esquerda(){
+			const ativ = document.getElementById('navegador');
+			if (ativ.className == 'activeD') {
+				ativ.classList.remove('activeD')
+				ativ.classList.add('activeE')
+			}else{
+			ativ.classList.add('activeE');
+		}
+		}
+
+		function Centro(){
+			const ativ = document.getElementById('navegador');
+			if(ativ.className == ''){
+				ativ.classList.add('centro');
+			}else if(ativ.className == 'activeE'){
+				ativ.classList.add('centro');
+			}else if(ativ.className == 'activeD'){
+				ativ.classList.add('centro');
+			}
+		}
+
+	</script>
+</body>
+</html>

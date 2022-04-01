@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>testes nav-bar</title>
+	<style type="text/css">
+		body{
+			margin: 0px;
+			padding: 2px;
+		}
+		.header{
+			background-color: #808080;
+		}
+		ul{
+			flex;
+			list-style: none;
+		}
+		li{
+			padding-right:10px;
+		}
+
+		a{
+			text-decoration: none;
+			color:yellowss;
+		}
+
+		#btn-menu{
+			display: none;
+			float: right;
+		}
+
+		@media( max-width: 600px){
+		#btn-menu{
+			display: block;
+			position: absolute;
+			top: 5px;
+			right: 2px;
+			gap: 300px;
+
+		}
+		#Menu{
+			z-index: 1000;
+			visibility: hidden;
+			overflow-y: auto;
+			transition: 2s;
+			height: 0px;
+			gap: 50px;
+		}
+
+		#navegador.active #Menu{			
+			visibility: visible;
+			display: block;
+			height: calc(100vh - 70px);
+		}
+		#modif{
+			width: 20px;
+			display: block;
+			border-bottom: 2px solid;
+			margin: 2px;
+		}
+
+		#modif::after,#modif::before{
+			width: 20px;
+			content:'';
+			display: block;
+			border-bottom: 2px solid;
+			margin-bottom: 2px;
+
+		}
+
+		}
+	</style>
+</head>
+<body>
+
+	<header class="header">
+		<a href="#">logo</a>
+	
+		<nav id="navegador">
+				<button id="btn-menu"><span id="modif"></span></button>
+			<ul id="Menu">
+				<li><a href="#">teste01</a></li>
+				<li><a href="#">teste02</a></li>
+				<li><a href="#">teste03</a></li>
+				<li><a href="#">teste04</a></li>
+				<li><a href="#">teste05</a></li>
+				<li><a href="#">teste06</a></li>
+				<li><a href="#">teste07</a></li>
+				<li><a href="#">teste08</a></li>
+				<li><a href="#">teste09</a></li>
+				<li><a href="#">teste00</a></li>
+				<li><a href="#">teste000</a></li>
+				<li><a href="#">teste0000</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<script type="text/javascript">
+		const btnMobile = document.getElementById('btn-menu');
+		function toggleMenu(){
+			const nav = document.getElementById('navegador');
+			nav.classList.toggle('active');
+		}
+
+
+		btnMobile.addEventListener('click', toggleMenu);
+	</script>
+</body>
+</html>

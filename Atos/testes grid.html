@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>testes</title>
+	<style type="text/css">
+		*{
+			margin: 0px;
+		}
+		h2{
+			background: blue;
+			text-align: center;
+		}
+		header{
+			margin: auto;
+			width:100%;
+			height: auto; 
+			max-width: 900px;
+			box-sizing: border-box;
+			background: red;
+		}
+		#container{
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr 1fr 1fr; 
+			grid-auto-rows: minmax(100px, auto);
+			grid-gap: 10px;
+
+		}
+		#container > div:nth-child( 6){
+			background: yellow;
+			grid-template-columns:10fr ;
+			right: 5px;
+		}
+
+		div{
+			border:1px solid;
+		}
+
+
+		#container2{
+			display: flex;
+			flex-wrap: wrap;
+			gap: 10px;
+			max-width: 600px;
+			height: auto;
+			margin: 0 auto;
+		}
+
+		#container2 > div{
+			flex: 1 1 100px;
+			max-width: 100px;
+			min-width: 50px;
+			}
+		#container2 > div:nth-child(6){
+			background: blue; 
+			margin-left: 13%;
+		}	
+		@media(max-width: 500px){
+			#container2 > div:nth-child(6){
+				display: block;
+			margin: 0px;			
+		}
+			#container2 > div:nth-child(9){
+			margin: 0px auto;			
+		}
+			#container2 > div{
+			flex: 1 1 100px;
+			max-width: 100px;
+			min-width: 50px;
+			flex-wrap: wrap;
+		}
+	}
+
+
+	</style>
+</head>
+<body>
+	<header>
+		<h2>testes de grid</h2>
+		<div id="container">
+		<div><h1>teste01</h1></div>
+		<div><h1>teste02</h1></div>
+		<div><h1>teste03</h1></div>
+		<div><h1>teste04</h1></div>
+		<div><h1>teste05</h1></div>
+		<div><h1>teste06</h1></div>
+		<div><h1>teste07</h1></div>
+		</div>
+		<h2>flex box</h2>
+		<section>
+		<div id="container2">
+		<div><h1>teste01</h1></div>
+		<div><h1>teste02</h1></div>
+		<div><h1>teste03</h1></div>
+		<div><h1>teste04</h1></div>
+		<div><h1>teste05</h1></div>
+		<div><h1>teste06</h1></div>
+		<div><h1>teste07</h1></div>
+		<div><h1>teste08</h1></div>
+		<div><h1>teste09</h1></div>
+		</div>
+		</section>
+	</header>
+</body>
+</html>
