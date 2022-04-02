@@ -1,0 +1,282 @@
+*{
+			margin: 0px;
+			padding: 0px;
+		}
+		section#navegador{
+			position: relative;
+			width: 100%;
+			box-sizing: border-box;
+			max-width: 1000px;
+			min-width: auto;
+			max-height: 800px;
+			min-height: 200px;
+			margin: auto;
+		}
+		h2{
+			text-align: center;
+		}
+		hr{
+			width: 250px;
+			margin: auto;
+			border: 1px solid red;
+		}
+		
+		div#div{
+			display: flex;
+			position: relative;
+			top: 10%;
+			margin: auto;
+			width: 100%;
+			max-width: 1000px;
+			height: 500px;
+			overflow-x: auto;
+			gap: 11%;		
+		}
+
+		div#div::-webkit-scrollbar{
+			width: 0px;
+		}
+
+		#div > div{
+			display: grid;	
+			position: relative;
+			margin: auto;
+			min-width: 100%;
+			height: 98%;
+			background: white;
+			border-radius: 15px;
+			grid-template-columns: 60% 25%;
+			grid-template-rows: 1fr 1fr;
+			transition: 2s;
+		}
+
+		div{
+			justify-content: center;	
+			width: 100%;
+			min-height: 100px;
+			margin: auto;
+			padding: 2px;
+			align-items: center;
+			text-align: center;
+			column-gap: 10px;
+			
+		}
+
+		.div-1{
+			z-index: 2;
+		}
+
+		/*testes com animações*/
+		/*************Condições do activeD******************/
+		section.activeD #direita{
+				background: yellow;
+		}
+		section.activeD .div-1{		
+
+			animation-name: testeA;
+			animation-duration: 0.25s;
+			animation-timing-function: ease;
+			animation-fill-mode: forwards;		
+			z-index: 1;
+		}
+
+		section.activeD .div-2{		
+			animation-name: ExcecaoCentro;
+			animation-duration: 2s;
+			animation-timing-function: ease;
+			animation-fill-mode: forwards;		
+
+		}
+
+		section.activeD .div-3{		
+
+			animation-name:ExcecaoCentro;
+			animation-duration:2s;
+			animation-timing-function: ease;
+			animation-fill-mode: forwards;
+			z-index: 1;			
+		}
+
+		/***************************************************/	
+		/*************Condições do activeE******************/
+		section.activeE #esquerda{
+				background: yellow;
+		}
+
+		section.activeE .div-3{		
+			animation-name: testeB;
+			animation-duration: 0.7s; 
+			animation-timing-function: ease;
+			animation-fill-mode: forwards;
+			z-index: 1;
+		}
+
+		section.activeE .div-2{		
+			animation-name: ExcecaoCentro;
+			animation-duration: 2s; 
+			animation-timing-function: ease;
+			animation-fill-mode: forwards;
+		}
+
+		section.activeE .div-1{		
+			animation-name: ExcecaoCentro;
+			animation-duration: 2s; 
+			animation-timing-function: ease;
+			z-index: 1;
+			animation-fill-mode: forwards;
+		}
+
+		/***************************************************/	
+		/*************Condições do Centro******************/	
+		section.activeE.centroE #direita{background: white;	}
+		section.activeD.centroD #direita{background: white;	}
+
+		section.activeE.centroE #centro{background: yellow;	}
+		section.activeD.centroD #centro{background: yellow;	}
+
+		section.activeE.centroE #esquerda{background: white;}
+		section.activeD.centroD #esquerda{background: white;}
+
+		section.activeE.centroE .div-2{
+			animation-name: testeC;
+			animation-timing-function: ease;
+			animation-fill-mode: forwards;
+			animation-duration: 0.7s;
+			z-index: 1;
+			
+		}
+		section.activeE.centroE .div-3{
+			animation-name: testeC;
+			animation-timing-function: ease;
+			animation-fill-mode: forwards;
+			animation-duration: 0.7s;
+			z-index: 1;
+
+		}
+
+
+
+		section.activeD.centroD .div-2{
+			animation-name: testeD;
+			animation-direction: reverse;
+			animation-timing-function: ease;
+			animation-fill-mode: forwards;
+			animation-duration: 0.7s;
+			z-index: 1;
+		}
+
+		section.activeD.centroD .div-1{
+			animation-name: testeD;
+			animation-direction: reverse;
+			animation-timing-function: ease;
+			animation-fill-mode: forwards;
+			animation-duration: 0.7s;
+			z-index: 1;
+
+		}
+		/***************************************************/	
+
+		@keyframes testeA{
+			0%{transform: translateX(0%);}
+			100%{transform: translateX(111%);}
+		}
+
+		@keyframes testeB{
+			0%{transform: translateX(0%);}
+			100%{transform: translateX(-111%);}
+		}
+		@keyframes ExcecaoCentro{
+			0%{transform: translateX(0%);
+				opacity: 0.4;}
+
+				50%{transform: translateX(0%);opacity: 0.2}
+				
+				100%{transform: translateX(0%);opacity: 0.2;}		
+			}
+
+			@keyframes testeC{
+				0%{transform: translateX(-111%);}
+				50%{transform: translateX(-60%);}			
+				100%{transform: translateX(0%);}
+			}
+			@keyframes testeD{
+				0%{transform: translateX(0px);}
+				50%{transform: translateX(60%);}		
+				100%{transform: translateX(111%);}
+			}
+
+
+			div.div-1 > div:nth-child(1),div.div-2 > div:nth-child(1),div.div-3 > div:nth-child(1) {
+				position: relative;
+				display: inline-block;
+				grid-row: span 2; 
+				height: 100%;
+				width: 100%;	
+				border-radius: 15px;
+			}
+
+			div.div-1 > div:nth-child(n + 2),div.div-2 > div:nth-child(n + 2),div.div-3 > div:nth-child(n + 2){
+				position: relative;
+				display: inline-block;
+				min-height: 95%;
+				min-width: 100%;
+				border-radius: 10px;
+			}
+			/*---------------------------------*/
+			.btn-principal{
+				border:none;height: 20px;font-size: 10px;position:absolute;left: 75% ; top: 90%;color: white; background: rgb(128,128,128);border-radius: 5px;
+				z-index: 1;
+			}
+
+			.btn-secundaria{
+				position:relative;top:50%; left:35%;heigth:10px;background: red;
+			}
+
+			.btn-secundaria > a{
+				text-decoration:none;color:white;font-size:8px;padding: 0px;
+			}
+
+			.btn-principal:hover,.btn-secundaria:hover{
+				transform: scale(1.2);
+			}
+
+			.img-principal{
+				width: 100%; height:100%;  border-radius:10px;
+			}
+
+			.img-secundaria-carrossel{
+				width: 100%; height:100%; border-radius: 2px;
+			}
+			h3{
+				color: white; max-width: 270px; min-width:200px;text-align: left;padding-left: 12px;
+			}
+			h5{
+				text-align:left;padding-bottom: 8px;padding-top: 8px; font-size: 12px;
+			}
+
+			.paragrafo-principal{
+				color: white;text-align: justify;font-size: 100%;padding-left: 12px;padding-top: 8px;padding-right: 10px;	
+			}
+
+			.paragrafo-secundario{
+				font-size: 14px; text-align: justify; line-height: 12px;
+			}
+
+			.div-interna{
+				width:95%;position: absolute;top: 60%; z-index: 1; ;text-align: left;
+			}
+			
+			div.container-btn{
+				background: red; align-content: center; margin: auto;align-items: center;
+				height: 50px; 
+			}
+
+			div.container-btn button{
+				width: 20px;
+				height: 20px;
+				border-radius: 50%;
+			}
+			#direita,#centro,#esquerda{
+				border:none;
+			}
+
