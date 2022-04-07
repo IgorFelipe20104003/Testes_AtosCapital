@@ -1,0 +1,73 @@
+/*====================sessao - 1 A Atos Capital=====================*/
+		.sessao-01{
+			position: relative;
+			margin: auto;
+			width: 100%;
+			max-width: 1920px;
+			min-width: 320px;
+			background: url("../.imagens/Lotes/Grupo de máscara 881.jpg");
+			background-size: 100%;
+			min-height: 454px;
+			max-height: auto;
+		}
+/*===============definindo o tamanho do div que contem as informações==*/		
+		#container-sessao{
+			width: 95%;
+			max-width: 1920px;
+			min-width: 320px;
+			height: min-content;
+
+
+		}
+/*======Definindo propriedades e alinhando itens a esquerda do view port========*/
+
+		#container-sessao #h2-sessao-01{
+			padding-top: 25px;
+			margin-top: 0px;
+			margin-bottom: 0px;
+			font-size: 50pt; /* verificar com o professor essa questão dos pontos*/
+			text-align: right;
+		}
+		#container-sessao #hr-right{
+			position: relative;
+			margin-top: 2px;
+			margin-right: 1px;
+			border-color:red;
+			width: 460px;
+			background-color: red;
+			float: right;
+		}
+
+		.paragrafo-sessao-01{
+			margin-top: 30px; 
+			padding-bottom: 25px;
+			text-align: right;
+			font-size: 20pt;
+			margin-left: 15%;
+			padding-right: 0px;
+			margin-bottom: 0px;
+		}
+/*=========================fim da sessao-1*======================================*/
+/*==========================sessao - 2 A Atos Capital============================*/		
+		.sessao-02{
+			position: relative;
+			margin: auto;
+			width: 100%;
+			max-width: 1920px;
+			min-width: 320px;
+			max-height: 760px;
+	}
+	   #container-img #img-sessao-02{
+	   	display: flex;
+	   	width: 100%;
+	   	max-height: 730px ;
+	   }
+
+  #container-img #hr-img-sessao-02{
+	   	margin: 0px;
+	    height: 30px;
+	    min-height: 15px;
+	   	background-color: red;
+	   	border: none;
+	   }
+/*======================fim da section - 2=========================================*/

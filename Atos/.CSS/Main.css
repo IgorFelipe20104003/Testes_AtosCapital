@@ -1,0 +1,149 @@
+/*==========================Iniciando div pincipal=========================*/
+		/*pre definições da MAIN*/
+		.sessão-principal{
+			width: 100%;
+			max-width: 1920px;
+			min-width: 320px;
+			max-height: 812px;/*quando for alterar no media query colocar max-height:auto para adaptar a quebra de view port*/
+			margin: auto;
+			position: relative;
+			background: url("../.imagens/Lotes/Grupo de máscara 878.jpg");
+		}
+		.principal{
+			max-height: auto;
+		}
+
+
+		#h2-center{
+		text-align: center;
+		font-size: 50pt;
+		}
+
+		#hr-principal{
+			align-items: center;
+			margin:auto;
+			max-width: 500px;
+			margin-top: 2px;
+			border-color:red;
+			background-color: red;
+		}
+	   
+		.div-principal{
+			display: flex;
+			position: relative;
+			margin: auto;
+			margin-top: 50px;
+			padding-top: 30px;
+			padding-bottom: 70px;
+			width: 100%;
+			max-width: 1450px;
+			min-height: 812px;
+			justify-content: center;
+			align-items: center;
+			min-height: auto;
+			gap: 19px;
+			flex-wrap: wrap;
+			border:1px solid black;
+		}
+		.img-div-interna{
+			width: 100%;
+			height: 70%;
+		}
+		.btn-ver-mais{
+			position: relative;
+			margin: auto;
+			left: 40%;
+			background-color: red;
+			font-size: 8pt;
+			color: white;
+			border-radius: 4px;
+			width: 78px;
+			height: 26px;
+			border:none;
+		}
+
+		.div-interna{
+			flex: 265px;
+			max-width: 265px;
+			height: 239px;
+			max-height: 239px;
+			background: white;
+			box-shadow: 8px 9px 24px -12px black;
+			transition: 0.1s;
+			padding-bottom: 30px;
+						
+		}
+
+		.div-interna:hover{
+			border-radius: 20%;
+			border:1px solid red;
+			background: black;
+			gap:10px; 
+		}
+		/*=============escondendo textos dos balões====================================*/
+		#texto-1, #texto-2, #texto-3, #texto-4, #texto-5, #texto-6, #texto-7, #texto-8{
+			display: none;
+		}
+
+		/*==========================================================ativando balões=================================================================*/
+		.div-interna.ativado #texto-1{display:block;width: 265px; height: max-content; animation-name: teste-balao-at; animation-duration: 0.5s;
+  		  animation-fill-mode: forwards; margin-top: -1px; color: #ebcf82; text-align: center; background-color: #ff1100; border-radius: 0% 0% 5% 5%;
+		  z-index: 3;
+		}
+		.div-interna.ativado #texto-2{display:block;width: 265px; height: max-content; animation-name: teste-balao-at; animation-duration: 0.5s;
+  		  animation-fill-mode: forwards; margin-top: -1px; color: #ebcf82; text-align: center; background-color: #ff1100; border-radius: 0% 0% 5% 5%;
+		  z-index: 3;
+		}
+		.div-interna.ativado #texto-3{display:block;width: 265px; height: max-content; animation-name: teste-balao-at; animation-duration: 0.5s;
+  		  animation-fill-mode: forwards; margin-top: -1px; color: #ebcf82; text-align: center; background-color: #ff1100; border-radius: 0% 0% 5% 5%;
+		  z-index: 3;
+		}
+		.div-interna.ativado #texto-4{display:block;width: 265px; height: max-content; animation-name: teste-balao-at; animation-duration: 0.5s;
+  		  animation-fill-mode: forwards; margin-top: -1px; color: #ebcf82; text-align: center; background-color: #ff1100; border-radius: 0% 0% 5% 5%;
+		  z-index: 3;
+		}
+		.div-interna.ativado #texto-5{display:block;width: 265px; height: max-content; animation-name: teste-balao-at; animation-duration: 0.5s;
+  		  animation-fill-mode: forwards; margin-top: -1px; color: #ebcf82; text-align: center; background-color: #ff1100; border-radius: 0% 0% 5% 5%;
+		  z-index: 3;
+		}
+		.div-interna.ativado #texto-6{display:block;width: 265px; height: max-content; animation-name: teste-balao-at; animation-duration: 0.5s;
+  		  animation-fill-mode: forwards; margin-top: -1px; color: #ebcf82; text-align: center; background-color: #ff1100; border-radius: 0% 0% 5% 5%;
+		  z-index: 3;
+		}
+		.div-interna.ativado #texto-7{display:block;width: 265px; height: max-content; animation-name: teste-balao-at; animation-duration: 0.5s;
+  		  animation-fill-mode: forwards; margin-top: -1px; color: #ebcf82; text-align: center; background-color: #ff1100; border-radius: 0% 0% 5% 5%;
+		  z-index: 3;
+		}
+		.div-interna.ativado #texto-8{display:block;width: 265px; height: max-content; animation-name: teste-balao-at; animation-duration: 0.5s;
+  		  animation-fill-mode: forwards; margin-top: -1px; color: #ebcf82; text-align: center; background-color: #ff1100; border-radius: 0% 0% 5% 5%;
+		  z-index: 3;
+		}
+
+		/*=================================================================desativando baloes======================================================*/
+
+
+		.div-interna.desativado #texto-1{ display: block; width: 265px; height: max-content; animation-name: teste-balao-dt;
+		  animation-duration: 0.5s; animation-fill-mode: forwards; margin-top: -1px; color: #ebcf82; text-align: center; background-color: #ff1100;
+		}
+		.div-interna.desativado #texto-2{ display: block; width: 265px; height: max-content; animation-name: teste-balao-dt;
+		  animation-duration: 0.5s; animation-fill-mode: forwards; margin-top: -1px; color: #ebcf82; text-align: center; background-color: #ff1100;
+		}
+		.div-interna.desativado #texto-3{ display: block; width: 265px; height: max-content; animation-name: teste-balao-dt;
+		  animation-duration: 0.5s; animation-fill-mode: forwards; margin-top: -1px; color: #ebcf82; text-align: center; background-color: #ff1100;
+		}	
+		.div-interna.desativado #texto-4{ display: block; width: 265px; height: max-content; animation-name: teste-balao-dt;
+		  animation-duration:0.5s; animation-fill-mode: forwards; margin-top: -1px; color: #ebcf82; text-align: center; background-color: #ff1100;
+		}	
+		.div-interna.desativado #texto-5{ display: block; width: 265px; height: max-content; animation-name: teste-balao-dt;
+		  animation-duration: 0.5s; animation-fill-mode: forwards; margin-top: -1px; color: #ebcf82; text-align: center; background-color: #ff1100;
+		}	
+		.div-interna.desativado #texto-6{ display: block; width: 265px; height: max-content; animation-name: teste-balao-dt;
+		  animation-duration: 0.5s; animation-fill-mode: forwards; margin-top: -1px; color: #ebcf82; text-align: center; background-color: #ff1100;
+		}	
+		.div-interna.desativado #texto-7{ display: block; width: 265px; height: max-content; animation-name: teste-balao-dt;
+		  animation-duration: 0.5s; animation-fill-mode: forwards; margin-top: -1px; color: #ebcf82; text-align: center; background-color: #ff1100;
+		}
+		.div-interna.desativado #texto-8{ display: block; width: 265px; height: max-content; animation-name: teste-balao-dt;
+		  animation-duration: 0.5s; animation-fill-mode: forwards; margin-top: -1px; color: #ebcf82; text-align: center; background-color: #ff1100;
+		}		
+		/*===========================================================================================================================================*/

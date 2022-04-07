@@ -1,0 +1,194 @@
+	/*CSS falta arrumar*/
+	 @media (max-width: 1800px){
+	 	.barra-rolagem-fixa{
+	 		height: 140px;
+	 		align-items: center;
+	 		justify-content: right;
+	 	}
+		.barra-rolagem-fixa #img-01-rolagem-fixa{
+			min-width: 16%;
+		}
+
+		.barra-rolagem-fixa #img-02-rolagem-fixa{
+			min-width: 16%;
+		}
+
+		.barra-rolagem-fixa #img-03-rolagem-fixa{
+		min-width: 16%;
+		
+		}
+
+		.bandeiras#bandeira-03{
+			padding-right: 0px;
+		}
+
+
+	 	.contato-inicio ul{
+	 		margin: auto;
+	 	}
+
+	 	div.texto{
+			width: 70%;
+			max-height: 30px;
+			position: absolute;
+			top: 50%;
+			margin-left: 20%;	
+			color: white;
+		}
+
+		div.texto p#p-header{
+			margin-top:0px; 
+			margin-bottom: 0px;
+			font-size:17pt;
+		}
+
+
+
+	 	/*============================================== feito falta comentar*/
+
+	 	#btn-lista{
+	 		top: 25px;
+	 		position: relative;
+	 		display: block;
+	 		width: 35px;
+	 		height: 35px;
+	 		background: black;
+	 		border:1px solid white;
+	 		border-radius: 2px;
+	 	}
+	 	#burger{
+	 		display: block;
+	 		width: 30px;
+	 		height: 0.5px;
+	 		background: white;
+	 		top: 1px;
+	 		position: relative;
+	 		top: 0px;
+	 		border-top: 1px solid white ;
+	 		margin: auto;
+	 		margin-top: 3px;
+	 		margin-bottom: 2px;
+	 		transition: 0.5s;
+	 	}
+	 		#burger::before{
+	 		content: '';
+	 		position: relative;
+	 		bottom: 12px;
+	 		background: white;
+	 		margin: auto;
+	 		display: block;
+	 		width: 28px;
+	 		height: 1px;
+	 		background: white;
+	 		border:1px solid white;
+	 		transition: 0.5s;
+	 		}
+
+	 		#burger::after{
+	 		content: '';
+	 		position: relative;
+	 		top: 4px;
+	 		background: white;
+	 		margin: auto;
+	 		display: block;
+	 		width: 28px;	 		
+	 		background: white;
+	 		border:1px solid white;
+	 		transition: 0.5s;
+	 		}
+
+	 		#navegador {	
+	 		left: 0px;
+	 		position: absolute;
+	 		}
+
+	 		#navegador ul#menu{
+	 		position: absolute;
+			display: block;
+			margin: auto;
+			margin-top: 28px;
+			padding-left: 50vw;
+			padding-bottom: 10px;
+			background: black;
+			overflow-y: auto;
+			z-index: 1;
+			visibility: hidden;
+			height: 0px;
+			width: 0px;
+			transition: 2s; 
+			 }
+
+			#navegador.active #menu{
+			 	visibility: visible;
+			 	width: 100vw;
+			 	height:100vh;
+			 	text-align: center;
+			 }
+
+			 #navegador.active #burger::before{
+			 background: red;
+			 border-top:red;
+			 position: absolute;
+			 transform: rotate(135deg);
+			 top: 11px;
+			 		 }
+
+			#navegador.active #burger::after{
+				background: red;
+				border-top:red;
+				position: absolute;
+			 	transform: rotate(-135deg);
+			 	bottom: 6px;
+			 }
+			 #navegador.active #burger{
+				border-color:black;
+				background: black;
+			 	
+			 }
+
+
+	 		.lista-rolagem-fixa{
+	 		display: block;
+			border:1px solid red;
+			align-items: center;
+			justify-content: space-between;
+			text-align: center;
+
+		}
+
+		 .lista-rolagem-fixa:hover, .links:hover{
+			color: red;
+			background:black;
+		}
+
+		.lista-rolagem-fixa#list-rolagem-fixa-01{
+		width: 200px;
+		padding-left: 0px;
+
+		}
+		.lista-rolagem-fixa#list-rolagem-fixa-02{
+		width: 200px;
+		padding-left: 0px;
+		}
+		.lista-rolagem-fixa#list-rolagem-fixa-03{
+		width: 200px;
+		padding-left: 0px;
+
+		}	
+		.lista-rolagem-fixa#list-rolagem-fixa-04{
+		width: 200px;
+		padding-left: 0px;
+		}
+		.lista-rolagem-fixa#list-rolagem-fixa-05{
+		width: 200px;
+		padding-left: 0px;
+
+		}
+		.lista-rolagem-fixa#list-rolagem-fixa-06{
+		width: 217px;
+		padding-right: 0px;
+		padding-left: 0px;
+		}	
+
+	 }
+

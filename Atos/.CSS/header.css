@@ -1,0 +1,207 @@
+/*css header*/
+		/* configuração geral do cabeçalho*/
+		header.container-Cabecalho{
+			background: #5e5e5e;
+			width: 100%;
+			max-width: 1920px;
+			min-width: 320px;
+			height: 996px;
+			margin: auto;			
+		}
+
+		/*==============estilo gerais das lista============*/
+		.contato-inicio{
+			background: #5e5e5e;
+			position: relative;
+			height: 25px;
+			max-width: 1920px;
+			min-width: 320px;
+			justify-content: space-between;
+		}
+		.contato-inicio ul{
+			position: relative;
+			list-style: none;
+			color: white;
+			margin-right:338px;
+			text-align: right;
+			height: 25px;
+			font-size: 10pt;
+		}
+		.contato-inicio ul li{
+			display: inline-flex;
+			padding-left: 18px;
+			margin: 0px;
+			height: 25px;
+			align-items: center;
+		}
+		label #tel-1, label #tel-2{
+			height: 25px;	
+			padding-right: 2px	
+		}
+		/*==============estilo individuais das lista============*/
+		li#mail-01{
+			width:175px; 
+			height: 25px;
+		}
+		li#tel-01{
+			width:180px;	
+			height: 25px;	
+		}
+		#mail-01:hover{
+			 background: rgba(105,89,205,0.4);
+			 height: 25px;	
+		}
+
+		#tel-01:hover {
+			 background: rgba(105,89,205,0.4);
+			 height: 25px;
+		}
+
+		/*=============label de lista adicionando simbolo telefone===========*/
+		#tel-1::before, #tel-2::before {
+			content:'✆' 
+
+		}
+
+		/*=========================Fim estilos listas hader=================================*/
+		/*=========================barra de rolagem fixa=====================================*/
+
+		.barra-rolagem-fixa{
+			position: fixed;
+			display: inline-flex;
+			box-sizing: border-box;
+			background: black;
+			width: 100%;
+			max-width: 1920px;
+			min-width: 320px;
+			height: 71px;
+			align-items: center;
+			align-self: center;
+			z-index: 2;
+		}
+
+		/*=============estilos das imagens da barra de rlagem fixa======================*/
+		.barra-rolagem-fixa #img-01-rolagem-fixa{
+			width: 174px;
+			height:37px;
+			padding-top:14px; 
+			padding-bottom: 14px;
+			padding-left: 345px; 
+		}
+
+		.barra-rolagem-fixa #img-02-rolagem-fixa{
+			width: 53px;
+			height: 37px;
+			padding-left: 24px; 
+			padding-bottom: 14px;
+			padding-top:14px;
+		}
+
+		.barra-rolagem-fixa #img-03-rolagem-fixa{
+			width: 154px;
+			height: 37px;
+			padding-left:23px;
+			padding-top:14px;
+			padding-bottom: 14px;			
+		}
+
+		/*lista da barra de rolagem fixa*/
+
+		#navegador{
+			position: relative;
+			text-align: center;
+			text-transform: uppercase;
+			margin-left: 0px;
+		}
+		#navegador ul#menu{
+			display: inline-flex;
+			margin: 0px;
+			padding-top: 14px;
+			padding-bottom: 14px;
+			align-items: center;
+			text-align: center;
+			 }
+
+		.lista-rolagem-fixa{
+			display: inline;
+			position: relative;
+			align-items: center;
+			padding-right: 17px;
+
+		}
+		.lista-rolagem-fixa#list-rolagem-fixa-01{
+		 padding-left: 187px;	
+		 width: 126px;
+		}
+		.lista-rolagem-fixa#list-rolagem-fixa-02{
+		width: 98px;
+		}
+		.lista-rolagem-fixa#list-rolagem-fixa-03{
+		width: 107px;
+		}	
+		.lista-rolagem-fixa#list-rolagem-fixa-04{
+		width: 86px;
+	
+		}
+		.lista-rolagem-fixa#list-rolagem-fixa-05{
+		width: 50px;
+	
+		}
+		.lista-rolagem-fixa#list-rolagem-fixa-06{
+		width: 88px;
+	
+		padding-right: 109px;	
+
+		}		
+		.lista-rolagem-fixa .links{
+			position: relative;
+			text-decoration: none;
+			color:white;
+		}
+		/*==============espaçamentos das bandeiras======*/
+
+		.bandeiras{
+			padding-right: 1px
+		}
+		.bandeiras#bandeira-03{
+			padding-right: 78px;
+		}
+
+		/*=========fim de espaçamento das bandeiras======*/
+		/*====imagem com texto para finalizar o header===*/
+
+		div.imagem{
+			padding-top: 71px;
+			position: relative;
+			width: 100%;
+		}
+		#img_f1{
+			width: 100%;
+			height: 900px;
+		}
+		div.texto{
+			width: 70%;
+			max-height: 30px;
+			position: absolute;
+			top: 20%;
+			margin-left: 20%;	
+			color: white;
+		}
+		div.texto #p-header{
+			margin-top:0px; 
+			margin-bottom: 0px;
+			font-size: 50pt;
+		}
+
+		hr#sublilinha-p-header{
+			margin:auto;
+			background-color: white;
+			height: 1px;
+			border-color:white;
+			margin-top:0px; 
+		}
+		/*========== fim imagem com texto =========*/
+		/*botão para mobile ou quebra de view port a 1800px*/
+		#btn-lista{
+			display: none;
+		}
