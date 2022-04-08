@@ -4,7 +4,7 @@
 			background: #5e5e5e;
 			width: 100%;
 			max-width: 1920px;
-			min-width: 320px;
+			min-width: 280px;
 			height: 996px;
 			margin: auto;			
 		}
@@ -15,8 +15,9 @@
 			position: relative;
 			height: 25px;
 			max-width: 1920px;
-			min-width: 320px;
+			min-width: 280px;
 			justify-content: space-between;
+			z-index: 4;
 		}
 		.contato-inicio ul{
 			position: relative;
@@ -73,7 +74,7 @@
 			background: black;
 			width: 100%;
 			max-width: 1920px;
-			min-width: 320px;
+			min-width: 280px;
 			height: 71px;
 			align-items: center;
 			align-self: center;

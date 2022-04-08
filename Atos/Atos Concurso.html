@@ -18,6 +18,392 @@
 			padding: 0px;
 		}
 
+/*=====================configuração geral da div 3======================*/
+		.sessao-03{
+			background: rgb(220,220,220);
+			width: 100%;
+			max-width: 1920px;
+			min-width: 280px;
+			min-height: 1661px;
+			margin: auto;
+			position: relative;
+		}
+
+		.container-sessao-3{
+			position: relative;
+			width: 100%;
+			max-width: 1920px;
+			min-width: 280px;
+			min-height: 1661px;
+			margin: auto;
+			position: relative;
+		}
+
+		#h2-parceiros {
+			margin-top: 123px;
+    		text-align: center;
+   			font-size: 50pt;
+   		}
+   		#sublilinha-h2-parceiros{
+   			padding: 1px;
+			background: red; 
+   			max-width: 50%;
+   			min-width: 200px;
+   			align-items: center;
+   			justify-content: center;
+   			margin: auto;
+   		}
+/*==================================================estilos das setas=====================================================*/
+
+		.seta{
+			position: absolute;
+		}
+		#seta-direita{
+			top: 320px;
+			left: 8%;
+			transform: rotate(180deg);
+		}
+		#seta-direita:hover{
+			animation-name: seta_Direita;
+			animation-duration: 1s;
+			animation-iteration-count: infinite;
+			animation-direction: alternate;
+			animation-timing-function: ease-in;
+		}
+
+		#seta-esquerda{
+			top: 320px;
+			right: 5%;
+		}
+		#seta-esquerda:hover{
+			animation-name: seta_Esquerda;
+			animation-duration: 1s;
+			animation-iteration-count: infinite;
+			animation-direction: alternate;
+			animation-timing-function: ease-in
+		}
+		@keyframes seta_Direita{
+			0%{
+				transform: translateX(-4px) rotate(180deg) scale(1.2);
+			}
+
+			100%{
+				transform: translateX(-8px)rotate(180deg) scale(1.2);
+			}
+		}
+		@keyframes seta_Esquerda{
+			0%{
+				transform: translateX(4px) scale(1.2);
+			}
+
+			100%{
+				transform: translateX(8px) scale(1.2);
+			}
+		}
+/*===========================================================================================*/
+/*===================================estil e animação carrossel==============================*/		
+
+		#navegador-scroll{
+			position: relative;
+			display: flex;
+			margin: auto;
+			padding-bottom:135px;
+			padding-top: 150px;
+			max-width: 75%;
+			overflow-x: auto;
+			gap: 9%;
+			justify-content: center;
+			align-items: center;
+
+		}
+		#navegador-scroll::-webkit-scrollbar{
+			width: 0px;
+		}
+		.div-carrossel-1{
+			width: 100%;
+			max-width:523px;
+			height: 380px;  
+			min-height: auto;
+			position: relative;
+			display: inline-flex;
+			margin: auto;
+			min-width: 40%;
+			background: white;
+			border-radius: 15px;
+			flex-wrap: wrap;
+			grid-gap:0px;
+		/*	border:1px solid black; caso queira modificar usar para definir os parametros*/
+
+		}
+		.div-carrossel-1 .h2-carrossel{
+			position: relative;
+			height: 20%;
+			font-size: 20pt;/*ver se a media esta correta*/
+			border:1px solid;
+			padding: 0px;
+			padding-bottom: 2px;
+			padding-top: 10px;
+			text-align: left;
+			border:1px solid black;
+		}
+		#navegador-scroll .paragrafo-carrossel{
+			display: inline-flex;
+			justify-content: center;
+			margin: 0px;
+			text-align: center;
+			align-items: center;
+			margin: auto;
+			width: 50%;
+			align-items: center;
+			height: 50%;
+		}
+		.iframe-carrossel{		
+			position: relative;	
+			display: inline-block;
+			top: -8%;
+			left: -10px;
+			width: 100%;
+			max-width: 233px; 
+			min-width: auto;
+			height: 100%;
+			max-height: 191px;
+			min-width: auto;
+			min-height: 20%;
+			background: rgba(135,0,0,1);
+			border-radius: 15px;
+		}
+
+		#navegador-scroll.centro.activeE .div-carrossel-1{
+			animation-name : testeC1;
+			animation-duration: 1.5s;
+			animation-fill-mode: forwards;	
+			animation-timing-function: ease-out;			
+		}
+
+		#navegador-scroll.centro.activeD .div-carrossel-1{
+			animation-name : testeC2;
+			animation-duration: 1.5s;
+			animation-fill-mode: forwards;
+			animation-timing-function: ease-out;
+		}
+		#navegador-scroll.activeE  .div-carrossel-1{
+			animation-name: testeE;
+			animation-duration: 1.5s;
+			animation-fill-mode: forwards;
+			animation-timing-function: ease-out;
+			
+		}
+		#navegador-scroll.activeD  .div-carrossel-1{
+			animation-name: testeD;
+			animation-duration: 1.5s;	
+			animation-fill-mode: forwards;	
+			animation-timing-function: ease-out;
+		}
+
+		#apontador{
+			width: 8px;
+			height: 10px;
+			background: rgb(54,54,54);
+			margin: auto;
+			border-radius: 50%;		
+			transition:1.4s;
+		}
+		#apontador::before{
+			content: "";
+			position: absolute;
+			display: inline-flex;
+			width: 8px;
+			height: 10px;
+			background: rgb(128,128,128);
+			margin-left: -10px;
+			border-radius: 50%;
+
+			transition:1.4s;	
+		}
+
+		#apontador::after{
+			content: "";
+			display: inline-flex;
+			position: absolute;
+			width: 8px;
+			height: 10px;
+			margin-left: 10px;
+			background: rgb(128,128,128);
+			border-radius: 50%;
+			transition:1.4s;
+		}
+
+		#apontador.centro.activeD#apontador{ background: rgb(54,54,54);}
+		#apontador.centro.activeE#apontador{ background: rgb(54,54,54);}
+
+
+		#apontador.centro.activeD#apontador::before{background: rgb(128,128,128);}
+		#apontador.centro.activeE#apontador::after{background: rgb(128,128,128);}
+
+		#apontador.activeD#apontador::before{ background: rgba(54,54,54);}
+		#apontador.activeD#apontador{background:rgb(128,128,128);}
+
+		#apontador.activeE#apontador::after{ background: rgba(54,54,54);}
+		#apontador.activeE#apontador{background:rgb(128,128,128);}
+
+
+		@keyframes testeC1{
+			0%{
+				transform: translateX(245%);
+				opacity: 0.1;
+			}
+			80%{
+				opacity: 0.2;
+			}
+			100%{
+				transform: translateX(0px);
+				opacity: 1;
+			}
+		}
+		@keyframes testeC2{
+			0%{
+				transform: translateX(-245%);
+				opacity: 0.1;
+			}
+			80%{
+				opacity: 0.2;
+			}
+			100%{
+				transform: translateX(0px);
+				opacity: 1;
+			}
+		}
+		@keyframes testeE{
+
+			0%{
+				opacity: 0.1;
+			}
+			80%{
+				opacity: 0.2;
+			}
+			100%{
+				transform: translateX(-245%);
+				opacity: 1;
+
+			}
+		}
+		@keyframes testeD{
+			0%{
+				opacity: 0.1;
+			}
+
+			80%{
+				opacity: 0.2;
+			}
+			100%{
+				transform: translateX(245%);
+				opacity: 1;
+			}
+		}
+
+		.qt-direita{
+			position: absolute;
+			display: inline-flex;
+			top: 90%;
+			left: 90%;
+			width: 25px;
+			height: 25px;
+
+
+		}
+		.qt-esquerda{
+			position: absolute;
+			display: inline-flex;
+			padding-left: 25px;
+			height: 20px;
+			bottom: 35%;
+			width: 25px;
+			height: 25px;
+			align-items: right;
+
+		}		
+		.svg-carrossel{
+			position: relative;
+			top: 10%;
+			right: 110px;
+			height: 10px;
+			padding: 5px;
+
+		}
+
+/*lembrar de deixar isso tdo responsivo em*/
+/*=========================================*/
+	#parceiros-container{
+		position: relative;
+		display: inline-flex;
+		width: 65%;
+		margin:auto;
+		height: auto;
+		margin-top: 75px;
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		column-gap: 20px;
+
+	}
+	.parceiros{
+		display: flex;
+		position: relative;
+		flex-flow:column;
+		width: 100%;
+		max-width: 504px;
+		min-height:150px; 
+		margin: auto;
+		background: white;
+		border-radius: 5%;
+		height: min-content;
+	}
+	.img-parceiros{
+		width: 100%;
+		min-height: 75px;
+		border-radius: 5%;
+	}
+
+	.h3-sap-parceiros{
+		padding-left: 40px;
+		position: relative;
+		display: inline-flex;
+	}
+
+	.paragrafo-parceiros{
+		align-items: justify;
+		padding-left: 40px;
+		padding-right: 40px;
+		opacity: 0.5;
+		text-indent: 20px;
+	}
+	.paragrafo-parceiros#id-paragrafo-parceiros-B1{
+		padding-bottom: 75px;
+	}
+
+		aside{
+
+		margin: auto;	
+		margin-top: 60px;
+		max-width: 90%;
+		height: max-content;	
+		justify-content: center;
+		display: flex;
+		flex-wrap: wrap;
+		padding-bottom: 50px;
+		gap: 15px;
+	}
+	aside img{
+		position: relative;	
+		flex:1 1 250px;
+		max-width: 300px;
+		grid-row-gap: 60px;
+		display: flex;
+		height: 60px;
+		flex-wrap: wrap;
+		margin-bottom: 60px; 
+	}
+
 
 		
 	</style>
@@ -136,19 +522,13 @@
 							</span></div>
 						<div class="div-interna"id="div-5" onmouseover="ativar('div-5')" onmouseout="desativar('div-5')"><img class="img-div-interna" src=".imagens/logos/b1 expenses.svg"><button class="btn-ver-mais"> veja mais</button>
 							<span id="texto-5">
-							<h3>B1TaxInvoices</h3>
+							<h3>B1Expenses</h3>
 
-							<p>O SAP Addon B1TaxInvoices, é uma solução de Automação e Gestão de Notas/Invoices para o
+							<p>O SAP Addon B1Expenses, é uma solução de Gestão de Despesas Corporativas para SAP Business
 
-							SAP Business One. Atua na Entrada de Documentos,
+							One. Mais uma alternativa para a gestão de despesas integrado aos principais
 
-							atualização de Estoques e Geração de Contas a Receber no SAP.
-
-							 Integrado à Sefaz por meio dos certificados digitais com acesso via Manifesto do Destinatário,
-
-							o B1TaxInvoices efetua o processamento automático das Notas, Gestão das informações e armazenamento,
-
-							e a geração no SAP.</p>								
+							bancos brasileiros e também bancos americanos.</p>						
 							</span></div>
 						<div class="div-interna"id="div-6" onmouseover="ativar('div-6')" onmouseout="desativar('div-6')"><img class="img-div-interna" src=".imagens/logos/cards4.svg"><button class="btn-ver-mais"> veja mais</button>
 							<span id="texto-6">
@@ -204,8 +584,131 @@
 							</span></div>
 					</div>
 	</main>
+	<section class="sessao-03">
+		<div class="container-sessao-3">
+			<img class="seta" id="seta-direita" src=".imagens/svg/seta.svg">
+			<div id="ativador-carrossel-1">
+				<nav id="navegador-scroll">
+				<div class="div-carrossel-1">
+					<iframe class="iframe-carrossel" src="https://www.youtube.com/embed/cvHYM4VI1Mk?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					<h2  class="h2-carrossel">Nome do</h2>
+					<img class="svg-carrossel" src=".imagens/svg/facebook.svg">
+					<img class="svg-carrossel" src=".imagens/svg/instagram.svg">
+					<img class="svg-carrossel" src=".imagens/svg/www.svg">
+
+
+					<p   class="paragrafo-carrossel">ipsum dolor sit amet, consectetur adipisicing elit</p>
+					<img class="qt-direita" src=".imagens/svg/quote-direita.svg">
+					<img class="qt-esquerda" src=".imagens/svg/quote-esquerda.svg">
+				</div>
+				<div class="div-carrossel-1">	
+					<iframe class="iframe-carrossel" src="https://www.youtube.com/embed/cvHYM4VI1Mk?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					
+					<h2  class="h2-carrossel">Nome do</h2>
+					<img class="svg-carrossel" src=".imagens/svg/facebook.svg">
+					<img class="svg-carrossel" src=".imagens/svg/instagram.svg">
+					<img class="svg-carrossel" src=".imagens/svg/www.svg">
+						
+		
+					<p   class="paragrafo-carrossel">ipsum dolor sit amet, consectetur adipisicing elit</p>
+					<img class="qt-direita" src=".imagens/svg/quote-direita.svg">
+					<img class="qt-esquerda" src=".imagens/svg/quote-esquerda.svg">
+				</div>
+				<div class="div-carrossel-1">
+				<img class="qt-direita" src=".imagens/svg/quote-direita.svg">			<img class="qt-esquerda" src=".imagens/svg/quote-esquerda.svg">
+					<iframe class="iframe-carrossel" src="https://www.youtube.com/embed/cvHYM4VI1Mk?controls=0" title="	YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+					<h2  class="h2-carrossel">Nome do</h2>
+					<img class="svg-carrossel"src=".imagens/svg/facebook.svg">
+					<img class="svg-carrossel" src=".imagens/svg/instagram.svg">
+					<img class="svg-carrossel" src=".imagens/svg/www.svg">
+
+
+					<p   class="paragrafo-carrossel">ipsum dolor sit amet, consectetur adipisicing elit</p>
+					<img class="qt-direita" src=".imagens/svg/quote-direita.svg">
+					<img class="qt-esquerda" src=".imagens/svg/quote-esquerda.svg">
+				</div>
+				<div class="div-carrossel-1">	
+					<iframe class="iframe-carrossel" src="https://www.youtube.com/embed/cvHYM4VI1Mk?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					
+					<h2  class="h2-carrossel">Nome do</h2>
+					<img class="svg-carrossel" src=".imagens/svg/facebook.svg">
+					<img class="svg-carrossel" src=".imagens/svg/instagram.svg">
+					<img class="svg-carrossel" src=".imagens/svg/www.svg">
+
+
+					<p   class="paragrafo-carrossel">ipsum dolor sit amet, consectetur adipisicing elit</p>
+					<img class="qt-direita" src=".imagens/svg/quote-direita.svg">
+					<img class="qt-esquerda" src=".imagens/svg/quote-esquerda.svg">
+				</div>
+				<div class="div-carrossel-1">	
+					<iframe class="iframe-carrossel" src="https://www.youtube.com/embed/cvHYM4VI1Mk?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+					<h2  class="h2-carrossel">Nome do</h2>
+					<img class="svg-carrossel" src=".imagens/svg/facebook.svg">
+					<img class="svg-carrossel" src=".imagens/svg/instagram.svg">
+					<img class="svg-carrossel"src=".imagens/svg/www.svg">
+
+
+					<p   class="paragrafo-carrossel">ipsum dolor sit amet, consectetur adipisicing elit</p>
+					<img class="qt-direita" src=".imagens/svg/quote-direita.svg">
+					<img class="qt-esquerda" src=".imagens/svg/quote-esquerda.svg">
+				</div>
+				<div class="div-carrossel-1">
+					<iframe class="iframe-carrossel" src="https://www.youtube.com/embed/cvHYM4VI1Mk?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+					<h2  class="h2-carrossel">Nome do</h2>
+					<img class="svg-carrossel" src=".imagens/svg/facebook.svg">
+					<img class="svg-carrossel" src=".imagens/svg/instagram.svg">
+					<img class="svg-carrossel" src=".imagens/svg/www.svg">
+
+
+					<p   class="paragrafo-carrossel">ipsum dolor sit amet, consectetur adipisicing elit</p>
+					<img class="qt-direita" src=".imagens/svg/quote-direita.svg">
+					<img class="qt-esquerda" src=".imagens/svg/quote-esquerda.svg">
+
+				</div>
+			</nav>
+			</div>
+			<div id="apontador"></div>
+			<img class="seta" id="seta-esquerda"src=".imagens/svg/seta.svg">
+
+			<h2 id="h2-parceiros">Parceiros</h2>	
+			<hr id="sublilinha-h2-parceiros">
+				<div id="parceiros-container">
+					<div class="parceiros"><img class="img-parceiros"src=".imagens/Lotes/Grupo de máscara 882.jpg">
+						<div><h3 class="h3-sap-parceiros">SAP</h3>
+						<p class="paragrafo-parceiros"> A Atos Capital - Serviços Financeiros, é uma empresa Parceira Oficial da
+						SAP com a solução B1 Cards Reconciliação de Meios de Pagamento para
+						SAP Business One desde 2019, sendo referência no mercado Brasileiro de
+						SAP Business One, atendendo aos principais players com o que há de
+						melhor e mais inovador em Reconciliação e módulos voltados para o
+						segmento financeiro.</p></div></div>
+					<div class="parceiros"><img class="img-parceiros" src=".imagens/Lotes/Grupo de máscara 883.jpg">
+						<div><h3 class="h3-sap-parceiros">B1 Alliance</h3>
+						<p class="paragrafo-parceiros" id="id-paragrafo-parceiros-B1"> 
+						A Atos Capital - Serviços Financeiros, é empresa Associada da B1 Alliance,
+						associação de empresas parceiras SAP no Brasil, com empresas líderes em
+						seus segmentos e presente em 12 países</p></div></div>
+					<aside>
+							<img src=".imagens/logos/logoSeidor.png">
+							<img src=".imagens/logos/Ramo-Sistemas-Digitais-Logo.png">
+							<img src=".imagens/logos/nordware.png">
+							<img src=".imagens/logos/UPPERTOOLS.png">
+							<img src=".imagens/logos/logo_alfa.png">
+							<img src=".imagens/logos/logo-1.png">
+							<img src=".imagens/logos/logo-alta-3.png">
+					</aside>
+					</div>
+
+					</div>
+				</div>	
+			</div>	
+	</section>
 	</body>
 	<script type="text/javascript">
+//===========================================================================
+//======================== dando funcionalidade ao botao mobile==============		
 			const btnMobile = document.getElementById('btn-lista');
 
 			function toggleMenu(){
@@ -216,22 +719,101 @@
 			btnMobile.addEventListener('click' , toggleMenu);
 			btnMobile.addEventListener('touchstar' , toggleMenu);
 
-
-
+//===========================================================================
+/*função para ativar div e assim exibir balão de informações*/
 			function ativar(x){
 				const ativar = document.getElementById(x);
 				ativar.classList.remove('desativado');
 				ativar.classList.add('ativado');
 
 			}
-
+/*função para desativar div e retirar exibição do balão de informações*/
 			function desativar(x){
 				const ativar = document.getElementById(x);
 
 				ativar.classList.remove('ativado');
 				ativar.classList.add('desativado');
 			}
+//==========================================================================
+	// Definindo variaveis para capturar o id do elemento que 
+	//ativara a função
+	const selectDireita = document.getElementById("seta-direita");
+	const selectEsquerda = document.getElementById("seta-esquerda");
 
+	//definindo qual evento ocorrera quando clicar nos 
+	//elementos que possuem determinado id
+	selectDireita.addEventListener("click" , btn_Direita);
+	selectEsquerda.addEventListener("click" , btn_Esquerda);
+
+//=============================================================================
+	//função ativada o clicar na seta para esquerda
+		function btn_Esquerda(){
+		const nav = document.getElementById("navegador-scroll");
+		const apont = document.getElementById("apontador");		
+		if(nav.className == 'activeD'){
+			nav.classList.remove('activeD');
+			nav.classList.add('centro');
+			nav.classList.add('activeE');
+
+			apont.classList.remove('activeD');
+			apont.classList.add('centro');
+			apont.classList.add('activeE');
+
+				}else if( nav.className == 'centro activeE' ||  nav.className == 'centro activeD'){
+					nav.classList.remove('centro','activeD');
+					nav.classList.add('activeE')
+
+					apont.classList.remove('centro','activeD');
+					apont.classList.add('activeE');
+
+						}else if(nav.className == 'activeE') {
+									nav.classList.remove('activeE');
+									apont.classList.remove('activeE');
+
+									nav.classList.add('activeD');
+									apont.classList.add('activeD');
+
+										}else{
+										 nav.classList.add('activeE');
+										 apont.classList.add('activeE');
+										}
+									}
+	
+//=============================================================================
+//função ativada o clicar na seta para direita
+		function btn_Direita(){
+		const nav = document.getElementById("navegador-scroll");
+		const apont = document.getElementById("apontador");
+		if(nav.className == 'activeE'){
+			nav.classList.remove('activeE');
+			nav.classList.add('centro'); 
+			nav.classList.add('activeD');
+
+			apont.classList.remove('activeE');
+			apont.classList.add('centro');
+			apont.classList.add('activeD');
+
+		}else if ( nav.className == 'centro activeD' || nav.className == 'centro activeE' ){
+			nav.classList.remove('centro','activeE');
+			nav.classList.remove('centro','activeD');
+			nav.classList.add('activeD'); 
+
+			apont.classList.remove('centro','activeE');
+			apont.classList.remove('centro','activeD');
+			apont.classList.add('activeD');
+
+				}else if(nav.className == 'activeD') {
+							nav.classList.remove('activeD');
+							apont.classList.remove('activeD');
+
+							nav.classList.add('activeE');
+						    apont.classList.add('activeE');
+
+								}else{
+									 nav.classList.add('activeD');
+									 apont.classList.add('activeD');
+										}
+		}
 
 		</script>
 </html>

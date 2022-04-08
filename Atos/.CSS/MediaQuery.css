@@ -1,9 +1,15 @@
 	/*CSS falta arrumar*/
 	 @media (max-width: 1800px){
+	 	.contato-inicio{
+	 		justify-content: right;
+			z-index: 3;
+		}
 	 	.barra-rolagem-fixa{
+	 		top: 0px;
 	 		height: 140px;
 	 		align-items: center;
 	 		justify-content: right;
+	 		z-index: 2;
 	 	}
 		.barra-rolagem-fixa #img-01-rolagem-fixa{
 			min-width: 16%;

@@ -4,7 +4,7 @@
 			margin: auto;
 			width: 100%;
 			max-width: 1920px;
-			min-width: 320px;
+			min-width: 280px;
 			background: url("../.imagens/Lotes/Grupo de máscara 881.jpg");
 			background-size: 100%;
 			min-height: 454px;
@@ -14,7 +14,7 @@
 		#container-sessao{
 			width: 95%;
 			max-width: 1920px;
-			min-width: 320px;
+			min-width: 280px;
 			height: min-content;
 
 
@@ -54,7 +54,7 @@
 			margin: auto;
 			width: 100%;
 			max-width: 1920px;
-			min-width: 320px;
+			min-width: 280px;
 			max-height: 760px;
 	}
 	   #container-img #img-sessao-02{
