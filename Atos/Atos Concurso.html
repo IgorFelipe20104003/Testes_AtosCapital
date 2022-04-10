@@ -6,9 +6,11 @@
 	<meta name="viewport" content="width=device-width,initial-sacle=1.0">
 	<link rel="stylesheet" type="text/css" href=".CSS/header.css">
 	<link rel="stylesheet" type="text/css" href=".CSS/Sections.css">
+		<link rel="stylesheet" type="text/css" href=".CSS/Section3.css">
 	<link rel="stylesheet" type="text/css" href=".CSS/Main.css">
 	<link rel="stylesheet" type="text/css" href=".CSS/MediaQuery.css">
 	<link rel="stylesheet" type="text/css" href=".CSS/KeyFrames.css">
+
 
 	<style type="text/css">
 		/*configurações gerais*/
@@ -18,394 +20,400 @@
 			padding: 0px;
 		}
 
-/*=====================configuração geral da div 3======================*/
-		.sessao-03{
-			background: rgb(220,220,220);
+		/*============================================*/
+
+		.sessao-04{
+			background: white;
 			width: 100%;
 			max-width: 1920px;
 			min-width: 280px;
-			min-height: 1661px;
+			min-height: 1101px;
 			margin: auto;
 			position: relative;
+			box-sizing: border-box;
+		}
+		#h2-sessao-4{
+			padding-top: 121px;
+			text-align: center;
+			font-size: 50pt;
 		}
 
-		.container-sessao-3{
-			position: relative;
-			width: 100%;
-			max-width: 1920px;
-			min-width: 280px;
-			min-height: 1661px;
-			margin: auto;
-			position: relative;
-		}
-
-		#h2-parceiros {
-			margin-top: 123px;
-    		text-align: center;
-   			font-size: 50pt;
-   		}
-   		#sublilinha-h2-parceiros{
-   			padding: 1px;
+		#hr-sessao-4{
+			width:520px;
+			padding: 1px;
 			background: red; 
-   			max-width: 50%;
-   			min-width: 200px;
-   			align-items: center;
-   			justify-content: center;
-   			margin: auto;
-   		}
-/*==================================================estilos das setas=====================================================*/
-
-		.seta{
-			position: absolute;
-		}
-		#seta-direita{
-			top: 320px;
-			left: 8%;
-			transform: rotate(180deg);
-		}
-		#seta-direita:hover{
-			animation-name: seta_Direita;
-			animation-duration: 1s;
-			animation-iteration-count: infinite;
-			animation-direction: alternate;
-			animation-timing-function: ease-in;
-		}
-
-		#seta-esquerda{
-			top: 320px;
-			right: 5%;
-		}
-		#seta-esquerda:hover{
-			animation-name: seta_Esquerda;
-			animation-duration: 1s;
-			animation-iteration-count: infinite;
-			animation-direction: alternate;
-			animation-timing-function: ease-in
-		}
-		@keyframes seta_Direita{
-			0%{
-				transform: translateX(-4px) rotate(180deg) scale(1.2);
-			}
-
-			100%{
-				transform: translateX(-8px)rotate(180deg) scale(1.2);
-			}
-		}
-		@keyframes seta_Esquerda{
-			0%{
-				transform: translateX(4px) scale(1.2);
-			}
-
-			100%{
-				transform: translateX(8px) scale(1.2);
-			}
-		}
-/*===========================================================================================*/
-/*===================================estil e animação carrossel==============================*/		
-
-		#navegador-scroll{
-			position: relative;
-			display: flex;
 			margin: auto;
-			padding-bottom:135px;
-			padding-top: 150px;
-			max-width: 75%;
-			overflow-x: auto;
-			gap: 9%;
+			margin-bottom: 57px;
+		}
+		#carrossel-2{
+			/*width: 100%;
+			display: flex;
+			flex-direction: right;
+			margin: auto;
+		/*	padding-bottom:135px;*/
+			/*width: 3500px;
+			max-height: auto;
+			overflow-x: scroll;
 			justify-content: center;
 			align-items: center;
+			background: yellow;
+			/*border:1px solid;*/
+
+			position: relative;
+		    display: flex;
+		    margin: auto;
+		    width:100%;
+		    max-width: 1920px;
+		    min-width: 280px;
+		    height: 697px;
+		    max-height: auto;
+		    overflow-x: auto;
+		    gap: 28%;
+		    justify-content: center;
+		    align-items: center;
+		    background: yellow;
 
 		}
-		#navegador-scroll::-webkit-scrollbar{
-			width: 0px;
-		}
-		.div-carrossel-1{
-			width: 100%;
-			max-width:523px;
-			height: 380px;  
-			min-height: auto;
-			position: relative;
-			display: inline-flex;
-			margin: auto;
-			min-width: 40%;
+
+		.div1-carrossel-2,.div2-carrossel-2,.div3-carrossel-2{
+		/*	width: 100%;
+			max-width: 900px;
+			min-width: auto;
+			height: 663px;
 			background: white;
 			border-radius: 15px;
-			flex-wrap: wrap;
-			grid-gap:0px;
-		/*	border:1px solid black; caso queira modificar usar para definir os parametros*/
-
-		}
-		.div-carrossel-1 .h2-carrossel{
+			grid-template-columns:2fr 1fr;
+			grid-template-rows: 1fr 1fr;
+			grid-column-gap: 20px;
+			grid-row-gap: 20px;
+			transition: 2s;
+			/*border:1px solid;*/
+			background: blue;
+			width: 790px;
+			min-width: 790px;
+			height: 663px;  
+			min-height: auto;
 			position: relative;
-			height: 20%;
-			font-size: 20pt;/*ver se a media esta correta*/
-			border:1px solid;
-			padding: 0px;
-			padding-bottom: 2px;
-			padding-top: 10px;
-			text-align: left;
-			border:1px solid black;
-		}
-		#navegador-scroll .paragrafo-carrossel{
-			display: inline-flex;
+			display: grid;
 			justify-content: center;
-			margin: 0px;
-			text-align: center;
-			align-items: center;
+			grid-template-columns:642px 360px;
+			grid-template-rows: 1fr 1fr;
 			margin: auto;
-			width: 50%;
-			align-items: center;
-			height: 50%;
-		}
-		.iframe-carrossel{		
-			position: relative;	
-			display: inline-block;
-			top: -8%;
-			left: -10px;
-			width: 100%;
-			max-width: 233px; 
-			min-width: auto;
-			height: 100%;
-			max-height: 191px;
-			min-width: auto;
-			min-height: 20%;
-			background: rgba(135,0,0,1);
+			background: white;
 			border-radius: 15px;
+			grid-column-gap: 19px;
+		}
+		.div1-carrossel-2{
+			background: black;
+			width: 790px;
+			min-width: 790px;
+			height: 663px;  
+			min-height: auto;
+			position: relative;
+			display: grid;
+			justify-content: center;
+			grid-template-columns:642px 360px;
+			grid-template-rows: 1fr 1fr;
+			margin: auto;
+			background: white;
+			border-radius: 15px;
+			grid-column-gap: 19px;
 		}
 
-		#navegador-scroll.centro.activeE .div-carrossel-1{
-			animation-name : testeC1;
-			animation-duration: 1.5s;
-			animation-fill-mode: forwards;	
-			animation-timing-function: ease-out;			
+		.div3-carrossel-2{
+			background: blue;			
+		}
+		.div2-carrossel-2{
+			background: red;
 		}
 
-		#navegador-scroll.centro.activeD .div-carrossel-1{
-			animation-name : testeC2;
-			animation-duration: 1.5s;
-			animation-fill-mode: forwards;
-			animation-timing-function: ease-out;
+		#carrossel-2::-webkit-scrollbar{
+			display: none;
 		}
-		#navegador-scroll.activeE  .div-carrossel-1{
-			animation-name: testeE;
-			animation-duration: 1.5s;
+		.div-interna-carrossel-2{
+			background: white;		
+			width: 100%;	
+		}
+
+
+		.img1-carrossel-2{
+			max-width: 100%;
+			height: 100%;
+			border-radius: 10px;
+		}
+
+		.div-interna-carrossel-2 .container-texto-interno{
+			position: absolute;			 
+			/*border:1px solid;*/
+			max-width: max-content;
+			min-width: auto;
+			color:white;
+			padding-left: 54px;
+			padding-right: 54px;
+			top: 65%;
+
+		}
+/*==========================================================================*/
+		.div1-carrossel-2 .div-interna-carrossel-2:nth-child(1){
+			background: green;
+			position: relative;
+			grid-row: 1/3;
+			width: 100%;
+			max-width: 700px;
+			min-width: auto;
+			max-height:663px; 
+			min-height: auto;
+		}
+		.div2-carrossel-2 .div-interna-carrossel-2:nth-child(1){
+			background: green;
+			position: relative;
+			grid-row: 1/3;
+			width: 100%;
+			max-width: 700px;
+			min-width: auto;
+			max-height:663px; 
+			min-height: auto;
+		}
+		.div3-carrossel-2 .div-interna-carrossel-2:nth-child(1){
+			background: green;
+			position: relative;
+			grid-row: 1/3;
+			width: 100%;
+			max-width: 700px;
+			min-width: auto;
+			max-height:663px; 
+			min-height: auto;
+		}
+/*==========================================================================*/
+		.h3-carrossel-2{
+			width: 50%;
+		}
+		.paragrafo-1-carrossel-2{
+			padding-top: 10px;
+			text-align: justify;
+			opacity: .8;
+		}
+
+		.btn-1-carrossel-2{
+			position: relative;
+			float: right;
+			border:none;
+			width: 100%;
+			max-width: 159px;
+			min-height:31px; 
+			padding-left: 10px;
+			margin-bottom: 20px;
+			background: rgba(105,105,105,.8);
+			color:white;
+			cursor: pointer;
+		}
+/*==========================================================================*/
+
+		.img2-carrossel-2{
+			width:100%;
+			max-width: 360px;
+			height: 100%;
+			max-height: 147px;
+			border-radius: 5px;
+		}
+
+		.h4-carrossel-2{
+			padding-top: 12px;
+			padding-bottom: 15px;
+		}
+
+		.btn-2-carrossel-2{
+			position: relative;
+			float: right;
+			color: white;
+			background: red;
+			border: none;
+			cursor: pointer;
+			width: 109px;
+			height: 16px;
+		}
+		.div1-carrossel-2{
+			background: white;
+		}
+		.div2-carrossel-2{
+			background: blue;
+		}
+
+		.div3-carrossel-2{
+			background: red;
+		}
+		/*=======================================================================================================*/
+		.container-btn{
+				background: red; align-content: center; margin: auto;align-items: center;justify-content: center;
+				height: 50px; 
+				width: max-content;
+			}
+		.container-btn > button{
+				width: 20px;
+				height: 20px;
+				border-radius: 50%;		
+				margin: auto;		
+				}
+				#direita,#centro,#esquerda{
+			/*	border:none;*/
+			}
+			#centro{
+				background: red;
+			}
+
+
+
+		/*========================================================================================================*/
+		#ativador-carrossel-2.activeE.centroE #direita{background: white;	}
+		#ativador-carrossel-2.activeD.centroD #direita{background: white;	}
+
+		#ativador-carrossel-2.activeE.centroE #centro{background: red;	}
+		#ativador-carrossel-2.activeD.centroD #centro{background: red;	}
+
+		#ativador-carrossel-2.activeE.centroE #esquerda{background: white;}
+		#ativador-carrossel-2.activeD.centroD #esquerda{background: white;}
+
+
+		/*========================================================================================================*/
+		#ativador-carrossel-2.activeE #esquerda{background: red;}
+		#ativador-carrossel-2.activeE #direita{background: white;}
+		#ativador-carrossel-2.activeE #centro{background: white;}
+
+
+		/*========================================================================================================*/
+		#ativador-carrossel-2.activeD #direita{background: red;}
+		#ativador-carrossel-2.activeD #esquerda{background: white;}
+		#ativador-carrossel-2.activeD #centro{background: white;}
+		/*=========================================================================================================*/
+
+
+				/*testes com animações*/
+		/*************Condições do activeD******************/
+
+		#ativador-carrossel-2.activeD .div1-carrossel-2{		
+
+			animation-name: testeA;
+			animation-duration: 0.25s;
+			animation-timing-function: ease;
+			animation-fill-mode: forwards;		
+			z-index: 1;
+		}
+
+		#ativador-carrossel-2.activeD .div2-carrossel-2{		
+			animation-name: ExcecaoCentro;
+			animation-duration: 2s;
+			animation-timing-function: ease;
+			animation-fill-mode: forwards;		
+
+		}
+
+		#ativador-carrossel-2.activeD .div3-carrossel-2{		
+
+			animation-name:ExcecaoCentro;
+			animation-duration:2s;
+			animation-timing-function: ease;
 			animation-fill-mode: forwards;
-			animation-timing-function: ease-out;
+			z-index: 1;			
+		}
+
+		/***************************************************/	
+		/*************Condições do activeE******************/
+		#ativador-carrossel-2.activeE .div3-carrossel-2{		
+			animation-name: testeB;
+			animation-duration: 0.7s; 
+			animation-timing-function: ease;
+			animation-fill-mode: forwards;
+			z-index: 1;
+		}
+
+		#ativador-carrossel-2.activeE .div2-carrossel-2{		
+			animation-name: ExcecaoCentro;
+			animation-duration: 2s; 
+			animation-timing-function: ease;
+			animation-fill-mode: forwards;
+		}
+
+		#ativador-carrossel-2.activeE .div1-carrossel-2{		
+			animation-name: ExcecaoCentro;
+			animation-duration: 2s; 
+			animation-timing-function: ease;
+			z-index: 1;
+			animation-fill-mode: forwards;
+		}
+
+		/***************************************************/
+		/*************Condições do Centro******************/	
+
+		#ativador-carrossel-2.activeE.centroE .div2-carrossel-2{
+			animation-name: testeC;
+			animation-timing-function: ease;
+			animation-fill-mode: forwards;
+			animation-duration: 0.7s;
+			z-index: 1;
 			
 		}
-		#navegador-scroll.activeD  .div-carrossel-1{
+		#ativador-carrossel-2.activeE.centroE .div3-carrossel-2{
+			animation-name: testeC;
+			animation-timing-function: ease;
+			animation-fill-mode: forwards;
+			animation-duration: 0.7s;
+			z-index: 1;
+
+		}
+
+
+
+		#ativador-carrossel-2.activeD.centroD .div2-carrossel-2{
 			animation-name: testeD;
-			animation-duration: 1.5s;	
-			animation-fill-mode: forwards;	
-			animation-timing-function: ease-out;
+			animation-direction: reverse;
+			animation-timing-function: ease;
+			animation-fill-mode: forwards;
+			animation-duration: 0.7s;
+			z-index: 1;
 		}
 
-		#apontador{
-			width: 8px;
-			height: 10px;
-			background: rgb(54,54,54);
-			margin: auto;
-			border-radius: 50%;		
-			transition:1.4s;
-		}
-		#apontador::before{
-			content: "";
-			position: absolute;
-			display: inline-flex;
-			width: 8px;
-			height: 10px;
-			background: rgb(128,128,128);
-			margin-left: -10px;
-			border-radius: 50%;
-
-			transition:1.4s;	
-		}
-
-		#apontador::after{
-			content: "";
-			display: inline-flex;
-			position: absolute;
-			width: 8px;
-			height: 10px;
-			margin-left: 10px;
-			background: rgb(128,128,128);
-			border-radius: 50%;
-			transition:1.4s;
-		}
-
-		#apontador.centro.activeD#apontador{ background: rgb(54,54,54);}
-		#apontador.centro.activeE#apontador{ background: rgb(54,54,54);}
-
-
-		#apontador.centro.activeD#apontador::before{background: rgb(128,128,128);}
-		#apontador.centro.activeE#apontador::after{background: rgb(128,128,128);}
-
-		#apontador.activeD#apontador::before{ background: rgba(54,54,54);}
-		#apontador.activeD#apontador{background:rgb(128,128,128);}
-
-		#apontador.activeE#apontador::after{ background: rgba(54,54,54);}
-		#apontador.activeE#apontador{background:rgb(128,128,128);}
-
-
-		@keyframes testeC1{
-			0%{
-				transform: translateX(245%);
-				opacity: 0.1;
-			}
-			80%{
-				opacity: 0.2;
-			}
-			100%{
-				transform: translateX(0px);
-				opacity: 1;
-			}
-		}
-		@keyframes testeC2{
-			0%{
-				transform: translateX(-245%);
-				opacity: 0.1;
-			}
-			80%{
-				opacity: 0.2;
-			}
-			100%{
-				transform: translateX(0px);
-				opacity: 1;
-			}
-		}
-		@keyframes testeE{
-
-			0%{
-				opacity: 0.1;
-			}
-			80%{
-				opacity: 0.2;
-			}
-			100%{
-				transform: translateX(-245%);
-				opacity: 1;
-
-			}
-		}
-		@keyframes testeD{
-			0%{
-				opacity: 0.1;
-			}
-
-			80%{
-				opacity: 0.2;
-			}
-			100%{
-				transform: translateX(245%);
-				opacity: 1;
-			}
-		}
-
-		.qt-direita{
-			position: absolute;
-			display: inline-flex;
-			top: 90%;
-			left: 90%;
-			width: 25px;
-			height: 25px;
-
-
-		}
-		.qt-esquerda{
-			position: absolute;
-			display: inline-flex;
-			padding-left: 25px;
-			height: 20px;
-			bottom: 35%;
-			width: 25px;
-			height: 25px;
-			align-items: right;
-
-		}		
-		.svg-carrossel{
-			position: relative;
-			top: 10%;
-			right: 110px;
-			height: 10px;
-			padding: 5px;
+		#ativador-carrossel-2.activeD.centroD .div1-carrossel-2{
+			animation-name: testeD;
+			animation-direction: reverse;
+			animation-timing-function: ease;
+			animation-fill-mode: forwards;
+			animation-duration: 0.7s;
+			z-index: 1;
 
 		}
 
-/*lembrar de deixar isso tdo responsivo em*/
-/*=========================================*/
-	#parceiros-container{
-		position: relative;
-		display: inline-flex;
-		width: 65%;
-		margin:auto;
-		height: auto;
-		margin-top: 75px;
-		display: flex;
-		align-items: center;
-		flex-wrap: wrap;
-		column-gap: 20px;
+/*==========================================================================*/		
 
-	}
-	.parceiros{
-		display: flex;
-		position: relative;
-		flex-flow:column;
-		width: 100%;
-		max-width: 504px;
-		min-height:150px; 
-		margin: auto;
-		background: white;
-		border-radius: 5%;
-		height: min-content;
-	}
-	.img-parceiros{
-		width: 100%;
-		min-height: 75px;
-		border-radius: 5%;
-	}
+		@keyframes testeA{
+			0%{transform: translateX(0%);}
+			100%{justify-content: center;}
+		}
 
-	.h3-sap-parceiros{
-		padding-left: 40px;
-		position: relative;
-		display: inline-flex;
-	}
+		@keyframes testeB{
+			0%{transform: translateX(0%);}
+			100%{transform: translateX(-111%);}
+		}
+		@keyframes ExcecaoCentro{
+			0%{transform: translateX(0%);
+				opacity: 0.4;}
 
-	.paragrafo-parceiros{
-		align-items: justify;
-		padding-left: 40px;
-		padding-right: 40px;
-		opacity: 0.5;
-		text-indent: 20px;
-	}
-	.paragrafo-parceiros#id-paragrafo-parceiros-B1{
-		padding-bottom: 75px;
-	}
+				50%{transform: translateX(0%);opacity: 0.2}
+				
+				100%{transform: translateX(0%);opacity: 0.2;}		
+			}
 
-		aside{
+			@keyframes testeC{
+				0%{transform: translateX(-1460px);}
+				50%{transform: translateX(-730%);}			
+				100%{transform: translateX(0%);}
+			}
+			@keyframes testeD{
+				0%{transform: translateX(0px);}
+				50%{transform: translateX(730px);}		
+				100%{transform: translateX(1460px);}
+			}
 
-		margin: auto;	
-		margin-top: 60px;
-		max-width: 90%;
-		height: max-content;	
-		justify-content: center;
-		display: flex;
-		flex-wrap: wrap;
-		padding-bottom: 50px;
-		gap: 15px;
-	}
-	aside img{
-		position: relative;	
-		flex:1 1 250px;
-		max-width: 300px;
-		grid-row-gap: 60px;
-		display: flex;
-		height: 60px;
-		flex-wrap: wrap;
-		margin-bottom: 60px; 
-	}
-
-
-		
+/*refaça essa porcaria deixe de ser preguiçoso*/
 	</style>
 
 </head>
@@ -470,7 +478,7 @@
 					<hr id="hr-img-sessao-02">					
 				</div>								
 	</section>
-	<main class="sessão-principal">
+	<main    class="sessao-principal">
 				<div class="principal">
 					<h2 id="h2-center">Nossas Soluções</h2>
 					<hr id="hr-principal">
@@ -690,23 +698,150 @@
 						A Atos Capital - Serviços Financeiros, é empresa Associada da B1 Alliance,
 						associação de empresas parceiras SAP no Brasil, com empresas líderes em
 						seus segmentos e presente em 12 países</p></div></div>
-					<aside>
-							<img src=".imagens/logos/logoSeidor.png">
-							<img src=".imagens/logos/Ramo-Sistemas-Digitais-Logo.png">
-							<img src=".imagens/logos/nordware.png">
-							<img src=".imagens/logos/UPPERTOOLS.png">
-							<img src=".imagens/logos/logo_alfa.png">
-							<img src=".imagens/logos/logo-1.png">
-							<img src=".imagens/logos/logo-alta-3.png">
-					</aside>
+					<div class="final-parceiros">
+							<img class="img-parceiros-final" src=".imagens/logos/logoSeidor.png">
+							<img class="img-parceiros-final" src=".imagens/logos/Ramo-Sistemas-Digitais-Logo.png">
+							<img class="img-parceiros-final" src=".imagens/logos/nordware.png">
+							<img class="img-parceiros-final" src=".imagens/logos/UPPERTOOLS.png">
+							<img class="img-parceiros-final" src=".imagens/logos/logo_alfa.png">
+							<img class="img-parceiros-final" src=".imagens/logos/logo-1.png">
+							<img class="img-parceiros-final" src=".imagens/logos/logo-alta-3.png">
+					</div>
 					</div>
 
 					</div>
 				</div>	
 			</div>	
 	</section>
+	<section class="sessao-04">
+		<div class="container-sessao-4">
+			<h2 id="h2-sessao-4">Blog | Ta na Mídia</h2>
+			<hr id="hr-sessao-4">
+			<div id="ativador-carrossel-2">
+			<div id="carrossel-2">
+
+				<div class="div1-carrossel-2">
+
+					<div class="div-interna-carrossel-2" >
+						<img class="img1-carrossel-2" src=".imagens/Lotes/Grupo de máscara 874.jpg">
+						<div class="container-texto-interno">
+							<h3 class="h3-carrossel-2" >Atos Capital é patrocinadora do SAP Partner Sales Meeting 2021</h3>
+
+							<p class="paragrafo-1-carrossel-2">O maior evento do Ecossistema SAP Business One do Brasil, desembarca em São Paulo emnovo formato, atendendo as todas as regras de saúde estipuladas pelo Ministério da Saúde e em modelo híbrido (presencial e Online), proporcionando o que há de mais inovador, lúdico e tecnológico aps parceiros SAP Business One Brasil.</p>	
+							<button class="btn-1-carrossel-2">Ler Materia Completa</button>				
+						</div>
+					</div>
+					<div class="div-interna-carrossel-2">
+						<img class="img2-carrossel-2" src=".imagens/Lotes/Grupo de máscara 875.jpg">
+						<div class="container-texto2-interno">
+							<h4 class="h4-carrossel-2">Granado Pharmácias Adota Suíte B1 Capital</h4>
+
+							<p class="paragrafo-2-carrossel-2">Com uma história de mais de 150 anos de	mercado, a Granado Pharmácias, uma das
+								principais empresas de Cosméticos do
+								Brasil, com indústria, mais de 80 lojas em
+							todo...</p>
+							<button class="btn-2-carrossel-2">Matéria Completa</button>
+						</div>		
+					</div>
+					<div class="div-interna-carrossel-2">
+						<img class="img2-carrossel-2" src=".imagens/Lotes/Grupo de máscara 876.jpg">
+						<div class="container-texto2-interno">
+							<h4 class="h4-carrossel-2">BBlend Inova na Gestão com Suíte B1Cards</h4>
+
+							<p class="paragrafo-2-carrossel-2">A BBlend, uma empresa Ambev/
+								Whirlpool, fornecedora das máquinas e
+								bebidas pré prontas, vem expandindo
+								solidamente suas operações no Brasil
+							ampliando suas vendas tanto no ecommerce quanto com suas...</p>
+							<button class="btn-2-carrossel-2">Matéria Completa</button>
+						</div>		
+					</div>
+				</div>
+				<div class="div2-carrossel-2">
+
+					<div style="background: red;" class="div-interna-carrossel-2" >
+						<img class="img1-carrossel-2" src=".imagens/Lotes/Grupo de máscara 874.jpg">
+						<div class="container-texto-interno">
+							<h3 class="h3-carrossel-2" >Atos Capital é patrocinadora do SAP Partner Sales Meeting 2021</h3>
+
+							<p class="paragrafo-1-carrossel-2">O maior evento do Ecossistema SAP Business One do Brasil, desembarca em São Paulo emnovo formato, atendendo as todas as regras de saúde estipuladas pelo Ministério da Saúde e em modelo híbrido (presencial e Online), proporcionando o que há de mais inovador, lúdico e tecnológico aps parceiros SAP Business One Brasil.</p>	
+							<button class="btn-1-carrossel-2">Ler Materia Completa</button>				
+						</div>
+					</div>
+					<div class="div-interna-carrossel-2">
+						<img class="img2-carrossel-2" src=".imagens/Lotes/Grupo de máscara 875.jpg">
+						<div class="container-texto2-interno">
+							<h4 class="h4-carrossel-2">Granado Pharmácias Adota Suíte B1 Capital</h4>
+
+							<p class="paragrafo-2-carrossel-2">Com uma história de mais de 150 anos de	mercado, a Granado Pharmácias, uma das
+								principais empresas de Cosméticos do
+								Brasil, com indústria, mais de 80 lojas em
+							todo...</p>
+							<button class="btn-2-carrossel-2">Matéria Completa</button>
+						</div>		
+					</div>
+					<div class="div-interna-carrossel-2">
+						<img class="img2-carrossel-2" src=".imagens/Lotes/Grupo de máscara 876.jpg">
+						<div class="container-texto2-interno">
+							<h4 class="h4-carrossel-2">BBlend Inova na Gestão com Suíte B1Cards</h4>
+
+							<p class="paragrafo-2-carrossel-2">A BBlend, uma empresa Ambev/
+								Whirlpool, fornecedora das máquinas e
+								bebidas pré prontas, vem expandindo
+								solidamente suas operações no Brasil
+							ampliando suas vendas tanto no ecommerce quanto com suas...</p>
+							<button class="btn-2-carrossel-2">Matéria Completa</button>
+						</div>		
+					</div>
+				</div>
+				<div class="div3-carrossel-2">
+
+					<div style="background: red;"class="div-interna-carrossel-2">
+						<img class="img1-carrossel-2" src=".imagens/Lotes/Grupo de máscara 874.jpg">
+						<div class="container-texto-interno">
+							<h3 class="h3-carrossel-2" >Atos Capital é patrocinadora do SAP Partner Sales Meeting 2021</h3>
+
+							<p class="paragrafo-1-carrossel-2">O maior evento do Ecossistema SAP Business One do Brasil, desembarca em São Paulo emnovo formato, atendendo as todas as regras de saúde estipuladas pelo Ministério da Saúde e em modelo híbrido (presencial e Online), proporcionando o que há de mais inovador, lúdico e tecnológico aps parceiros SAP Business One Brasil.</p>	
+							<button class="btn-1-carrossel-2">Ler Materia Completa</button>				
+						</div>
+					</div>
+					<div class="div-interna-carrossel-2">
+						<img class="img2-carrossel-2" src=".imagens/Lotes/Grupo de máscara 875.jpg">
+						<div class="container-texto2-interno">
+							<h4 class="h4-carrossel-2">Granado Pharmácias Adota Suíte B1 Capital</h4>
+
+							<p class="paragrafo-2-carrossel-2">Com uma história de mais de 150 anos de	mercado, a Granado Pharmácias, uma das
+								principais empresas de Cosméticos do
+								Brasil, com indústria, mais de 80 lojas em
+							todo...</p>
+							<button class="btn-2-carrossel-2">Matéria Completa</button>
+						</div>		
+					</div>
+					<div class="div-interna-carrossel-2">
+						<img class="img2-carrossel-2" src=".imagens/Lotes/Grupo de máscara 876.jpg">
+						<div class="container-texto2-interno">
+							<h4 class="h4-carrossel-2">BBlend Inova na Gestão com Suíte B1Cards</h4>
+
+							<p class="paragrafo-2-carrossel-2">A BBlend, uma empresa Ambev/
+								Whirlpool, fornecedora das máquinas e
+								bebidas pré prontas, vem expandindo
+								solidamente suas operações no Brasil
+							ampliando suas vendas tanto no ecommerce quanto com suas...</p>
+							<button class="btn-2-carrossel-2">Matéria Completa</button>
+						</div>		
+					</div>
+				</div>
+			</div> 
+				<div class="container-btn" >
+					<button id="direita"></button> <button id="centro"></button> <button id="esquerda"></button>
+				</div>
+			</div>	
+		</div>		
+	</section>
 	</body>
+	<script src=".Script/.Carrossel2/Carrossel.js"></script>
 	<script type="text/javascript">
+		/*	<script src=".Script/.Carrossel2/Carrossel.js">*/
 //===========================================================================
 //======================== dando funcionalidade ao botao mobile==============		
 			const btnMobile = document.getElementById('btn-lista');
