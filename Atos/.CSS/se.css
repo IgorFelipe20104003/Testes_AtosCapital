@@ -89,7 +89,7 @@
 			margin: auto;
 			padding-bottom:135px;
 			padding-top: 150px;
-			max-width: 75%;
+			max-width: 80%;
 			overflow-x: auto;
 			gap: 9%;
 			justify-content: center;
@@ -175,7 +175,7 @@
 		}
 		#navegador-scroll.activeD  .div-carrossel-1{
 			animation-name: testeD;
-			animation-duration: 1.5s;	
+			animation-duration: 0.1s;	
 			animation-fill-mode: forwards;	
 			animation-timing-function: ease-out;
 		}

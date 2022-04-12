@@ -62,13 +62,12 @@
 			position: relative;
 		    display: flex;
 		    margin: auto;
-		    width:100%;
-		    max-width: 1920px;
+		    width:1200px;
 		    min-width: 280px;
 		    height: 697px;
 		    max-height: auto;
 		    overflow-x: auto;
-		    gap: 28%;
+		    gap: 50%;
 		    justify-content: center;
 		    align-items: center;
 		    background: yellow;
@@ -102,29 +101,6 @@
 			background: white;
 			border-radius: 15px;
 			grid-column-gap: 19px;
-		}
-		.div1-carrossel-2{
-			background: black;
-			width: 790px;
-			min-width: 790px;
-			height: 663px;  
-			min-height: auto;
-			position: relative;
-			display: grid;
-			justify-content: center;
-			grid-template-columns:642px 360px;
-			grid-template-rows: 1fr 1fr;
-			margin: auto;
-			background: white;
-			border-radius: 15px;
-			grid-column-gap: 19px;
-		}
-
-		.div3-carrossel-2{
-			background: blue;			
-		}
-		.div2-carrossel-2{
-			background: red;
 		}
 
 		#carrossel-2::-webkit-scrollbar{
@@ -235,13 +211,7 @@
 		.div1-carrossel-2{
 			background: white;
 		}
-		.div2-carrossel-2{
-			background: blue;
-		}
 
-		.div3-carrossel-2{
-			background: red;
-		}
 		/*=======================================================================================================*/
 		.container-btn{
 				background: red; align-content: center; margin: auto;align-items: center;justify-content: center;
@@ -264,77 +234,48 @@
 
 
 		/*========================================================================================================*/
-		#ativador-carrossel-2.activeE.centroE #direita{background: white;	}
-		#ativador-carrossel-2.activeD.centroD #direita{background: white;	}
+		#ativador-carrossel-2.activeE2.centroE2 #direita{background: white;	}
+		#ativador-carrossel-2.activeD2.centroD2 #direita{background: white;	}
 
-		#ativador-carrossel-2.activeE.centroE #centro{background: red;	}
-		#ativador-carrossel-2.activeD.centroD #centro{background: red;	}
+		#ativador-carrossel-2.activeE2.centroE2 #centro{background: red;	}
+		#ativador-carrossel-2.activeD2.centroD2 #centro{background: red;	}
 
-		#ativador-carrossel-2.activeE.centroE #esquerda{background: white;}
-		#ativador-carrossel-2.activeD.centroD #esquerda{background: white;}
-
-
-		/*========================================================================================================*/
-		#ativador-carrossel-2.activeE #esquerda{background: red;}
-		#ativador-carrossel-2.activeE #direita{background: white;}
-		#ativador-carrossel-2.activeE #centro{background: white;}
+		#ativador-carrossel-2.centroE2.activeE2 #esquerda{background: white;}
+		#ativador-carrossel-2.centroD2.activeD2 #esquerda{background: white;}
 
 
 		/*========================================================================================================*/
-		#ativador-carrossel-2.activeD #direita{background: red;}
-		#ativador-carrossel-2.activeD #esquerda{background: white;}
-		#ativador-carrossel-2.activeD #centro{background: white;}
+		#ativador-carrossel-2.activeE2 #esquerda{background: red;}
+		#ativador-carrossel-2.activeE2 #direita{background: white;}
+		#ativador-carrossel-2.activeE2 #centro{background: white;}
+
+
+		/*========================================================================================================*/
+		#ativador-carrossel-2.activeD2 #direita{background: red;}
+		#ativador-carrossel-2.activeD2 #esquerda{background: white;}
+		#ativador-carrossel-2.activeD2 #centro{background: white;}
 		/*=========================================================================================================*/
 
 
 				/*testes com animações*/
 		/*************Condições do activeD******************/
 
-		#ativador-carrossel-2.activeD .div1-carrossel-2{		
+		#ativador-carrossel-2.activeD2 .div1-carrossel-2{		
 
-			animation-name: testeA;
-			animation-duration: 0.25s;
-			animation-timing-function: ease;
-			animation-fill-mode: forwards;		
-			z-index: 1;
-		}
-
-		#ativador-carrossel-2.activeD .div2-carrossel-2{		
-			animation-name: ExcecaoCentro;
+			animation-name: testeA2;
 			animation-duration: 2s;
 			animation-timing-function: ease;
 			animation-fill-mode: forwards;		
-
-		}
-
-		#ativador-carrossel-2.activeD .div3-carrossel-2{		
-
-			animation-name:ExcecaoCentro;
-			animation-duration:2s;
-			animation-timing-function: ease;
-			animation-fill-mode: forwards;
-			z-index: 1;			
-		}
-
-		/***************************************************/	
-		/*************Condições do activeE******************/
-		#ativador-carrossel-2.activeE .div3-carrossel-2{		
-			animation-name: testeB;
-			animation-duration: 0.7s; 
-			animation-timing-function: ease;
-			animation-fill-mode: forwards;
 			z-index: 1;
 		}
 
-		#ativador-carrossel-2.activeE .div2-carrossel-2{		
-			animation-name: ExcecaoCentro;
-			animation-duration: 2s; 
-			animation-timing-function: ease;
-			animation-fill-mode: forwards;
-		}
 
-		#ativador-carrossel-2.activeE .div1-carrossel-2{		
-			animation-name: ExcecaoCentro;
+		/***************************************************/	
+		/*************Condições do activeE******************/
+
+
+		#ativador-carrossel-2.activeE2 .div1-carrossel-2{		
+			animation-name: testeB2;
 			animation-duration: 2s; 
 			animation-timing-function: ease;
 			z-index: 1;
@@ -344,74 +285,48 @@
 		/***************************************************/
 		/*************Condições do Centro******************/	
 
-		#ativador-carrossel-2.activeE.centroE .div2-carrossel-2{
-			animation-name: testeC;
+		#ativador-carrossel-2.activeE2.centroE2 .div1-carrossel-2{
+			animation-name: ExcecaoCentroA;
 			animation-timing-function: ease;
 			animation-fill-mode: forwards;
-			animation-duration: 0.7s;
+			animation-duration: 2s;
 			z-index: 1;
 			
 		}
-		#ativador-carrossel-2.activeE.centroE .div3-carrossel-2{
-			animation-name: testeC;
+
+		#ativador-carrossel-2.activeD2.centroD2 .div1-carrossel-2{
+			animation-name: ExcecaoCentroB;
 			animation-timing-function: ease;
 			animation-fill-mode: forwards;
-			animation-duration: 0.7s;
-			z-index: 1;
-
-		}
-
-
-
-		#ativador-carrossel-2.activeD.centroD .div2-carrossel-2{
-			animation-name: testeD;
-			animation-direction: reverse;
-			animation-timing-function: ease;
-			animation-fill-mode: forwards;
-			animation-duration: 0.7s;
+			animation-duration: 2s;
 			z-index: 1;
 		}
 
-		#ativador-carrossel-2.activeD.centroD .div1-carrossel-2{
-			animation-name: testeD;
-			animation-direction: reverse;
-			animation-timing-function: ease;
-			animation-fill-mode: forwards;
-			animation-duration: 0.7s;
-			z-index: 1;
-
-		}
 
 /*==========================================================================*/		
 
-		@keyframes testeA{
-			0%{transform: translateX(0%);}
-			100%{justify-content: center;}
+		@keyframes testeA2{
+			0%{transform: translateX(0%);opacity: 0.4;}
+			50%{transform: translateX(88%);opacity: 0.4;}
+			100%{transform: translateX(176%);opacity: 1;},
+
 		}
 
-		@keyframes testeB{
-			0%{transform: translateX(0%);}
-			100%{transform: translateX(-111%);}
+		@keyframes testeB2{
+			0%{transform: translateX(0%);opacity: 0.4;}
+			50%{transform: translateX(-88%);opacity: 0.4;}
+			100%{transform: translateX(-176%);}
 		}
-		@keyframes ExcecaoCentro{
-			0%{transform: translateX(0%);
-				opacity: 0.4;}
-
-				50%{transform: translateX(0%);opacity: 0.2}
-				
-				100%{transform: translateX(0%);opacity: 0.2;}		
-			}
-
-			@keyframes testeC{
-				0%{transform: translateX(-1460px);}
-				50%{transform: translateX(-730%);}			
-				100%{transform: translateX(0%);}
-			}
-			@keyframes testeD{
-				0%{transform: translateX(0px);}
-				50%{transform: translateX(730px);}		
-				100%{transform: translateX(1460px);}
-			}
+		@keyframes ExcecaoCentroA{
+			0%{	transform: translateX(-176%); ;opacity: 0.4;}
+			50%{transform: translateX(-88%);opacity: 0.4}				
+			100%{transform: translateX(0%);opacity: 1;}	
+		}
+		@keyframes ExcecaoCentroB{
+			0%{	transform: translateX(176%); opacity: 0.4;}
+			50%{transform: translateX(88%);opacity: 0.4}				
+				100%{transform: translateX(0%);opacity: 1;}		
+		}	
 
 /*refaça essa porcaria deixe de ser preguiçoso*/
 	</style>
@@ -757,7 +672,7 @@
 						</div>		
 					</div>
 				</div>
-				<div class="div2-carrossel-2">
+				<div class="div1-carrossel-2">
 
 					<div style="background: red;" class="div-interna-carrossel-2" >
 						<img class="img1-carrossel-2" src=".imagens/Lotes/Grupo de máscara 874.jpg">
@@ -794,7 +709,7 @@
 						</div>		
 					</div>
 				</div>
-				<div class="div3-carrossel-2">
+				<div class="div1-carrossel-2">
 
 					<div style="background: red;"class="div-interna-carrossel-2">
 						<img class="img1-carrossel-2" src=".imagens/Lotes/Grupo de máscara 874.jpg">
@@ -839,7 +754,7 @@
 		</div>		
 	</section>
 	</body>
-	<script src=".Script/.Carrossel2/Carrossel.js"></script>
+
 	<script type="text/javascript">
 		/*	<script src=".Script/.Carrossel2/Carrossel.js">*/
 //===========================================================================
@@ -949,6 +864,6 @@
 									 apont.classList.add('activeD');
 										}
 		}
-
 		</script>
+		<script src=".Script/.Carrossel2/Carrossel.js"></script>	
 </html>

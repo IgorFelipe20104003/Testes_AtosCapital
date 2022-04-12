@@ -12,51 +12,51 @@
 
 			function Direita(){
 
-				if(ativ.className == 'activeE'){
-					ativ.classList.remove('activeE');	
-					ativ.classList.add('activeD');
-				}else if(ativ.className == 'activeE centroE'){
-					ativ.classList.remove('activeE');	
-					ativ.classList.remove('centroE');	
-					ativ.classList.add('activeD');
+				if(ativ.className == 'activeE2'){
+					ativ.classList.remove('activeE2');	
+					ativ.classList.add('activeD2');
+				}else if(ativ.className == 'activeE2 centroE2'){
+					ativ.classList.remove('activeE2');	
+					ativ.classList.remove('centroE2');	
+					ativ.classList.add('activeD2');
 				}else{
-					ativ.classList.remove('centroD');
-					ativ.classList.add('activeD');
+					ativ.classList.remove('centroD2');
+					ativ.classList.add('activeD2');
 				}
 			}
 
 			function Esquerda(){
 
-				if (ativ.className == 'activeD') {
-					ativ.classList.remove('activeD')
-					ativ.classList.add('activeE')
-				}else if(ativ.className == 'activeD centroD'){
-					ativ.classList.remove('activeD');	
-					ativ.classList.remove('centroD');	
-					ativ.classList.add('activeE');
+				if (ativ.className == 'activeD2') {
+					ativ.classList.remove('activeD2')
+					ativ.classList.add('activeE2')
+				}else if(ativ.className == 'activeD2 centroD2'){
+					ativ.classList.remove('activeD2');	
+					ativ.classList.remove('centroD2');	
+					ativ.classList.add('activeE2');
 				}else{
-					ativ.classList.remove('centroE');
-					ativ.classList.add('activeE');
+					ativ.classList.remove('centroE2');
+					ativ.classList.add('activeE2');
 				}
 			}
 
 			function Centro(){
 
-				if(ativ.className == 'activeE'){
-					ativ.classList.add('centroE');
-				}else if(ativ.className == 'activeD'){
-					ativ.classList.add('centroD');
+				if(ativ.className == 'activeE2'){
+					ativ.classList.add('centroE2');
+				}else if(ativ.className == 'activeD2'){
+					ativ.classList.add('centroD2');
 				}
 			}
 
 			const X = setInterval(()=>{Timer01();},5000);
 
 			function Timer01(){
-				if(ativ.className == "" || ativ.className == 'activeE'){
+				if(ativ.className == "" || ativ.className == 'activeE2'){
 					Direita();
-				}else if( ativ.className == 'activeD'){
+				}else if( ativ.className == 'activeD2'){
 					Centro();
-				}else if( ativ.className == 'activeE centroE' ||  ativ.className == 'activeD centroD' ){
+				}else if( ativ.className == 'activeE2 centroE2' ||  ativ.className == 'activeD2 centroD2' ){
 					Esquerda();
 				}
 			}
