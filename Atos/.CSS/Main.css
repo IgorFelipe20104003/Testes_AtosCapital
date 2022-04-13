@@ -15,6 +15,7 @@
 
 
 		#h2-center{
+		padding-top: 135px; 
 		text-align: center;
 		font-size: 50pt;
 		}
@@ -80,7 +81,8 @@
 		.div-interna:hover{
 			transform: scaleY(1.2);
 			border-radius: 20%;
-		/*	border:1px solid red;*/
+			outline-style: solid;
+			outline-color: red;
 			background: black;
 			gap:19px; 
 		}

@@ -6,7 +6,8 @@
 	<meta name="viewport" content="width=device-width,initial-sacle=1.0">
 	<link rel="stylesheet" type="text/css" href=".CSS/header.css">
 	<link rel="stylesheet" type="text/css" href=".CSS/Sections.css">
-		<link rel="stylesheet" type="text/css" href=".CSS/Section3.css">
+	<link rel="stylesheet" type="text/css" href=".CSS/Section3.css">
+	<link rel="stylesheet" type="text/css" href=".CSS/Section4.css">
 	<link rel="stylesheet" type="text/css" href=".CSS/Main.css">
 	<link rel="stylesheet" type="text/css" href=".CSS/MediaQuery.css">
 	<link rel="stylesheet" type="text/css" href=".CSS/KeyFrames.css">
@@ -14,325 +15,103 @@
 
 	<style type="text/css">
 		/*configurações gerais*/
-
 		*{
 			margin: 0px;
 			padding: 0px;
 		}
 
-		/*============================================*/
-
-		.sessao-04{
-			background: white;
+		.container-sessao-final{
+			display: flex;
+			flex-wrap: wrap;
+			position:relative;
 			width: 100%;
 			max-width: 1920px;
 			min-width: 280px;
-			min-height: 1101px;
-			margin: auto;
-			position: relative;
-			box-sizing: border-box;
-		}
-		#h2-sessao-4{
-			padding-top: 121px;
-			text-align: center;
-			font-size: 50pt;
-		}
-
-		#hr-sessao-4{
-			width:520px;
-			padding: 1px;
-			background: red; 
-			margin: auto;
-			margin-bottom: 57px;
-		}
-		#carrossel-2{
-			/*width: 100%;
-			display: flex;
-			flex-direction: right;
-			margin: auto;
-		/*	padding-bottom:135px;*/
-			/*width: 3500px;
+			height: 100%;
 			max-height: auto;
-			overflow-x: scroll;
-			justify-content: center;
-			align-items: center;
-			background: yellow;
-			/*border:1px solid;*/
-
-			position: relative;
-		    display: flex;
-		    margin: auto;
-		    width:1200px;
-		    min-width: 280px;
-		    height: 697px;
-		    max-height: auto;
-		    overflow-x: auto;
-		    gap: 50%;
-		    justify-content: center;
-		    align-items: center;
-		    background: yellow;
-
+			min-height: 671px;
+			background: rgb(220,220,220);
+			margin: auto; 
+			column-gap: 50px;
 		}
 
-		.div1-carrossel-2,.div2-carrossel-2,.div3-carrossel-2{
-		/*	width: 100%;
-			max-width: 900px;
-			min-width: auto;
-			height: 663px;
-			background: white;
-			border-radius: 15px;
-			grid-template-columns:2fr 1fr;
-			grid-template-rows: 1fr 1fr;
-			grid-column-gap: 20px;
-			grid-row-gap: 20px;
-			transition: 2s;
-			/*border:1px solid;*/
-			background: blue;
-			width: 790px;
-			min-width: 790px;
-			height: 663px;  
-			min-height: auto;
-			position: relative;
-			display: grid;
-			justify-content: center;
-			grid-template-columns:642px 360px;
-			grid-template-rows: 1fr 1fr;
-			margin: auto;
-			background: white;
-			border-radius: 15px;
-			grid-column-gap: 19px;
-		}
-
-		#carrossel-2::-webkit-scrollbar{
-			display: none;
-		}
-		.div-interna-carrossel-2{
-			background: white;		
-			width: 100%;	
-		}
-
-
-		.img1-carrossel-2{
-			max-width: 100%;
-			height: 100%;
-			border-radius: 10px;
-		}
-
-		.div-interna-carrossel-2 .container-texto-interno{
-			position: absolute;			 
-			/*border:1px solid;*/
-			max-width: max-content;
-			min-width: auto;
-			color:white;
-			padding-left: 54px;
-			padding-right: 54px;
-			top: 65%;
-
-		}
-/*==========================================================================*/
-		.div1-carrossel-2 .div-interna-carrossel-2:nth-child(1){
-			background: green;
-			position: relative;
-			grid-row: 1/3;
+		.container-fale-conosco{
 			width: 100%;
-			max-width: 700px;
 			min-width: auto;
-			max-height:663px; 
-			min-height: auto;
-		}
-		.div2-carrossel-2 .div-interna-carrossel-2:nth-child(1){
-			background: green;
-			position: relative;
-			grid-row: 1/3;
-			width: 100%;
-			max-width: 700px;
+			max-width: 800px;
 			min-width: auto;
-			max-height:663px; 
-			min-height: auto;
+		/*	background: blue;*/
+			height: min-content;
 		}
-		.div3-carrossel-2 .div-interna-carrossel-2:nth-child(1){
-			background: green;
+		#h2-sessao-final{
 			position: relative;
-			grid-row: 1/3;
-			width: 100%;
-			max-width: 700px;
-			min-width: auto;
-			max-height:663px; 
-			min-height: auto;
+			text-align: left;
+			padding-left: 350px;
+			padding-top: 161px;
+			font-size: 50pt;
+			display: inline-flex;
 		}
-/*==========================================================================*/
-		.h3-carrossel-2{
-			width: 50%;
-		}
-		.paragrafo-1-carrossel-2{
-			padding-top: 10px;
-			text-align: justify;
-			opacity: .8;
-		}
-
-		.btn-1-carrossel-2{
+		#hr-sessao-final{
 			position: relative;
-			float: right;
-			border:none;
-			width: 100%;
-			max-width: 159px;
-			min-height:31px; 
-			padding-left: 10px;
-			margin-bottom: 20px;
-			background: rgba(105,105,105,.8);
-			color:white;
-			cursor: pointer;
-		}
-/*==========================================================================*/
-
-		.img2-carrossel-2{
-			width:100%;
-			max-width: 360px;
-			height: 100%;
-			max-height: 147px;
-			border-radius: 5px;
-		}
-
-		.h4-carrossel-2{
-			padding-top: 12px;
-			padding-bottom: 15px;
-		}
-
-		.btn-2-carrossel-2{
-			position: relative;
-			float: right;
-			color: white;
 			background: red;
-			border: none;
+			padding: 1px;
+			width: 400px;
+			margin-right: 0px;
+			margin-left:350px;
+		}
+
+		.container-form{
+/*			background: red;*/
+			width: 100%;
+			max-width:900px; 
+			height: max-content;
+		}
+		.campos-form{
+			color: rgb(128,128,128);
+			margin-top: 60px;
+		}
+		.text-form{
+			width: 100%;
+			max-width: 755px;
+			min-width: auto;
+			height: 52px;
+			border-radius: 5px;
+			border-style: none;
+		}
+		.text-form:focus{
+			outline-color: red;
+		}
+		#form-mensagem{
+			width: 100%;
+			max-width: 755px;
+			min-width: auto;
+			height: 100%;
+			min-height: 227px;
+			max-height: 227px;
+		}
+		#form-mensagem:focus{
+			background: black;
+			color:white;
+		}
+
+		#btn-form{
+			margin-top: 20px; 
+			height: 40px;
+			width: 119px;
+			background: red;
+			color: white;
 			cursor: pointer;
-			width: 109px;
-			height: 16px;
+			border-radius: 5px;
+			border: none;
+			text-align: center;
+			display: block;
 		}
-		.div1-carrossel-2{
-			background: white;
-		}
-
-		/*=======================================================================================================*/
-		.container-btn{
-				background: red; align-content: center; margin: auto;align-items: center;justify-content: center;
-				height: 50px; 
-				width: max-content;
-			}
-		.container-btn > button{
-				width: 20px;
-				height: 20px;
-				border-radius: 50%;		
-				margin: auto;		
-				}
-				#direita,#centro,#esquerda{
-			/*	border:none;*/
-			}
-			#centro{
-				background: red;
-			}
-
-
-
-		/*========================================================================================================*/
-		#ativador-carrossel-2.activeE2.centroE2 #direita{background: white;	}
-		#ativador-carrossel-2.activeD2.centroD2 #direita{background: white;	}
-
-		#ativador-carrossel-2.activeE2.centroE2 #centro{background: red;	}
-		#ativador-carrossel-2.activeD2.centroD2 #centro{background: red;	}
-
-		#ativador-carrossel-2.centroE2.activeE2 #esquerda{background: white;}
-		#ativador-carrossel-2.centroD2.activeD2 #esquerda{background: white;}
-
-
-		/*========================================================================================================*/
-		#ativador-carrossel-2.activeE2 #esquerda{background: red;}
-		#ativador-carrossel-2.activeE2 #direita{background: white;}
-		#ativador-carrossel-2.activeE2 #centro{background: white;}
-
-
-		/*========================================================================================================*/
-		#ativador-carrossel-2.activeD2 #direita{background: red;}
-		#ativador-carrossel-2.activeD2 #esquerda{background: white;}
-		#ativador-carrossel-2.activeD2 #centro{background: white;}
-		/*=========================================================================================================*/
-
-
-				/*testes com animações*/
-		/*************Condições do activeD******************/
-
-		#ativador-carrossel-2.activeD2 .div1-carrossel-2{		
-
-			animation-name: testeA2;
-			animation-duration: 2s;
-			animation-timing-function: ease;
-			animation-fill-mode: forwards;		
-			z-index: 1;
-		}
-
-
-		/***************************************************/	
-		/*************Condições do activeE******************/
-
-
-		#ativador-carrossel-2.activeE2 .div1-carrossel-2{		
-			animation-name: testeB2;
-			animation-duration: 2s; 
-			animation-timing-function: ease;
-			z-index: 1;
-			animation-fill-mode: forwards;
-		}
-
-		/***************************************************/
-		/*************Condições do Centro******************/	
-
-		#ativador-carrossel-2.activeE2.centroE2 .div1-carrossel-2{
-			animation-name: ExcecaoCentroA;
-			animation-timing-function: ease;
-			animation-fill-mode: forwards;
-			animation-duration: 2s;
-			z-index: 1;
-			
-		}
-
-		#ativador-carrossel-2.activeD2.centroD2 .div1-carrossel-2{
-			animation-name: ExcecaoCentroB;
-			animation-timing-function: ease;
-			animation-fill-mode: forwards;
-			animation-duration: 2s;
-			z-index: 1;
-		}
-
-
-/*==========================================================================*/		
-
-		@keyframes testeA2{
-			0%{transform: translateX(0%);opacity: 0.4;}
-			50%{transform: translateX(88%);opacity: 0.4;}
-			100%{transform: translateX(176%);opacity: 1;},
-
-		}
-
-		@keyframes testeB2{
-			0%{transform: translateX(0%);opacity: 0.4;}
-			50%{transform: translateX(-88%);opacity: 0.4;}
-			100%{transform: translateX(-176%);}
-		}
-		@keyframes ExcecaoCentroA{
-			0%{	transform: translateX(-176%); ;opacity: 0.4;}
-			50%{transform: translateX(-88%);opacity: 0.4}				
-			100%{transform: translateX(0%);opacity: 1;}	
-		}
-		@keyframes ExcecaoCentroB{
-			0%{	transform: translateX(176%); opacity: 0.4;}
-			50%{transform: translateX(88%);opacity: 0.4}				
-				100%{transform: translateX(0%);opacity: 1;}		
-		}	
 
 /*refaça essa porcaria deixe de ser preguiçoso*/
 	</style>
 
 </head>
-	<body style="background-color: yellow;">
+<body style="background-color: yellow;">
 	<header class="container-Cabecalho">
 		<div class="contato-inicio">
 			<ul>
@@ -360,7 +139,7 @@
 						<li class="lista-rolagem-fixa" id="list-rolagem-fixa-06" ><a class="links"href="#">contato   </a></li>	
 					</ul>
 				</nav>
-				<img class="bandeiras"src=".imagens/svg/eua.svg">
+				<img class="bandeiras"id="bandeira-01"src=".imagens/svg/eua.svg">
 				<img class="bandeiras" src=".imagens/svg/espanha.svg">
 				<img class="bandeiras"id="bandeira-03" src=".imagens/svg/br.svg">
 		</div>
@@ -597,22 +376,30 @@
 			<img class="seta" id="seta-esquerda"src=".imagens/svg/seta.svg">
 
 			<h2 id="h2-parceiros">Parceiros</h2>	
+
 			<hr id="sublilinha-h2-parceiros">
+
 				<div id="parceiros-container">
+
 					<div class="parceiros"><img class="img-parceiros"src=".imagens/Lotes/Grupo de máscara 882.jpg">
 						<div><h3 class="h3-sap-parceiros">SAP</h3>
 						<p class="paragrafo-parceiros"> A Atos Capital - Serviços Financeiros, é uma empresa Parceira Oficial da
-						SAP com a solução B1 Cards Reconciliação de Meios de Pagamento para
-						SAP Business One desde 2019, sendo referência no mercado Brasileiro de
-						SAP Business One, atendendo aos principais players com o que há de
-						melhor e mais inovador em Reconciliação e módulos voltados para o
-						segmento financeiro.</p></div></div>
+						A SAP, multinacional alemã que há 50 anos opera no Brasil, é a maior empresa de Softwares de gestão do Mundo. Presente em mais de 180 países, com mais 440 mil clientes das maiores e mais inovadoras empresas do planeta.</p>
+
+						<p class="paragrafo-parceiros">Por meio do PartnerEdge, a Atos Capital conquistou a aprovação como empresa Parceira Oficial, enquadrada como SAP Solution Provider com a solução certificada Oficialmente, B1Cards - Reconciliação de Meios de Pagamento para SAP Business One.<p>
+
+						<p class="paragrafo-parceiros">Atualmente a Atos Capital lidera no Brasil o referido segmento com diversos casos de sucesso em grandes e expressivas empresas do cenário nacional.</p></div></div>
+
 					<div class="parceiros"><img class="img-parceiros" src=".imagens/Lotes/Grupo de máscara 883.jpg">
 						<div><h3 class="h3-sap-parceiros">B1 Alliance</h3>
-						<p class="paragrafo-parceiros" id="id-paragrafo-parceiros-B1"> 
-						A Atos Capital - Serviços Financeiros, é empresa Associada da B1 Alliance,
-						associação de empresas parceiras SAP no Brasil, com empresas líderes em
-						seus segmentos e presente em 12 países</p></div></div>
+						<p class="paragrafo-parceiros"> 
+						A B1Alliance é a aliança de empresas parceiras oficiais da SAP no Brasil, especialistas em verticais de negócios que tem como objetivo apoiar o ecossistema de SAP Business One.</p>
+
+						<p class="paragrafo-parceiros">Presentes em mais de 12 países diferentes entre América Latina, Estados Unidos e Europa.</p>
+
+						<p class="paragrafo-parceiros">Possui soluções para diversas verticais que unidas ao SAP Business One ajudam empresas de diversos segmentos com uma solução integrada e de fácil implementação.</p>
+
+						<p class="paragrafo-parceiros" id="id-paragrafo-parceiros-B1">A Atos Capital foi aprovada no processo de seleção, tornando-se associada integrante da Aliança que possui as principais empresas do ecosistema.</p></div></div>
 					<div class="final-parceiros">
 							<img class="img-parceiros-final" src=".imagens/logos/logoSeidor.png">
 							<img class="img-parceiros-final" src=".imagens/logos/Ramo-Sistemas-Digitais-Logo.png">
@@ -753,8 +540,28 @@
 			</div>	
 		</div>		
 	</section>
-	</body>
+	<section class="sessao-final">
+		<div class="container-sessao-final" >
+			<div class="container-fale-conosco">
+			<h2 id="h2-sessao-final">Fale conosco</h2>
+			<hr id="hr-sessao-final">
+			</div>
 
+			<div class="container-form">
+				<form action="get">
+					<h2 class="campos-form">Nome</h2>
+					<input class="text-form" type="text" name="nome" placeholder=" ">
+					<h2 class="campos-form">Email</h2>
+					<input class="text-form" type="mail" name="email" placeholder=" ">
+					<h2 class="campos-form">Menssagem</h2>
+					<textarea class="text-form" id="form-mensagem"></textarea>	
+					<button id="btn-form">enviar mensagens</button>				
+				</form>			
+			</div>
+		</div>
+
+	</section>
+</body>
 	<script type="text/javascript">
 		/*	<script src=".Script/.Carrossel2/Carrossel.js">*/
 //===========================================================================

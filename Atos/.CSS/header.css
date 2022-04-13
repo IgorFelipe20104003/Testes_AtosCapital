@@ -103,7 +103,8 @@
 			height: 37px;
 			padding-left:23px;
 			padding-top:14px;
-			padding-bottom: 14px;			
+			padding-bottom: 14px;
+			padding-right: 187px;			
 		}
 
 		/*lista da barra de rolagem fixa*/
@@ -129,9 +130,9 @@
 			align-items: center;
 			padding-right: 17px;
 
+
 		}
 		.lista-rolagem-fixa#list-rolagem-fixa-01{
-		 padding-left: 187px;	
 		 width: 126px;
 		}
 		.lista-rolagem-fixa#list-rolagem-fixa-02{
@@ -151,9 +152,7 @@
 		.lista-rolagem-fixa#list-rolagem-fixa-06{
 		width: 88px;
 	
-		padding-right: 109px;	
-
-		}		
+	}		
 		.lista-rolagem-fixa .links{
 			position: relative;
 			text-decoration: none;
@@ -163,6 +162,9 @@
 
 		.bandeiras{
 			padding-right: 1px
+		}
+		.bandeiras#bandeira-01{
+			padding-left: 109px
 		}
 		.bandeiras#bandeira-03{
 			padding-right: 78px;
