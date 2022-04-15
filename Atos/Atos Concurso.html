@@ -8,6 +8,7 @@
 	<link rel="stylesheet" type="text/css" href=".CSS/Sections.css">
 	<link rel="stylesheet" type="text/css" href=".CSS/Section3.css">
 	<link rel="stylesheet" type="text/css" href=".CSS/Section4.css">
+	<link rel="stylesheet" type="text/css" href=".CSS/Section-Final.css">	
 	<link rel="stylesheet" type="text/css" href=".CSS/Main.css">
 	<link rel="stylesheet" type="text/css" href=".CSS/MediaQuery.css">
 	<link rel="stylesheet" type="text/css" href=".CSS/KeyFrames.css">
@@ -19,93 +20,77 @@
 			margin: 0px;
 			padding: 0px;
 		}
-
-		.container-sessao-final{
-			display: flex;
-			flex-wrap: wrap;
-			position:relative;
+		.rodape{
 			width: 100%;
 			max-width: 1920px;
 			min-width: 280px;
-			height: 100%;
-			max-height: auto;
-			min-height: 671px;
-			background: rgb(220,220,220);
-			margin: auto; 
-			column-gap: 50px;
+			margin: auto;
+			background-image: url(".imagens/Lotes/Grupo de máscara 884.jpg");
+			background-repeat: no-repeat;
+			background-size: 100% 100%;
 		}
 
-		.container-fale-conosco{
-			width: 100%;
-			min-width: auto;
-			max-width: 800px;
-			min-width: auto;
-		/*	background: blue;*/
-			height: min-content;
-		}
-		#h2-sessao-final{
+		.container-rodape{
 			position: relative;
-			text-align: left;
-			padding-left: 350px;
-			padding-top: 161px;
-			font-size: 50pt;
-			display: inline-flex;
-		}
-		#hr-sessao-final{
-			position: relative;
-			background: red;
-			padding: 1px;
-			width: 400px;
-			margin-right: 0px;
-			margin-left:350px;
-		}
-
-		.container-form{
-/*			background: red;*/
+			display: grid;
+			grid-template-columns: 1fr 1fr;
 			width: 100%;
-			max-width:900px; 
-			height: max-content;
-		}
-		.campos-form{
-			color: rgb(128,128,128);
-			margin-top: 60px;
-		}
-		.text-form{
-			width: 100%;
-			max-width: 755px;
-			min-width: auto;
-			height: 52px;
-			border-radius: 5px;
-			border-style: none;
-		}
-		.text-form:focus{
-			outline-color: red;
-		}
-		#form-mensagem{
-			width: 100%;
-			max-width: 755px;
-			min-width: auto;
+			max-width: 1920px;
+			min-width: 280px;
+			margin: auto;
 			height: 100%;
-			min-height: 227px;
-			max-height: 227px;
-		}
-		#form-mensagem:focus{
-			background: black;
-			color:white;
+			min-height: 423px;
+			border:1px solid white;
+			wrap
+			justify-content: center;
+			column-gap: 12%;
 		}
 
-		#btn-form{
-			margin-top: 20px; 
-			height: 40px;
-			width: 119px;
-			background: red;
+		.texto-footer{
+			position: relative;
+			text-align-last: left;
 			color: white;
-			cursor: pointer;
-			border-radius: 5px;
-			border: none;
-			text-align: center;
-			display: block;
+			word-wrap: wrap;
 		}
+		.img-footer{
+			display: inline-flex;
+			width: 32%;
+			height: 35%;
+			margin: auto;
+			margin-left: 50%; 
+		}
+		#img1-footer{
+			width: 100%;			
+		}
+		 #img2-footer, #img3-footer{
+			width: 50%;
+		}
+		#img-footer-1{
+			position: relative;
+			top: 20%;
+			align-self: bottom;
+		}
+
+		#img-footer-2{
+			position: relative;
+			top: -30%;
+		}
+
+		#text-footer-1{
+			align-self: center;
+		}
+
+		#text-footer-2{
+			align-self: top;
+		}
+
+		.link-footer{
+			text-decoration: none;
+			color:white;
+			cursor: pointer;
+		}
+
+
 
 /*refaça essa porcaria deixe de ser preguiçoso*/
 	</style>
@@ -548,20 +533,75 @@
 			</div>
 
 			<div class="container-form">
-				<form action="get">
+				<form name="dados" >
 					<h2 class="campos-form">Nome</h2>
-					<input class="text-form" type="text" name="nome" placeholder=" ">
+					<input class="text-form" type="text" name="nome" placeholder="Ex:eduardo dos santos">
 					<h2 class="campos-form">Email</h2>
-					<input class="text-form" type="mail" name="email" placeholder=" ">
+					<input class="text-form" type="mail" name="email" placeholder="Ex:dados@dados.com.br ">
 					<h2 class="campos-form">Menssagem</h2>
-					<textarea class="text-form" id="form-mensagem"></textarea>	
-					<button id="btn-form">enviar mensagens</button>				
+					<textarea class="text-form" id="form-mensagem" name="mensagem"></textarea>	
+					<button id="btn-form" onclick="Checar_Dados()">enviar mensagens</button>				
 				</form>			
 			</div>
 		</div>
-
 	</section>
+	<footer class="rodape">
+		<div class="container-rodape">
+			<div class="img-footer" id="img-footer-1">
+				<img id="img1-footer" src=".imagens/logos/logo atos.svg">
+			</div>
+			<div class="texto-footer" id="text-footer-1">
+				<p>Unidade São Paulo:<br>
+				Avenida Paulista, 575 - Edifício Barão de Ouro<br>
+				Branco, 19º Andar - Bela Vista<br>
+				São Paulo - SP<br>
+				(11) 3522-7018</p>
+				<a class="link-footer" href="#">atendimento@atoscapital.com.br</a>
+				
+			</div>
+			<div class="img-footer" id="img-footer-2">
+				<img id="img2-footer" src=".imagens/logos/sap partner.svg">
+				<img id="img3-footer" src=".imagens/logos/Logo-white.png">				
+			</div>
+			<div class="texto-footer" id="text-footer-2">
+				<p>Base de Operações - Nordeste:<br>
+				Rua dr Roberto Ribeiro, 78 - Grageru<br>
+				Aracaju – SE<br>
+				(79)3042-4048</p>
+				<a class="link-footer" href="#">atendimento@atoscapital.com.br</a>
+				
+			</div>
+			
+		</div>
+		
+	</footer>
 </body>
+	<script type="text/javascript">
+
+
+		function Checar_Dados(){
+
+			var checar = "";
+
+			if(document.dados.nome.value  == "" || document.dados.nome.value.length < 5 )
+				checar += "Nome(em branco ou inválido)\n";
+
+			if(document.dados.email.value == "" || document.dados.email.value.indexOf("@")== -1 || document.dados.email.value.indexOf(".") == -1 )
+				checar += "Email (em branco ou inválido)\n";
+
+			if(document.dados.mensagem.value  == "" || document.dados.mensagem.value.length < 5 )
+				checar += "Mensagem(em branco ou inválda)\n";
+
+			if(checar != ""){
+				alert("Favor preencha os campos em branco:\n=================\n" + checar + "\n=================\n");
+			}else{
+				alert("Enviando Dados");
+			}
+
+		}
+
+
+	</script>
 	<script type="text/javascript">
 		/*	<script src=".Script/.Carrossel2/Carrossel.js">*/
 //===========================================================================
