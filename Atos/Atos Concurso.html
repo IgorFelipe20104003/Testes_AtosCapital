@@ -33,15 +33,13 @@
 		.container-rodape{
 			position: relative;
 			display: grid;
-			grid-template-columns: 1fr 1fr;
+			grid-template-columns: 1fr 1fr ;
 			width: 100%;
 			max-width: 1920px;
 			min-width: 280px;
 			margin: auto;
 			height: 100%;
 			min-height: 423px;
-			border:1px solid white;
-			wrap
 			justify-content: center;
 			column-gap: 12%;
 		}
@@ -89,7 +87,49 @@
 			color:white;
 			cursor: pointer;
 		}
+		@media(max-width:800px ){
+			.container-rodape{
+				display: inline-grid;
+				align-items: flex-start;
+				grid-template-columns: 1fr;
+				grid-row-gap: 5px;
+			}
+			.texto-footer{
+				text-align-last: center;
+			}
+			.img-footer{
+				margin: auto;
+			}
+			#img1-footer{
+				margin-left: 0px;
+				martgin:auto;
+				justify-content: center;
+				align-items: center;
+				align-content: center;
+			}
+		}
 
+		/*========================================================================================*/
+		.container-rodape-final{
+			position: relative;
+			width: 100%;
+			border:none;
+			background: blue;
+			height: 79px;
+			text-align: center;
+			align-self: center;
+			justify-content: center;
+			align-content: center;
+
+		}
+		.container-rodape-final > a{
+			float: right;
+			width: 25%;
+			text-decoration: none;
+			color: white;
+			text-align: center;
+			align-self: center;
+		}
 
 
 /*refaça essa porcaria deixe de ser preguiçoso*/
@@ -103,9 +143,7 @@
 				<li id="mail-01">atendimento@atoscapital.com.br</li>
 				<li id="tel-01"><label id="tel-1">11 3522 7018</label> <label id="tel-2">79 3042 4048</label></li>
 				<li>
-					<svg id="instagram01" xmlns="http://www.w3.org/2000/svg" width="13.6" height="13.6" viewBox="0 0 13.6 13.6">
-						<path id="instagram-brands_1_" data-name="instagram-brands(1)" d="M6.726,35.138a3.487,3.487,0,1,0,3.486,3.487A3.481,3.481,0,0,0,6.726,35.138Zm0,5.754a2.267,2.267,0,1,1,2.266-2.267,2.271,2.271,0,0,1-2.266,2.267ZM11.168,35a.813.813,0,1,1-.813-.813A.811.811,0,0,1,11.168,35Zm2.309.825a4.025,4.025,0,0,0-1.1-2.85,4.05,4.05,0,0,0-2.849-1.1c-1.123-.064-4.487-.064-5.61,0a4.044,4.044,0,0,0-2.849,1.1,4.038,4.038,0,0,0-1.1,2.85c-.064,1.123-.064,4.488,0,5.611a4.025,4.025,0,0,0,1.1,2.85,4.055,4.055,0,0,0,2.849,1.1c1.123.064,4.487.064,5.61,0a4.023,4.023,0,0,0,2.849-1.1,4.052,4.052,0,0,0,1.1-2.85C13.541,40.306,13.541,36.944,13.477,35.821Zm-1.45,6.813a2.3,2.3,0,0,1-1.292,1.293,14.982,14.982,0,0,1-4.008.273,15.1,15.1,0,0,1-4.008-.273,2.3,2.3,0,0,1-1.292-1.293,14.991,14.991,0,0,1-.273-4.009,15.108,15.108,0,0,1,.273-4.009,2.3,2.3,0,0,1,1.292-1.293,14.982,14.982,0,0,1,4.008-.273,15.1,15.1,0,0,1,4.008.273,2.3,2.3,0,0,1,1.292,1.293,14.991,14.991,0,0,1,.273,4.009A14.983,14.983,0,0,1,12.027,42.634Z" transform="translate(0.075 -31.825)" fill="white"/>
-					</svg></li>
+					<a href="#"><img class="instagram" src=".imagens/svg/instagram2.svg"></a></li>
 				</ul>
 			</div>
 			<div class="barra-rolagem-fixa">
@@ -141,7 +179,7 @@
 					<h2 id="h2-sessao-01">A Atos Capital</h2>
 					<hr id="hr-right">
 					<div id="conter-paragrafo-sessao-01">
-					<p class="paragrafo-sessao-01">A ATOS CAPITAL é uma Fintech, uma empresa de serviços financeiros, 100% brasileira e genuinamente nordestina,especializada na Gestão e Conciliação de Cartões Eletrônicos. Atuamos atendendo diversos segmentos da economia que
+					<p class="paragrafo-sessao-01" id="sessao-01-p">A ATOS CAPITAL é uma Fintech, uma empresa de serviços financeiros, 100% brasileira e genuinamente nordestina,especializada na Gestão e Conciliação de Cartões Eletrônicos. Atuamos atendendo diversos segmentos da economia que
 					possuem grande participação de seus recebíveis financeiros por meio de transações com cartões eletrônicos de diversas
 					Adquirentes e Bandeiras.</p>
 					<p class="paragrafo-sessao-01">Com larga experiência, equipe capacitada e tecnologia, somos uma empresa parceira SAP, oferecendo aos nossos clientes
@@ -162,7 +200,7 @@
 					<h2 id="h2-center">Nossas Soluções</h2>
 					<hr id="hr-principal">
 					<div class="div-principal" id="ativador-divs-internas">
-						<div class="div-interna" id="div-1" onmouseover="ativar('div-1')" onmouseout="desativar('div-1')"><img class="img-div-interna" src=".imagens/logos/b1 cards.svg"><button class="btn-ver-mais"> veja mais</button>
+						<div class="div-interna" id="div-1" ><img class="img-div-interna" src=".imagens/logos/b1 cards.svg"><button class="btn-ver-mais" onclick="selecionar('div-1')"> ver mais</button>
 						<span id="texto-1">
 							<h3>B1Cards</h3>   
 
@@ -172,14 +210,14 @@
 							Sefaz e muitas outras fontes relevantes de informações, atua na reconciliação de cartões,
 							vouchers, adquirentes, gateways de pagamento para E-Commerces, Marketplaces,Deliverys,
 							Contas Digitais, Dinheiro, Pix, TED, DOC e muito mais.</p></span></div>
-						<div class="div-interna"id="div-2" onmouseover="ativar('div-2')" onmouseout="desativar('div-2')"><img class="img-div-interna" src=".imagens/logos/b1 pay.svg"><button class="btn-ver-mais"> veja mais</button>
+						<div class="div-interna"id="div-2" ><img class="img-div-interna" src=".imagens/logos/b1 pay.svg"><button class="btn-ver-mais" onclick="selecionar('div-2')"> ver mais</button>
 						<span id="texto-2">
 							<h3>B1Pay</h3>
 							<p>O SAP Addon B1Pay, é uma solução de Pagamento Eletrônico para SAP Business One,
 						atuando como mais uma alternativa para a automação dos processos de
 						Contas a Pagar, de forma integrada e automatizada junto aos principais
 						bancos brasileiros.</p></span></div> 
-						<div class="div-interna"id="div-3" onmouseover="ativar('div-3')" onmouseout="desativar('div-3')"><img class="img-div-interna" src=".imagens/logos/b1 bill.svg">             <button class="btn-ver-mais"> veja mais</button>
+						<div class="div-interna"id="div-3"><img class="img-div-interna" src=".imagens/logos/b1 bill.svg"><button class="btn-ver-mais" onclick="selecionar('div-3')"> ver mais</button>
 							<span id="texto-3">
 							<h3>B1Bill</h3>
 
@@ -191,7 +229,7 @@
 
 							de gestão executadas no B1Bill que proporcionam uma gestão a vista de todo o processo financeiro junto ao SAP Business One.</p>
 						</span></div>
-						<div class="div-interna"id="div-4" onmouseover="ativar('div-4')" onmouseout="desativar('div-4')"><img class="img-div-interna" src=".imagens/logos/B1-TaxInvoice.svg"><button class="btn-ver-mais"> veja mais</button>
+						<div class="div-interna"id="div-4"><img class="img-div-interna" src=".imagens/logos/B1-TaxInvoice.svg"><button class="btn-ver-mais" onclick="selecionar('div-4')"> ver mais</button>
 							<span id="texto-4">
 							<h3>B1TaxInvoices</h3>
 
@@ -207,7 +245,7 @@
 
 							e a geração no SAP.</p>								
 							</span></div>
-						<div class="div-interna"id="div-5" onmouseover="ativar('div-5')" onmouseout="desativar('div-5')"><img class="img-div-interna" src=".imagens/logos/b1 expenses.svg"><button class="btn-ver-mais"> veja mais</button>
+						<div class="div-interna"id="div-5"><img class="img-div-interna" src=".imagens/logos/b1 expenses.svg"><button class="btn-ver-mais" onclick="selecionar('div-5')"> ver mais</button>
 							<span id="texto-5">
 							<h3>B1Expenses</h3>
 
@@ -217,7 +255,7 @@
 
 							bancos brasileiros e também bancos americanos.</p>						
 							</span></div>
-						<div class="div-interna"id="div-6" onmouseover="ativar('div-6')" onmouseout="desativar('div-6')"><img class="img-div-interna" src=".imagens/logos/cards4.svg"><button class="btn-ver-mais"> veja mais</button>
+						<div class="div-interna"id="div-6"><img class="img-div-interna" src=".imagens/logos/cards4.svg"><button class="btn-ver-mais" onclick="selecionar('div-6')">ver mais</button>
 							<span id="texto-6">
 							<h3>Cards/4</h3>
 
@@ -235,7 +273,7 @@
 
 							Deliverys, Contas Digitais, Dinheiro, Pix, TED, DOC e muito mais.</p>
 							</span></div>
-						<div class="div-interna"id="div-7" onmouseover="ativar('div-7')" onmouseout="desativar('div-7')"><img class="img-div-interna" src=".imagens/logos/cardservices.svg"><button class="btn-ver-mais"> veja mais</button>
+						<div class="div-interna"id="div-7"><img class="img-div-interna" src=".imagens/logos/cardservices.svg"><button class="btn-ver-mais" onclick="selecionar('div-7')">ver mais</button>
 							<span id="texto-7">
 							<h3>CardServices</h3>
 
@@ -251,7 +289,7 @@
 
 							Deliverys, Contas Digitais, Dinheiro, Pix, TED, DOC e muito mais.</p>
 							</span></div>
-						<div class="div-interna"id="div-8" onmouseover="ativar('div-8')" onmouseout="desativar('div-8')"><img class="img-div-interna" src=".imagens/logos/marca_taxservices-01.svg"><button class="btn-ver-mais"> veja mais</button>
+						<div class="div-interna"id="div-8"><img class="img-div-interna" src=".imagens/logos/marca_taxservices-01.svg"><button class="btn-ver-mais" onclick="selecionar('div-8')">ver mais</button>
 							<span id="texto-8">
 							<h3>TaxServices</h3>
 
@@ -277,19 +315,19 @@
 			<div id="ativador-carrossel-1">
 				<nav id="navegador-scroll">
 				<div class="div-carrossel-1">
-					<iframe class="iframe-carrossel" src="https://www.youtube.com/embed/cvHYM4VI1Mk?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					<iframe class="iframe-carrossel" src="https://www.youtube.com/embed/2prrw9_yhNw?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 					<h2  class="h2-carrossel">Nome do</h2>
 					<img class="svg-carrossel" src=".imagens/svg/facebook.svg">
 					<img class="svg-carrossel" src=".imagens/svg/instagram.svg">
 					<img class="svg-carrossel" src=".imagens/svg/www.svg">
 
 
-					<p   class="paragrafo-carrossel">ipsum dolor sit amet, consectetur adipisicing elit</p>
+					<p   class="paragrafo-carrossel">"Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
 					<img class="qt-direita" src=".imagens/svg/quote-direita.svg">
 					<img class="qt-esquerda" src=".imagens/svg/quote-esquerda.svg">
 				</div>
 				<div class="div-carrossel-1">	
-					<iframe class="iframe-carrossel" src="https://www.youtube.com/embed/cvHYM4VI1Mk?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					<iframe class="iframe-carrossel" src="https://www.youtube.com/embed/2prrw9_yhNw?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 					
 					<h2  class="h2-carrossel">Nome do</h2>
 					<img class="svg-carrossel" src=".imagens/svg/facebook.svg">
@@ -297,13 +335,13 @@
 					<img class="svg-carrossel" src=".imagens/svg/www.svg">
 						
 		
-					<p   class="paragrafo-carrossel">ipsum dolor sit amet, consectetur adipisicing elit</p>
+					<p   class="paragrafo-carrossel">"Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
 					<img class="qt-direita" src=".imagens/svg/quote-direita.svg">
 					<img class="qt-esquerda" src=".imagens/svg/quote-esquerda.svg">
 				</div>
 				<div class="div-carrossel-1">
 				<img class="qt-direita" src=".imagens/svg/quote-direita.svg">			<img class="qt-esquerda" src=".imagens/svg/quote-esquerda.svg">
-					<iframe class="iframe-carrossel" src="https://www.youtube.com/embed/cvHYM4VI1Mk?controls=0" title="	YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					<iframe class="iframe-carrossel" src="https://www.youtube.com/embed/2prrw9_yhNw?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 					<h2  class="h2-carrossel">Nome do</h2>
 					<img class="svg-carrossel"src=".imagens/svg/facebook.svg">
@@ -311,12 +349,12 @@
 					<img class="svg-carrossel" src=".imagens/svg/www.svg">
 
 
-					<p   class="paragrafo-carrossel">ipsum dolor sit amet, consectetur adipisicing elit</p>
+					<p   class="paragrafo-carrossel">"Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
 					<img class="qt-direita" src=".imagens/svg/quote-direita.svg">
 					<img class="qt-esquerda" src=".imagens/svg/quote-esquerda.svg">
 				</div>
 				<div class="div-carrossel-1">	
-					<iframe class="iframe-carrossel" src="https://www.youtube.com/embed/cvHYM4VI1Mk?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					<iframe class="iframe-carrossel" src="https://www.youtube.com/embed/2prrw9_yhNw?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 					
 					<h2  class="h2-carrossel">Nome do</h2>
 					<img class="svg-carrossel" src=".imagens/svg/facebook.svg">
@@ -324,12 +362,12 @@
 					<img class="svg-carrossel" src=".imagens/svg/www.svg">
 
 
-					<p   class="paragrafo-carrossel">ipsum dolor sit amet, consectetur adipisicing elit</p>
+					<p   class="paragrafo-carrossel">"Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
 					<img class="qt-direita" src=".imagens/svg/quote-direita.svg">
 					<img class="qt-esquerda" src=".imagens/svg/quote-esquerda.svg">
 				</div>
 				<div class="div-carrossel-1">	
-					<iframe class="iframe-carrossel" src="https://www.youtube.com/embed/cvHYM4VI1Mk?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					<iframe class="iframe-carrossel" src="https://www.youtube.com/embed/2prrw9_yhNw?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 					<h2  class="h2-carrossel">Nome do</h2>
 					<img class="svg-carrossel" src=".imagens/svg/facebook.svg">
@@ -337,12 +375,12 @@
 					<img class="svg-carrossel"src=".imagens/svg/www.svg">
 
 
-					<p   class="paragrafo-carrossel">ipsum dolor sit amet, consectetur adipisicing elit</p>
+					<p   class="paragrafo-carrossel">"Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
 					<img class="qt-direita" src=".imagens/svg/quote-direita.svg">
 					<img class="qt-esquerda" src=".imagens/svg/quote-esquerda.svg">
 				</div>
 				<div class="div-carrossel-1">
-					<iframe class="iframe-carrossel" src="https://www.youtube.com/embed/cvHYM4VI1Mk?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					<iframe class="iframe-carrossel" src="https://www.youtube.com/embed/2prrw9_yhNw?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 					<h2  class="h2-carrossel">Nome do</h2>
 					<img class="svg-carrossel" src=".imagens/svg/facebook.svg">
@@ -350,7 +388,7 @@
 					<img class="svg-carrossel" src=".imagens/svg/www.svg">
 
 
-					<p   class="paragrafo-carrossel">ipsum dolor sit amet, consectetur adipisicing elit</p>
+					<p   class="paragrafo-carrossel">"Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
 					<img class="qt-direita" src=".imagens/svg/quote-direita.svg">
 					<img class="qt-esquerda" src=".imagens/svg/quote-esquerda.svg">
 
@@ -400,7 +438,7 @@
 				</div>	
 			</div>	
 	</section>
-	<section class="sessao-04">
+	<section class="sessao-04"> <!-- Na sessão quatro não coloquei um link dentro do a somente a tag -->
 		<div class="container-sessao-4">
 			<h2 id="h2-sessao-4">Blog | Ta na Mídia</h2>
 			<hr id="hr-sessao-4">
@@ -415,7 +453,7 @@
 							<h3 class="h3-carrossel-2" >Atos Capital é patrocinadora do SAP Partner Sales Meeting 2021</h3>
 
 							<p class="paragrafo-1-carrossel-2">O maior evento do Ecossistema SAP Business One do Brasil, desembarca em São Paulo emnovo formato, atendendo as todas as regras de saúde estipuladas pelo Ministério da Saúde e em modelo híbrido (presencial e Online), proporcionando o que há de mais inovador, lúdico e tecnológico aps parceiros SAP Business One Brasil.</p>	
-							<button class="btn-1-carrossel-2">Ler Materia Completa</button>				
+							<button class="btn-1-carrossel-2"><a>Ler Materia Completa</a></button>				
 						</div>
 					</div>
 					<div class="div-interna-carrossel-2">
@@ -427,7 +465,7 @@
 								principais empresas de Cosméticos do
 								Brasil, com indústria, mais de 80 lojas em
 							todo...</p>
-							<button class="btn-2-carrossel-2">Matéria Completa</button>
+							<button class="btn-2-carrossel-2"><a>Matéria Completa<img class="seta-button" src=".imagens/svg/seta - 2.svg"></a></button>
 						</div>		
 					</div>
 					<div class="div-interna-carrossel-2">
@@ -440,7 +478,7 @@
 								bebidas pré prontas, vem expandindo
 								solidamente suas operações no Brasil
 							ampliando suas vendas tanto no ecommerce quanto com suas...</p>
-							<button class="btn-2-carrossel-2">Matéria Completa</button>
+							<button class="btn-2-carrossel-2"><a>Matéria Completa<img class="seta-button" src=".imagens/svg/seta - 2.svg"></a></button>
 						</div>		
 					</div>
 				</div>
@@ -464,7 +502,7 @@
 								principais empresas de Cosméticos do
 								Brasil, com indústria, mais de 80 lojas em
 							todo...</p>
-							<button class="btn-2-carrossel-2">Matéria Completa</button>
+							<button class="btn-2-carrossel-2"><a>Matéria Completa<img class="seta-button" src=".imagens/svg/seta - 2.svg"></a></button>
 						</div>		
 					</div>
 					<div class="div-interna-carrossel-2">
@@ -477,7 +515,7 @@
 								bebidas pré prontas, vem expandindo
 								solidamente suas operações no Brasil
 							ampliando suas vendas tanto no ecommerce quanto com suas...</p>
-							<button class="btn-2-carrossel-2">Matéria Completa</button>
+							<button class="btn-2-carrossel-2"><a>Matéria Completa<img class="seta-button" src=".imagens/svg/seta - 2.svg"></a></button>
 						</div>		
 					</div>
 				</div>
@@ -501,7 +539,7 @@
 								principais empresas de Cosméticos do
 								Brasil, com indústria, mais de 80 lojas em
 							todo...</p>
-							<button class="btn-2-carrossel-2">Matéria Completa</button>
+							<button class="btn-2-carrossel-2"><a>Matéria Completa<img class="seta-button" src=".imagens/svg/seta - 2.svg"></a></button>
 						</div>		
 					</div>
 					<div class="div-interna-carrossel-2">
@@ -514,7 +552,7 @@
 								bebidas pré prontas, vem expandindo
 								solidamente suas operações no Brasil
 							ampliando suas vendas tanto no ecommerce quanto com suas...</p>
-							<button class="btn-2-carrossel-2">Matéria Completa</button>
+							<button class="btn-2-carrossel-2"><a>Matéria Completa<img class="seta-button" src=".imagens/svg/seta - 2.svg"></a></button>
 						</div>		
 					</div>
 				</div>
@@ -570,7 +608,12 @@
 				(79)3042-4048</p>
 				<a class="link-footer" href="#">atendimento@atoscapital.com.br</a>
 				
-			</div>
+			</div>			
+		</div>
+		<div class="container-rodape-final">
+
+			<a href="#">poliicas de privacidade</a>
+			<a href="#">poliicas de privacidade</a>
 			
 		</div>
 		
@@ -618,19 +661,20 @@
 
 //===========================================================================
 /*função para ativar div e assim exibir balão de informações*/
-			function ativar(x){
+			function selecionar(x){
 				const ativar = document.getElementById(x);
+				if(ativar.className == 'div-interna' || ativar.className == 'div-interna desativado' ){
+
 				ativar.classList.remove('desativado');
 				ativar.classList.add('ativado');
 
-			}
+			}else{
 /*função para desativar div e retirar exibição do balão de informações*/
-			function desativar(x){
-				const ativar = document.getElementById(x);
 
 				ativar.classList.remove('ativado');
 				ativar.classList.add('desativado');
 			}
+		}
 //==========================================================================
 	// Definindo variaveis para capturar o id do elemento que 
 	//ativara a função
