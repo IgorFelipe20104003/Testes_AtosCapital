@@ -1,5 +1,14 @@
 /*====================sessao - 1 A Atos Capital=====================*/
+		@font-face{
+			font-family: 'Bold';
+			src: url("../fontes/Montserrat-Bold.otf");
+		}
+		@font-face{
+			font-family: 'Medium';
+			src: url("../fontes/Montserrat-Medium.otf");
+		}
 		.sessao-01{
+
 			position: relative;
 			margin: auto;
 			width: 100%;
@@ -25,6 +34,7 @@
 			padding-top: 25px;
 			margin-top: 0px;
 			margin-bottom: 0px;
+			font-family: "Bold";
 			font-size: 50pt; /* verificar com o professor essa questão dos pontos*/
 			text-align: right;
 		}
@@ -33,20 +43,28 @@
 			margin-top: 2px;
 			margin-right: 1px;
 			border-color:red;
-			width: 460px;
+			width: 520px;
 			background-color: red;
 			float: right;
 		}
 
 		.paragrafo-sessao-01{
-			margin-top: 30px; 
-			padding-bottom: 25px;
+			font-family: "Medium";
+			font-size: 20pt;
+			padding-bottom: 40px;
 			text-align: right;
 			font-size: 20pt;
 			margin-left: 15%;
 			padding-right: 0px;
 			margin-bottom: 0px;
+			word-wrap: break-word;
 		}
+
+		#sessao-01-p{
+			margin-top: 40px; 
+			word-wrap: break-word;
+		}
+
 /*=========================fim da sessao-1*======================================*/
 /*==========================sessao - 2 A Atos Capital============================*/		
 		.sessao-02{

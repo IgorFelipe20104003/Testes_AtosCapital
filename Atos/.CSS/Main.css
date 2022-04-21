@@ -15,6 +15,7 @@
 
 
 		#h2-center{
+		font-family: "Bold";
 		padding-top: 135px; 
 		text-align: center;
 		font-size: 50pt;
@@ -23,7 +24,7 @@
 		#hr-principal{
 			align-items: center;
 			margin:auto;
-			max-width: 500px;
+			max-width: 620px;
 			margin-top: 2px;
 			border-color:red;
 			background-color: red;
@@ -62,6 +63,13 @@
 			width: 78px;
 			height: 26px;
 			border:none;
+			cursor: pointer;
+			font-family: "Bold";
+			font-size: 8pt;
+		}
+		.btn-ver-mais:active{
+			color: red;
+			background-color: white;
 		}
 
 		.div-interna{
@@ -73,8 +81,6 @@
 			box-shadow: 8px 9px 24px -12px black;
 			transition: 0.1s;
 			padding-bottom: 30px;
-			/*quando for resolver o problema com as
-			divs z-index*/
 						
 		}
 
@@ -85,45 +91,47 @@
 			outline-color: red;
 			background: black;
 			gap:19px; 
+			z-index: 2;
 		}
 		/*=============escondendo textos dos balões====================================*/
 		#texto-1, #texto-2, #texto-3, #texto-4, #texto-5, #texto-6, #texto-7, #texto-8{
+			font-family: "Regular";
+			font-size: 11pt;
 			display: none;
 		}
 
 		/*==========================================================ativando balões=================================================================*/
-		.div-interna.ativado #texto-1{display:block;width: 265px; height: max-content; animation-name: teste-balao-at; animation-duration: 0.5s;
-  		  animation-fill-mode: forwards; margin-top: -1px; color: #ebcf82; text-align: center; background-color: #ff1100; border-radius: 0% 0% 5% 5%;
-		  z-index: 2;
+		.div-interna.ativado{
+			z-index: 2;
 		}
-		.div-interna.ativado #texto-2{display:block;width: 265px; height: max-content; animation-name: teste-balao-at; animation-duration: 0.5s;
-  		  animation-fill-mode: forwards; margin-top: -1px; color: #ebcf82; text-align: center; background-color: #ff1100; border-radius: 0% 0% 5% 5%;
-		  z-index: 2;
+
+		.div-interna.ativado #texto-1{
+			position:relative;display:block;width: 265px; height: max-content; animation-name: teste-balao-at; animation-duration: 0.5s;
+  		  animation-fill-mode: forwards; margin-top: -1px; color: #ebcf82; text-align: center; background-color: #ff1100; border-radius: 0% 0% 5% 5%;outline-color: black;outline-style: double;outline-color: black;outline-width: 2px;z-index: 2;
 		}
-		.div-interna.ativado #texto-3{display:block;width: 265px; height: max-content; animation-name: teste-balao-at; animation-duration: 0.5s;
-  		  animation-fill-mode: forwards; margin-top: -1px; color: #ebcf82; text-align: center; background-color: #ff1100; border-radius: 0% 0% 5% 5%;
-		  z-index: 2;
+		.div-interna.ativado #texto-2{
+			display:block;width: 265px; height: max-content; animation-name: teste-balao-at; animation-duration: 0.5s;
+  		  animation-fill-mode: forwards; margin-top: -1px; color: #ebcf82; text-align: center; background-color: #ff1100; border-radius: 0% 0% 5% 5%;outline-style: double;outline-color: black;outline-width: 2px;z-index: 2;
+		}
+		.div-interna.ativado #texto-3{
+			display:block;width: 265px; height: max-content; animation-name: teste-balao-at; animation-duration: 0.5s;
+  		  animation-fill-mode: forwards; margin-top: -1px; color: #ebcf82; text-align: center; background-color: #ff1100; border-radius: 0% 0% 5% 5%;outline-style: double;outline-color: black;outline-width: 2px;z-index: 2;
 		}
 		.div-interna.ativado #texto-4{display:block;width: 265px; height: max-content; animation-name: teste-balao-at; animation-duration: 0.5s;
-  		  animation-fill-mode: forwards; margin-top: -1px; color: #ebcf82; text-align: center; background-color: #ff1100; border-radius: 0% 0% 5% 5%;
-		  z-index: 2;
+  		  animation-fill-mode: forwards; margin-top: -1px; color: #ebcf82; text-align: center; background-color: #ff1100; border-radius: 0% 0% 5% 5%;outline-style: double;outline-color: black;outline-width: 2px;z-index: 2;
 		}
 		.div-interna.ativado #texto-5{display:block;width: 265px; height: max-content; animation-name: teste-balao-at; animation-duration: 0.5s;
-  		  animation-fill-mode: forwards; margin-top: -1px; color: #ebcf82; text-align: center; background-color: #ff1100; border-radius: 0% 0% 5% 5%;
-		  z-index: 2;
+  		  animation-fill-mode: forwards; margin-top: -1px; color: #ebcf82; text-align: center; background-color: #ff1100; border-radius: 0% 0% 5% 5%;outline-style: double;outline-color: black;outline-width: 2px;z-index: 2;
 		}
 		.div-interna.ativado #texto-6{display:block;width: 265px; height: max-content; animation-name: teste-balao-at; animation-duration: 0.5s;
-  		  animation-fill-mode: forwards; margin-top: -1px; color: #ebcf82; text-align: center; background-color: #ff1100; border-radius: 0% 0% 5% 5%;
-		  z-index: 2;
+  		  animation-fill-mode: forwards; margin-top: -1px; color: #ebcf82; text-align: center; background-color: #ff1100; border-radius: 0% 0% 5% 5%;outline-style: double;outline-color: black;outline-width: 2px;z-index: 2;
 		}
 		.div-interna.ativado #texto-7{display:block;width: 265px; height: max-content; animation-name: teste-balao-at; animation-duration: 0.5s;
-  		  animation-fill-mode: forwards; margin-top: -1px; color: #ebcf82; text-align: center; background-color: #ff1100; border-radius: 0% 0% 5% 5%;
-		  z-index: 2;
+  		  animation-fill-mode: forwards; margin-top: -1px; color: #ebcf82; text-align: center; background-color: #ff1100; border-radius: 0% 0% 5% 5%;outline-style: double;outline-color: black;outline-width: 2px;z-index: 2;
 		}
 		.div-interna.ativado #texto-8{display:block;width: 265px; height: max-content; animation-name: teste-balao-at; animation-duration: 0.5s;
-  		  animation-fill-mode: forwards; margin-top: -1px; color: #ebcf82; text-align: center; background-color: #ff1100; border-radius: 0% 0% 5% 5%;
-		  z-index: 3;
-		}
+  		  animation-fill-mode: forwards; margin-top: -1px; color: #ebcf82; text-align: center; background-color: #ff1100; border-radius: 0% 0% 5% 5%;outline-style: double;outline-color: black;outline-width: 2px;
+		z-index: 2;}
 
 		/*=================================================================desativando baloes======================================================*/
 

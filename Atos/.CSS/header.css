@@ -1,5 +1,18 @@
 /*css header*/
 		/* configuração geral do cabeçalho*/
+		@font-face{
+			font-family: 'Bold';
+			src: url("../fontes/Montserrat-Bold.otf");
+		}
+		@font-face{
+			font-family: 'Medium';
+			src: url("../fontes/Montserrat-Medium.otf");
+		}
+		@font-face{
+			font-family: 'Regular';
+			src: url("../fontes/Montserrat-Regular.otf");
+		}
+
 		header.container-Cabecalho{
 			background: #5e5e5e;
 			width: 100%;
@@ -26,6 +39,7 @@
 			margin-right:338px;
 			text-align: right;
 			height: 25px;
+			font-family: "Bold";
 			font-size: 10pt;
 		}
 		.contato-inicio ul li{
@@ -41,11 +55,16 @@
 		}
 		/*==============estilo individuais das lista============*/
 		li#mail-01{
-			width:175px; 
+			width:100%; 
 			height: 25px;
+			min-width: 175px;
+			max-width: min-content;
+			cursor: pointer;
 		}
 		li#tel-01{
-			width:180px;	
+			width:100%; 
+			min-width: 175px;
+			max-width: max-content;
 			height: 25px;	
 		}
 		#mail-01:hover{
@@ -62,6 +81,12 @@
 		#tel-1::before, #tel-2::before {
 			content:'✆' 
 
+		}
+
+		/*==============================================*/
+		.instagram{
+			width: 13.6px;
+			height: 13.6px;
 		}
 
 		/*=========================Fim estilos listas hader=================================*/
@@ -122,6 +147,8 @@
 			padding-bottom: 14px;
 			align-items: center;
 			text-align: center;
+			font-family: "Bold";
+
 			 }
 
 		.lista-rolagem-fixa{
@@ -152,11 +179,26 @@
 		.lista-rolagem-fixa#list-rolagem-fixa-06{
 		width: 88px;
 	
-	}		
+		}		
 		.lista-rolagem-fixa .links{
 			position: relative;
 			text-decoration: none;
 			color:white;
+		}
+
+		.lista-rolagem-fixa:hover{
+			background-color: red;
+			outline-style: solid;
+			outline-color: red;
+			outline-width: 7px;
+			overflow-y: auto;
+			transform: scaleY(2);
+			z-index: 1;
+			border-radius: 2px;
+		}
+
+		.links:active{
+			color: black;
 		}
 		/*==============espaçamentos das bandeiras======*/
 
@@ -186,13 +228,14 @@
 			width: 70%;
 			max-height: 30px;
 			position: absolute;
-			top: 20%;
+			top: 33%;
 			margin-left: 20%;	
 			color: white;
 		}
 		div.texto #p-header{
 			margin-top:0px; 
 			margin-bottom: 0px;
+			font-family: "Bold";
 			font-size: 50pt;
 		}
 

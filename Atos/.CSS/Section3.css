@@ -18,21 +18,8 @@
 			position: relative;
 		}
 
-		#h2-parceiros {
-			margin-top: 123px;
-    		text-align: center;
-   			font-size: 50pt;
-   		}
-   		#sublilinha-h2-parceiros{
-   			padding: 1px;
-			background: red; 
-   			max-width: 50%;
-   			min-width: 200px;
-   			align-items: center;
-   			justify-content: center;
-   			margin: auto;
-   		}
-/*==================================================estilos das setas=====================================================*/
+
+		/*==================================================estilos das setas=====================================================*/
 
 		.seta{
 			position: absolute;
@@ -79,8 +66,8 @@
 				transform: translateX(8px) scale(1.2);
 			}
 		}
-/*===========================================================================================*/
-/*===================================estil e animação carrossel==============================*/		
+		/*===========================================================================================*/
+		/*===================================estil e animação carrossel==============================*/		
 
 		#navegador-scroll{
 			position: relative;
@@ -111,29 +98,33 @@
 			border-radius: 15px;
 			flex-wrap: wrap;
 			grid-gap:0px;
-		/*	border:1px solid black; caso queira modificar usar para definir os parametros*/
+			z-index: 0;
+			/*	border:1px solid black; caso queira modificar usar para definir os parametros*/
 
 		}
 		.div-carrossel-1 .h2-carrossel{
 			position: relative;
 			height: 20%;
+			font-family: "Bold";
 			font-size: 20pt;/*ver se a media esta correta*/
-			border:1px solid;
 			padding: 0px;
 			padding-bottom: 2px;
-			padding-top: 10px;
+			padding-top: 45px;
 			text-align: left;
-			border:1px solid black;
+
 		}
 		#navegador-scroll .paragrafo-carrossel{
 			display: inline-flex;
 			justify-content: center;
 			margin: 0px;
+			font-family: "Medium";
 			text-align: center;
 			align-items: center;
 			margin: auto;
 			width: 50%;
-			align-items: center;
+			min-width: max-content;
+			min-width: 29%;
+			word-wrap: break-word;
 			height: 50%;
 		}
 		.iframe-carrossel{		
@@ -287,8 +278,7 @@
 			left: 90%;
 			width: 25px;
 			height: 25px;
-
-
+			padding-right: 25px;
 		}
 		.qt-esquerda{
 			position: absolute;
@@ -299,87 +289,171 @@
 			width: 25px;
 			height: 25px;
 			align-items: right;
+			left: 0%;
 
 		}		
 		.svg-carrossel{
 			position: relative;
-			top: 10%;
-			right: 110px;
+			top: 75px;
+			right: 130px;
 			height: 10px;
 			padding: 5px;
+		}
+
+		@media(max-width: 1435px){
+			.div-carrossel-1{
+				display: inline-block;
+				position: relative;
+				align-self: center;
+			}	
+			.div-carrossel-1 .h2-carrossel{
+				height: 10%;
+				position: relative;
+				bottom: 74px;
+				text-align: center;
+			}
+			#h2-sessao-4{
+			padding-top: 121px;
+			text-align: center;
+			font-family: "Bold";
+			font-size: 30pt;
+			}
+			#sublilinha-h2-parceiros{
+				width: 100%;
+			}
+			#navegador-scroll .paragrafo-carrossel{
+				display: inline-grid;
+				max-width: 50%;
+				height: 20%;
+				overflow-x: hidden;
+				overflow-y: hidden;				
+				text-align: center;
+				justify-content: left;
+				border:1px solid;
+			}
+			#navegador-scroll.paragrafo-carrossel::-webkit-scroll{
+				width: 5px;
+			}
+			#navegador-scroll.paragrafo-carrossel::-webkit-scroll-track{
+				width: 1px;
+				border:1px solid blue;
+			}
+			#navegador-scroll.paragrafo-carrossel::-webkit-scrollbar-thumb{
+				background: red;
+			}
+
+			.svg-carrossel{
+				top: -24%;
+				right: 90%;
+				height: 10px;
+				padding: 5px;
+			}	
+
+			.qt-esquerda{
+				float: left;
+				bottom: 100px;
+				height: 10%;
+			}
+			.qt-direita{
+				float: right;
+			}
+			.iframe-carrossel{
+				justify-content: center;
+				left: 0%;
+				min-width: 100%;
+				
+			}
 
 		}
 
-/*lembrar de deixar isso tdo responsivo em*/
-/*=========================================*/
-	#parceiros-container{
-		position: relative;
-		display: inline-flex;
-		width: 65%;
-		margin:auto;
-		height: auto;
-		margin-top: 75px;
-		display: flex;
-		align-items: center;
-		flex-wrap: wrap;
-		column-gap: 20px;
+		/*lembrar de deixar isso tdo responsivo em*/
+		/*=========================================*/
+		#parceiros-container{
+			position: relative;
+			display: inline-flex;
+			width: 65%;
+			margin:auto;
+			height: auto;
+			margin-top: 75px;
+			display: flex;
+			align-items: center;
+			flex-wrap: wrap;
+			column-gap: 20px;
+		}
+		#h2-parceiros {
+			font-family: "Bold";
+			margin-top: 123px;
+			text-align: center;
+			font-size: 50pt;
+		}
+		#sublilinha-h2-parceiros{
+			padding: 1px;
+			background: red; 
+			width: 100%;
+			max-width: 50%;
+			min-width: 200px;
+			align-items: center;
+			justify-content: center;
+			margin: auto;
+		}
+		.parceiros{
+			display: flex;
+			position: relative;
+			flex-flow:column;
+			width: 100%;
+			max-width: 504px;
+			min-height:150px; 
+			margin: auto;
+			background: white;
+			border-radius: 5%;
+			height: min-content;
+		}
+		.img-parceiros{
+			width: 100%;
+			min-height: 75px;
+			border-radius: 5%;
+		}
 
-	}
-	.parceiros{
-		display: flex;
-		position: relative;
-		flex-flow:column;
-		width: 100%;
-		max-width: 504px;
-		min-height:150px; 
-		margin: auto;
-		background: white;
-		border-radius: 5%;
-		height: min-content;
-	}
-	.img-parceiros{
-		width: 100%;
-		min-height: 75px;
-		border-radius: 5%;
-	}
+		.h3-sap-parceiros{
+			padding-left: 40px;
+			position: relative;
+			display: inline-flex;
+			font-family: "Bold";
+			font-size: 17pt;
+		}
 
-	.h3-sap-parceiros{
-		padding-left: 40px;
-		position: relative;
-		display: inline-flex;
-	}
+		.paragrafo-parceiros{
+			align-items: justify;
+			padding-left: 40px;
+			padding-right: 40px;
+			opacity: 0.5;
+			text-indent: 20px;
+			font-family: "Medium";
+			font-size: 13pt;
+		}
+		.paragrafo-parceiros#id-paragrafo-parceiros-B1{
+			padding-bottom: 40px;
+		}
 
-	.paragrafo-parceiros{
-		align-items: justify;
-		padding-left: 40px;
-		padding-right: 40px;
-		opacity: 0.5;
-		text-indent: 20px;
-	}
-	.paragrafo-parceiros#id-paragrafo-parceiros-B1{
-		padding-bottom: 40px;
-	}
-
-	.final-parceiros{
-
-		margin: auto;	
-		margin-top: 60px;
-		max-width: 90%;
-		height: max-content;	
-		justify-content: center;
-		display: flex;
-		flex-wrap: wrap;
-		padding-bottom: 50px;
-		gap: 15px;
-	}
-	.img-parceiros-final{
-		position: relative;	
-		flex:1 1 250px;
-		max-width: 300px;
-		grid-row-gap: 60px;
-		display: flex;
-		height: 60px;
-		flex-wrap: wrap;
-		margin-bottom: 60px; 
-	}
+		.final-parceiros{
+			margin: auto;	
+			margin-top: 60px;
+			max-width: 90%;
+			height: max-content;	
+			justify-content: center;
+			display: flex;
+			flex-wrap: wrap;
+			padding-bottom: 50px;
+			gap: 15px;
+		}
+		.img-parceiros-final{
+			position: relative;	
+			flex:1 1 250px;
+			max-width: 300px;
+			grid-row-gap: 60px;
+			display: flex;
+			height: 60px;
+			flex-wrap: wrap;
+			margin-bottom: 60px; 
+		}
 

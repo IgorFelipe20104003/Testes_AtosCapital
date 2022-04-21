@@ -1,0 +1,125 @@
+		.rodape{
+			width: 100%;
+			max-width: 1920px;
+			min-width: 280px;
+			margin: auto;
+			background-image: url("../.imagens/Lotes/Grupo de máscara 884.jpg");
+			background-repeat: no-repeat;
+			background-size: 100% 100%;
+		}
+
+		.container-rodape{
+			position: relative;
+			display: grid;
+			grid-template-columns: 1fr 1fr ;
+			width: 100%;
+			max-width: 1920px;
+			min-width: 280px;
+			margin: auto;
+			height: 100%;
+			min-height: 423px;
+			justify-content: center;
+			column-gap: 12%;
+		}
+
+		.texto-footer{
+			position: relative;
+			text-align-last: left;
+			color: white;
+			word-wrap: wrap;
+		}
+		.img-footer{
+			display: inline-flex;
+			width: 32%;
+			height: 35%;
+			margin: auto;
+			margin-left: 50%; 
+		}
+		#img1-footer{
+			width: 100%;			
+		}
+		 #img2-footer, #img3-footer{
+			width: 50%;
+		}
+		#img-footer-1{
+			position: relative;
+			top: 20%;
+			align-self: bottom;
+		}
+
+		#img-footer-2{
+			position: relative;
+			top: -30%;
+		}
+
+		#text-footer-1{
+			align-self: center;
+		}
+
+		#text-footer-2{
+			align-self: top;
+		}
+
+		.link-footer{
+			text-decoration: none;
+			color:white;
+			cursor: pointer;
+		}
+		@media(max-width:800px ){
+			.container-rodape{
+				display: inline-grid;
+				align-items: flex-start;
+				grid-template-columns: 1fr;
+				grid-row-gap: 5px;
+			}
+			.texto-footer{
+				text-align-last: center;
+			}
+			.img-footer{
+				margin: auto;
+			}
+			#img1-footer{
+				margin-left: 0px;
+				martgin:auto;
+				justify-content: center;
+				align-items: center;
+				align-content: center;
+			}
+		}
+
+		/*========================================================================================*/
+		.container-rodape-final{
+			position: relative;
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			width: 100%;
+			border:none;
+			background: rgb(128,0,0);
+			height: 79px;
+			text-align: center;
+			align-self: center;
+			justify-content: center;
+			align-content: center;
+			column-gap: 10%;
+
+		}
+
+		.srv > img{
+			padding-right: 10px;
+		}
+
+		.politicas{
+			display: inline-flex;
+			width: 100%;
+			color: white;
+		}
+		.politicas_1{
+			padding-left: 10%
+		}
+
+		.politicas_link{
+			width: 100%;
+			color: white;
+			text-align: left;
+			text-decoration: none;
+		}

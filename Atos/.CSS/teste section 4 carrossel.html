@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		/*============================================*/
+		
+		.sessao-04{
+			background: white;
+			width: 100%;
+			max-width: 1920px;
+			min-width: 280px;
+			min-height: 1101px;
+			margin: auto;
+			position: relative;
+			box-sizing: border-box;
+		}
+		#h2-sessao-4{
+			padding-top: 121px;
+			text-align: center;
+			font-family: "Bold";
+			font-size: 50pt;
+		}
+
+		#hr-sessao-4{
+			width:100%;
+			max-width: 600px;
+			padding: 1px;
+			background: red; 
+			margin: auto;
+			margin-bottom: 57px;
+		}
+		#carrossel-2{
+			position: relative;
+		    display: flex;
+		    margin: auto;
+		    width:100%;
+	/*	    max-width: 1200px;
+		    min-width: 280px;*/
+		    overflow-x: auto;
+		    overflow-y: hidden;
+		    gap: 50%;
+		    justify-content: center;
+		    align-items: center;
+		    background: yellow;
+
+		}
+
+		.div1-carrossel-2{
+			background: blue;
+			width: 100%;
+			max-width: 790px;
+			min-width: auto;
+			height: 663px;  
+			min-height: auto;
+			position: relative;
+			display: grid;
+			justify-content: center;
+			grid-template-columns:642px 360px;
+			grid-template-rows: 1fr 1fr;
+			margin: auto;
+			background: white;
+			border-radius: 15px;
+			grid-column-gap: 19px;
+		}
+		.div1-carrossel-2:nth-child(1){	background: blue;}/*as cores sao simplismente para mostrar que se tratam de divs diferentes*/
+		.div1-carrossel-2:nth-child(2){	background: red;}
+		.div1-carrossel-2:nth-child(3){	background: green;}
+		/*#carrossel-2::-webkit-scrollbar{
+			display: none;
+		}*/
+		.div-interna-carrossel-2{
+			background: white;		
+			width: 100%;	
+		}
+
+
+		.img1-carrossel-2{
+			max-width: 100%;
+			height: 100%;
+			border-radius: 10px;
+		}
+
+		.div-interna-carrossel-2 .container-texto-interno{
+			position: absolute;			 
+			max-width: max-content;
+			min-width: auto;
+			color:white;
+			padding-left: 54px;
+			padding-right: 54px;
+			top: 65%;
+
+		}
+/*==========================================================================*/
+		.div1-carrossel-2 .div-interna-carrossel-2:nth-child(1){
+			background: green;
+			position: relative;
+			grid-row: 1/3;
+			width: 100%;
+			max-width: 700px;
+			min-width: auto;
+			max-height:663px; 
+			min-height: auto;
+		}
+
+/*==========================================================================*/
+		.h3-carrossel-2{
+			width: 50%;
+		}
+		.paragrafo-1-carrossel-2{
+			padding-top: 10px;
+			text-align: justify;
+			opacity: .8;
+		}
+
+		.btn-1-carrossel-2{
+			position: relative;
+			float: right;
+			border:none;
+			width: 100%;
+			max-width: 159px;
+			min-height:31px; 
+			padding-left: 10px;
+			margin-bottom: 20px;
+			background: rgba(105,105,105,.8);
+			color:white;
+			cursor: pointer;
+		}
+/*==========================================================================*/
+
+		.img2-carrossel-2{
+			width:100%;
+			max-width: 360px;
+			height: 100%;
+			max-height: 147px;
+			border-radius: 5px;
+		}
+
+		.h4-carrossel-2{
+			padding-top: 12px;
+			padding-bottom: 15px;
+		}
+
+		.btn-2-carrossel-2{
+			background: red;
+			position: relative;
+			float: right;
+			color: white;
+			border: none;
+			cursor: pointer;
+			width: 109px;
+			height: 16px;
+		}
+		.div1-carrossel-2{
+			background: white;
+		}
+
+		/*=======================================================================================================*/
+		.container-btn{
+				align-content: center; margin: auto;align-items: center;justify-content: center;
+				height: 50px; 
+				width: max-content;
+				margin-bottom: 181px; 
+			}
+		.container-btn > #direita, #centro, #esquerda{
+				width: 8px;
+				height: 10px;
+				border-radius: 50%;		
+				margin: auto;
+				border:none;	
+				background-color: rgb(128,128,128);
+			}
+
+		#centro{
+				background: rgb(54,54,54);
+			}
+
+
+
+		/*========================================================================================================*/
+		#ativador-carrossel-2.activeE2.centroE2 #direita{background-color: rgb(128,128,128);}
+		#ativador-carrossel-2.activeD2.centroD2 #direita{background-color: rgb(128,128,128);}
+
+		#ativador-carrossel-2.activeE2.centroE2 #centro{background: rgb(54,54,54);}
+		#ativador-carrossel-2.activeD2.centroD2 #centro{background: rgb(54,54,54);}
+
+		#ativador-carrossel-2.centroE2.activeE2 #esquerda{background-color: rgb(128,128,128);}
+		#ativador-carrossel-2.centroD2.activeD2 #esquerda{background-color: rgb(128,128,128);}
+
+
+		/*========================================================================================================*/
+		#ativador-carrossel-2.activeE2 #esquerda{background: rgb(54,54,54);}
+		#ativador-carrossel-2.activeE2 #direita{background-color: rgb(128,128,128);}
+		#ativador-carrossel-2.activeE2 #centro{background-color: rgb(128,128,128);}
+
+
+		/*========================================================================================================*/
+		#ativador-carrossel-2.activeD2 #direita{background: rgb(54,54,54);}
+		#ativador-carrossel-2.activeD2 #esquerda{background-color: rgb(128,128,128);}
+		#ativador-carrossel-2.activeD2 #centro{background-color: rgb(128,128,128);}
+		/*=========================================================================================================*/
+
+
+				/*testes com animações*/
+		/*************Condições do activeD******************/
+		
+
+		#ativador-carrossel-2.activeD2 .div1-carrossel-2{		
+
+			animation-name: testeA2;
+			animation-duration: 1s;
+			animation-timing-function: ease;
+			animation-fill-mode: forwards;		
+			z-index: 1;
+		}
+
+
+		/***************************************************/	
+		/*************Condições do activeE******************/
+
+
+		#ativador-carrossel-2.activeE2 .div1-carrossel-2{		
+			animation-name: testeB2;
+			animation-duration: 1s; 
+			animation-timing-function: ease;
+			z-index: 1;
+			animation-fill-mode: forwards;
+		}
+
+		/***************************************************/
+		/*************Condições do Centro******************/	
+
+		#ativador-carrossel-2.activeE2.centroE2 .div1-carrossel-2{
+			animation-name: ExcecaoCentroA;
+			animation-timing-function: ease;
+			animation-fill-mode: forwards;
+			animation-duration: 1s;
+			z-index: 1;
+			
+		}
+
+		#ativador-carrossel-2.activeD2.centroD2 .div1-carrossel-2{
+			animation-name: ExcecaoCentroB;
+			animation-timing-function: ease;
+			animation-fill-mode: forwards;
+			animation-duration: 1s;
+			z-index: 1;
+		}
+
+
+/*==========================================================================*/		
+
+		@keyframes testeA2{
+			0%{transform: translateX(0%);opacity: 0.1;}
+			50%{opacity: 0.2;}
+			100%{transform: translateX(176%);opacity: 1;},
+
+		}
+
+		@keyframes testeB2{
+			0%{transform: translateX(0%);opacity: 0.1;}
+			50%{opacity: 0.4;}
+			100%{transform: translateX(-176%);}
+		}
+		@keyframes ExcecaoCentroA{
+			0%{	transform: translateX(-176%); ;opacity: 0.4;}
+			50%{transform: translateX(-88%);opacity: 0.4}				
+			100%{transform: translateX(0%);opacity: 1;}	
+		}
+		@keyframes ExcecaoCentroB{
+			0%{	transform: translateX(176%); opacity: 0.4;}
+			50%{transform: translateX(88%);opacity: 0.4}				
+				100%{transform: translateX(0%);opacity: 1;}		
+		}
+
+		@media(max-width: 1228px){
+		#carrossel-2{
+			position: relative;
+		    display: flex;
+		    flex-wrap: wrap;
+		    margin: auto;
+		    width:100%;
+		    max-width: 1200px;
+		    min-width: 280px;
+		    height: 697px;
+		    max-height: auto;
+		    overflow-x: auto;
+		    gap: 50%;
+		    justify-content: center;
+		    align-items: center;
+		    background: yellow;
+
+		}
+
+		.div1-carrossel-2{
+			background: blue;
+			width: 100%;
+			max-width: 790px;
+			min-width: auto;
+			height: 663px;  
+			min-height: auto;
+			position: relative;
+			display: inline;
+			justify-content: center;
+			grid-template-columns: 1fr 1fr 1fr;
+			grid-template-rows: 1fr 1fr;
+			margin: auto;
+			background: white;
+			border-radius: 15px;
+			grid-column-gap: 19px;
+		}
+
+		}
+
+	</style>
+</head>
+<body>
+	<section class="sessao-04">
+		<div class="container-sessao-4">
+			<h2 id="h2-sessao-4">Blog | Ta na Mídia</h2>
+			<hr id="hr-sessao-4">
+			<div id="ativador-carrossel-2">
+			<div id="carrossel-2">
+
+				<div class="div1-carrossel-2">
+
+					<div class="div-interna-carrossel-2" >
+						<img class="img1-carrossel-2" src=".imagens/Lotes/Grupo de máscara 874.jpg">
+						<div class="container-texto-interno">
+							<h3 class="h3-carrossel-2" >Atos Capital é patrocinadora do SAP Partner Sales Meeting 2021</h3>
+
+							<p class="paragrafo-1-carrossel-2">O maior evento do Ecossistema SAP Business One do Brasil, desembarca em São Paulo emnovo formato, atendendo as todas as regras de saúde estipuladas pelo Ministério da Saúde e em modelo híbrido (presencial e Online), proporcionando o que há de mais inovador, lúdico e tecnológico aps parceiros SAP Business One Brasil.</p>	
+							<button class="btn-1-carrossel-2">Ler Materia Completa</button>				
+						</div>
+					</div>
+					<div class="div-interna-carrossel-2">
+						<img class="img2-carrossel-2" src=".imagens/Lotes/Grupo de máscara 875.jpg">
+						<div class="container-texto2-interno">
+							<h4 class="h4-carrossel-2">Granado Pharmácias Adota Suíte B1 Capital</h4>
+
+							<p class="paragrafo-2-carrossel-2">Com uma história de mais de 150 anos de	mercado, a Granado Pharmácias, uma das
+								principais empresas de Cosméticos do
+								Brasil, com indústria, mais de 80 lojas em
+							todo...</p>
+							<button class="btn-2-carrossel-2">Matéria Completa</button>
+						</div>		
+					</div>
+					<div class="div-interna-carrossel-2">
+						<img class="img2-carrossel-2" src=".imagens/Lotes/Grupo de máscara 876.jpg">
+						<div class="container-texto2-interno">
+							<h4 class="h4-carrossel-2">BBlend Inova na Gestão com Suíte B1Cards</h4>
+
+							<p class="paragrafo-2-carrossel-2">A BBlend, uma empresa Ambev/
+								Whirlpool, fornecedora das máquinas e
+								bebidas pré prontas, vem expandindo
+								solidamente suas operações no Brasil
+							ampliando suas vendas tanto no ecommerce quanto com suas...</p>
+							<button class="btn-2-carrossel-2">Matéria Completa</button>
+						</div>		
+					</div>
+				</div>
+				<div class="div1-carrossel-2">
+
+					<div style="background: red;" class="div-interna-carrossel-2" >
+						<img class="img1-carrossel-2" src=".imagens/Lotes/Grupo de máscara 874.jpg">
+						<div class="container-texto-interno">
+							<h3 class="h3-carrossel-2" >Atos Capital é patrocinadora do SAP Partner Sales Meeting 2021</h3>
+
+							<p class="paragrafo-1-carrossel-2">O maior evento do Ecossistema SAP Business One do Brasil, desembarca em São Paulo emnovo formato, atendendo as todas as regras de saúde estipuladas pelo Ministério da Saúde e em modelo híbrido (presencial e Online), proporcionando o que há de mais inovador, lúdico e tecnológico aps parceiros SAP Business One Brasil.</p>	
+							<button class="btn-1-carrossel-2">Ler Materia Completa</button>				
+						</div>
+					</div>
+					<div class="div-interna-carrossel-2">
+						<img class="img2-carrossel-2" src=".imagens/Lotes/Grupo de máscara 875.jpg">
+						<div class="container-texto2-interno">
+							<h4 class="h4-carrossel-2">Granado Pharmácias Adota Suíte B1 Capital</h4>
+
+							<p class="paragrafo-2-carrossel-2">Com uma história de mais de 150 anos de	mercado, a Granado Pharmácias, uma das
+								principais empresas de Cosméticos do
+								Brasil, com indústria, mais de 80 lojas em
+							todo...</p>
+							<button class="btn-2-carrossel-2">Matéria Completa</button>
+						</div>		
+					</div>
+					<div class="div-interna-carrossel-2">
+						<img class="img2-carrossel-2" src=".imagens/Lotes/Grupo de máscara 876.jpg">
+						<div class="container-texto2-interno">
+							<h4 class="h4-carrossel-2">BBlend Inova na Gestão com Suíte B1Cards</h4>
+
+							<p class="paragrafo-2-carrossel-2">A BBlend, uma empresa Ambev/
+								Whirlpool, fornecedora das máquinas e
+								bebidas pré prontas, vem expandindo
+								solidamente suas operações no Brasil
+							ampliando suas vendas tanto no ecommerce quanto com suas...</p>
+							<button class="btn-2-carrossel-2">Matéria Completa</button>
+						</div>		
+					</div>
+				</div>
+				<div class="div1-carrossel-2">
+
+					<div style="background: red;"class="div-interna-carrossel-2">
+						<img class="img1-carrossel-2" src=".imagens/Lotes/Grupo de máscara 874.jpg">
+						<div class="container-texto-interno">
+							<h3 class="h3-carrossel-2" >Atos Capital é patrocinadora do SAP Partner Sales Meeting 2021</h3>
+
+							<p class="paragrafo-1-carrossel-2">O maior evento do Ecossistema SAP Business One do Brasil, desembarca em São Paulo emnovo formato, atendendo as todas as regras de saúde estipuladas pelo Ministério da Saúde e em modelo híbrido (presencial e Online), proporcionando o que há de mais inovador, lúdico e tecnológico aps parceiros SAP Business One Brasil.</p>	
+							<button class="btn-1-carrossel-2">Ler Materia Completa</button>				
+						</div>
+					</div>
+					<div class="div-interna-carrossel-2">
+						<img class="img2-carrossel-2" src=".imagens/Lotes/Grupo de máscara 875.jpg">
+						<div class="container-texto2-interno">
+							<h4 class="h4-carrossel-2">Granado Pharmácias Adota Suíte B1 Capital</h4>
+
+							<p class="paragrafo-2-carrossel-2">Com uma história de mais de 150 anos de	mercado, a Granado Pharmácias, uma das
+								principais empresas de Cosméticos do
+								Brasil, com indústria, mais de 80 lojas em
+							todo...</p>
+							<button class="btn-2-carrossel-2">Matéria Completa</button>
+						</div>		
+					</div>
+					<div class="div-interna-carrossel-2">
+						<img class="img2-carrossel-2" src=".imagens/Lotes/Grupo de máscara 876.jpg">
+						<div class="container-texto2-interno">
+							<h4 class="h4-carrossel-2">BBlend Inova na Gestão com Suíte B1Cards</h4>
+
+							<p class="paragrafo-2-carrossel-2">A BBlend, uma empresa Ambev/
+								Whirlpool, fornecedora das máquinas e
+								bebidas pré prontas, vem expandindo
+								solidamente suas operações no Brasil
+							ampliando suas vendas tanto no ecommerce quanto com suas...</p>
+							<button class="btn-2-carrossel-2">Matéria Completa</button>
+						</div>		
+					</div>
+				</div>
+			</div> 
+				<div class="container-btn" >
+					<button id="direita"></button> <button id="centro"></button> <button id="esquerda"></button>
+				</div>
+			</div>	
+		</div>		
+	</section>
+			<script type="text/javascript">
+				
+			const clickD = document.getElementById('direita');
+			const clickE = document.getElementById('esquerda');
+			const clickC = document.getElementById('centro');
+			const ativ = document.getElementById('ativador-carrossel-2');
+
+
+			clickD.addEventListener('click', Direita);
+			clickE.addEventListener('click', Esquerda);
+			clickC.addEventListener('click', Centro);
+
+			function Direita(){
+
+				if(ativ.className == 'activeE2'){
+					ativ.classList.remove('activeE2');	
+					ativ.classList.add('activeD2');
+				}else if(ativ.className == 'activeE2 centroE2'){
+					ativ.classList.remove('activeE2');	
+					ativ.classList.remove('centroE2');	
+					ativ.classList.add('activeD2');
+				}else{
+					ativ.classList.remove('centroD2');
+					ativ.classList.add('activeD2');
+				}
+			}
+
+			function Esquerda(){
+
+				if (ativ.className == 'activeD2') {
+					ativ.classList.remove('activeD2')
+					ativ.classList.add('activeE2')
+				}else if(ativ.className == 'activeD2 centroD2'){
+					ativ.classList.remove('activeD2');	
+					ativ.classList.remove('centroD2');	
+					ativ.classList.add('activeE2');
+				}else{
+					ativ.classList.remove('centroE2');
+					ativ.classList.add('activeE2');
+				}
+			}
+
+			function Centro(){
+
+				if(ativ.className == 'activeE2'){
+					ativ.classList.add('centroE2');
+				}else if(ativ.className == 'activeD2'){
+					ativ.classList.add('centroD2');
+				}
+			}
+
+			const X = setInterval(()=>{Timer01();},5000);
+
+			function Timer01(){
+				if(ativ.className == "" || ativ.className == 'activeE2'){
+					Direita();
+				}else if( ativ.className == 'activeD2'){
+					Centro();
+				}else if( ativ.className == 'activeE2 centroE2' ||  ativ.className == 'activeD2 centroD2' ){
+					Esquerda();
+				}
+			}
+
+
+			</script>	
+</body>
+</html>

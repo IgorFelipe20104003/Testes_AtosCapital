@@ -5,6 +5,7 @@
 			z-index: 3;
 		}
 	 	.barra-rolagem-fixa{
+	 		max-width: 100%;
 	 		top: 0px;
 	 		height: 140px;
 	 		align-items: center;

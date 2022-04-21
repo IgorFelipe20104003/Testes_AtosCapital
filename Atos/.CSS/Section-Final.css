@@ -25,6 +25,7 @@
 			position: relative;
 			padding-left: 350px;
 			padding-top: 161px;
+			font-family: "Bold";
 			font-size: 50pt;
 			display: inline-flex;
 		}
@@ -32,9 +33,11 @@
 			position: relative;
 			background: red;
 			padding: 2px;
-			width: 400px;
+			max-width: 400px;
+			min-width: 300px;
 			margin-right: 0px;
 			margin-left:350px;
+
 		}
 
 		.container-form{
@@ -65,7 +68,7 @@
 		#form-mensagem{
 			width: 100%;
 			max-width: 755px;
-			min-width: auto;
+			min-width: 300px;
 			height: 100%;
 			min-height: 227px;
 			max-height: 227px;
@@ -95,7 +98,8 @@
 				padding: 0px;
 			}
 			#hr-sessao-final{
-				margin: auto;
+				margin: 0px;
+				max-width: 100%;
 			}
 			.container-fale-conosco{
 				text-align: center;
